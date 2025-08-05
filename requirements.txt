@@ -1,0 +1,40 @@
+# Core data manipulation
+pandas>=1.5.0
+numpy>=1.23.0
+
+# Climate data sources
+earthengine-api>=0.1.323
+geopy>=2.3.0
+
+# Machine learning and optimization
+scikit-learn>=1.2.0
+xgboost>=1.7.0
+lightgbm>=3.3.0
+optuna>=3.0.0
+
+# Explainable AI
+shap>=0.41.0
+
+# Visualization
+matplotlib>=3.6.0
+seaborn>=0.12.0
+plotly>=5.0.0
+
+# Statistical analysis
+scipy>=1.9.0
+statsmodels>=0.13.0
+
+# Data handling
+pyarrow>=10.0.0
+fastparquet>=0.8.0
+
+# Utilities
+joblib>=1.2.0
+pyyaml>=6.0
+tqdm>=4.64.0
+requests>=2.28.0
+
+# Development and testing
+pytest>=7.0.0
+black>=22.0.0
+flake8>=5.0.0
