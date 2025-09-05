@@ -1,0 +1,595 @@
+{
+  "analysis_timestamp": "2025-09-01T17:09:24.316185",
+  "dataset_overview": {
+    "total_records": 9103,
+    "date_range": {
+      "start": "2002-11-27",
+      "end": "2021-08-10"
+    },
+    "study_count": 17
+  },
+  "biomarker_analysis_by_category": {
+    "Metabolic": {
+      "Glucose (mg/dL)": {
+        "description": "Standard glucose",
+        "available_records": 0,
+        "total_records": 9103,
+        "availability_percentage": 0.0,
+        "statistics": {}
+      },
+      "FASTING GLUCOSE": {
+        "description": "Fasting glucose",
+        "available_records": 2736,
+        "total_records": 9103,
+        "availability_percentage": 30.06,
+        "statistics": {
+          "mean": 16.719546783625727,
+          "median": 5.0,
+          "std": 27.641240329639363,
+          "min": 0.95,
+          "max": 295.0,
+          "q25": 4.41,
+          "q75": 5.862500000000001
+        }
+      },
+      "Oral glucose tolerance test fasting plasma glucose": {
+        "description": "OGTT fasting glucose",
+        "available_records": 0,
+        "total_records": 9103,
+        "availability_percentage": 0.0,
+        "statistics": {
+          "note": "Column not found"
+        }
+      },
+      "Oral glucose tolerance test 1-h plasma glucose": {
+        "description": "OGTT 1-hour glucose",
+        "available_records": 0,
+        "total_records": 9103,
+        "availability_percentage": 0.0,
+        "statistics": {
+          "note": "Column not found"
+        }
+      },
+      "Oral glucose tolerance test 2-h plasma glucose": {
+        "description": "OGTT 2-hour glucose",
+        "available_records": 0,
+        "total_records": 9103,
+        "availability_percentage": 0.0,
+        "statistics": {
+          "note": "Column not found"
+        }
+      },
+      "FASTING TOTAL CHOLESTEROL": {
+        "description": "Total cholesterol",
+        "available_records": 2936,
+        "total_records": 9103,
+        "availability_percentage": 32.25,
+        "statistics": {
+          "mean": 25.706287465940054,
+          "median": 4.365,
+          "std": 52.79270041474692,
+          "min": 1.12,
+          "max": 251.93,
+          "q25": 3.6,
+          "q75": 5.452500000000001
+        }
+      },
+      "FASTING HDL": {
+        "description": "HDL cholesterol",
+        "available_records": 2937,
+        "total_records": 9103,
+        "availability_percentage": 32.26,
+        "statistics": {
+          "mean": 6.675726932243786,
+          "median": 1.25,
+          "std": 13.848230991416237,
+          "min": 0.1,
+          "max": 89.32,
+          "q25": 1.0,
+          "q75": 1.65
+        }
+      },
+      "FASTING LDL": {
+        "description": "LDL cholesterol",
+        "available_records": 2936,
+        "total_records": 9103,
+        "availability_percentage": 32.25,
+        "statistics": {
+          "mean": 15.396198910081743,
+          "median": 2.45,
+          "std": 33.099391532001015,
+          "min": 0.0,
+          "max": 190.14,
+          "q25": 1.7,
+          "q75": 3.4625
+        }
+      },
+      "FASTING TRIGLYCERIDES": {
+        "description": "Triglycerides",
+        "available_records": 972,
+        "total_records": 9103,
+        "availability_percentage": 10.68,
+        "statistics": {
+          "mean": 1.0413786008230452,
+          "median": 0.85,
+          "std": 0.7435021317054601,
+          "min": 0.22,
+          "max": 10.42,
+          "q25": 0.64,
+          "q75": 1.21
+        }
+      },
+      "FASTING INSULIN": {
+        "description": "Fasting insulin",
+        "available_records": 0,
+        "total_records": 9103,
+        "availability_percentage": 0.0,
+        "statistics": {}
+      }
+    },
+    "Cardiovascular": {
+      "systolic blood pressure": {
+        "description": "Systolic BP",
+        "available_records": 4957,
+        "total_records": 9103,
+        "availability_percentage": 54.45,
+        "statistics": {
+          "mean": 126.30465335216192,
+          "median": 125.0,
+          "std": 16.53227905866448,
+          "min": 81.0,
+          "max": 258.5,
+          "q25": 115.0,
+          "q75": 136.0
+        }
+      },
+      "diastolic blood pressure": {
+        "description": "Diastolic BP",
+        "available_records": 4957,
+        "total_records": 9103,
+        "availability_percentage": 54.45,
+        "statistics": {
+          "mean": 80.69669154730684,
+          "median": 80.0,
+          "std": 11.856228378755748,
+          "min": 39.0,
+          "max": 150.0,
+          "q25": 73.0,
+          "q75": 87.0
+        }
+      },
+      "heart rate": {
+        "description": "Heart rate",
+        "available_records": 1324,
+        "total_records": 9103,
+        "availability_percentage": 14.54,
+        "statistics": {
+          "mean": 77.18126888217523,
+          "median": 77.0,
+          "std": 13.61795132307167,
+          "min": 0.0,
+          "max": 135.0,
+          "q25": 67.0,
+          "q75": 86.0
+        }
+      }
+    },
+    "Hematological": {
+      "Hemoglobin (g/dL)": {
+        "description": "Hemoglobin",
+        "available_records": 1283,
+        "total_records": 9103,
+        "availability_percentage": 14.09,
+        "statistics": {
+          "mean": 12.924395946999221,
+          "median": 13.0,
+          "std": 1.8721262755545167,
+          "min": 5.4,
+          "max": 20.5,
+          "q25": 11.7,
+          "q75": 14.1
+        }
+      },
+      "Hematocrit (%)": {
+        "description": "Hematocrit",
+        "available_records": 1066,
+        "total_records": 9103,
+        "availability_percentage": 11.71,
+        "statistics": {
+          "mean": 38.93930581613508,
+          "median": 39.0,
+          "std": 5.4927936644899535,
+          "min": 13.4,
+          "max": 60.3,
+          "q25": 35.4,
+          "q75": 42.6
+        }
+      },
+      "White blood cell count (\u00d710\u00b3/\u00b5L)": {
+        "description": "WBC count",
+        "available_records": 1283,
+        "total_records": 9103,
+        "availability_percentage": 14.09,
+        "statistics": {
+          "mean": 4.459563522992984,
+          "median": 4.2,
+          "std": 1.6065118936893763,
+          "min": 1.2,
+          "max": 15.85,
+          "q25": 3.3,
+          "q75": 5.2
+        }
+      },
+      "Platelet count (\u00d710\u00b3/\u00b5L)": {
+        "description": "Platelet count",
+        "available_records": 1267,
+        "total_records": 9103,
+        "availability_percentage": 13.92,
+        "statistics": {
+          "mean": 236.37884767166534,
+          "median": 227.0,
+          "std": 80.1537038114275,
+          "min": 19.0,
+          "max": 747.0,
+          "q25": 184.0,
+          "q75": 275.0
+        }
+      },
+      "Lymphocytes (%)": {
+        "description": "Lymphocytes %",
+        "available_records": 1283,
+        "total_records": 9103,
+        "availability_percentage": 14.09,
+        "statistics": {
+          "mean": 3.8374045206547156,
+          "median": 1.7,
+          "std": 8.239678261947876,
+          "min": 0.25,
+          "max": 53.1,
+          "q25": 1.25,
+          "q75": 2.28
+        }
+      },
+      "Neutrophils (%)": {
+        "description": "Neutrophils %",
+        "available_records": 1283,
+        "total_records": 9103,
+        "availability_percentage": 14.09,
+        "statistics": {
+          "mean": 5.166849571317225,
+          "median": 1.93,
+          "std": 11.963110813471049,
+          "min": 0.39,
+          "max": 71.1,
+          "q25": 1.38,
+          "q75": 2.79
+        }
+      }
+    },
+    "Renal": {
+      "Creatinine (mg/dL)": {
+        "description": "Creatinine",
+        "available_records": 1251,
+        "total_records": 9103,
+        "availability_percentage": 13.74,
+        "statistics": {
+          "mean": 42.850287769784174,
+          "median": 54.0,
+          "std": 33.919710943301425,
+          "min": 0.42,
+          "max": 237.0,
+          "q25": 0.86,
+          "q75": 67.0
+        }
+      },
+      "creatinine clearance": {
+        "description": "Creatinine clearance",
+        "available_records": 221,
+        "total_records": 9103,
+        "availability_percentage": 2.43,
+        "statistics": {
+          "mean": 129.18099547511312,
+          "median": 126.0,
+          "std": 37.499258185450415,
+          "min": 40.0,
+          "max": 243.0,
+          "q25": 100.0,
+          "q75": 154.0
+        }
+      },
+      "Blood urea nitrogen (mg/dL)": {
+        "description": "BUN",
+        "available_records": 90,
+        "total_records": 9103,
+        "availability_percentage": 0.99,
+        "statistics": {
+          "mean": 62.888888888888886,
+          "median": 62.0,
+          "std": 12.259776602657414,
+          "min": 31.0,
+          "max": 90.0,
+          "q25": 56.0,
+          "q75": 70.75
+        }
+      }
+    },
+    "Hepatic": {
+      "ALT (U/L)": {
+        "description": "ALT",
+        "available_records": 1254,
+        "total_records": 9103,
+        "availability_percentage": 13.78,
+        "statistics": {
+          "mean": 24.30940988835726,
+          "median": 19.0,
+          "std": 21.572127922002828,
+          "min": 5.0,
+          "max": 284.0,
+          "q25": 14.0,
+          "q75": 27.0
+        }
+      },
+      "AST (U/L)": {
+        "description": "AST",
+        "available_records": 1254,
+        "total_records": 9103,
+        "availability_percentage": 13.78,
+        "statistics": {
+          "mean": 30.450558213716107,
+          "median": 26.0,
+          "std": 20.33930917442717,
+          "min": 10.0,
+          "max": 263.0,
+          "q25": 21.0,
+          "q75": 33.0
+        }
+      },
+      "Total bilirubin (mg/dL)": {
+        "description": "Total bilirubin",
+        "available_records": 1031,
+        "total_records": 9103,
+        "availability_percentage": 11.33,
+        "statistics": {
+          "mean": 3.61454898157129,
+          "median": 3.2,
+          "std": 4.353822309666746,
+          "min": 0.1,
+          "max": 77.4,
+          "q25": 0.5,
+          "q75": 5.5
+        }
+      },
+      "Alkaline phosphatase (U/L)": {
+        "description": "Alkaline phosphatase",
+        "available_records": 1031,
+        "total_records": 9103,
+        "availability_percentage": 11.33,
+        "statistics": {
+          "mean": 81.81862269641125,
+          "median": 74.0,
+          "std": 45.21769438912364,
+          "min": 30.0,
+          "max": 946.0,
+          "q25": 60.0,
+          "q75": 92.0
+        }
+      }
+    },
+    "Protein/Nutritional": {
+      "Total protein (g/dL)": {
+        "description": "Total protein",
+        "available_records": 929,
+        "total_records": 9103,
+        "availability_percentage": 10.21,
+        "statistics": {
+          "mean": 55.019494079655544,
+          "median": 49.1,
+          "std": 26.854133440229745,
+          "min": 12.09,
+          "max": 261.25,
+          "q25": 37.15,
+          "q75": 66.7
+        }
+      },
+      "Albumin (g/dL)": {
+        "description": "Albumin",
+        "available_records": 1972,
+        "total_records": 9103,
+        "availability_percentage": 21.66,
+        "statistics": {
+          "mean": 39.5738336713996,
+          "median": 41.0,
+          "std": 8.541445494183563,
+          "min": 1.7,
+          "max": 60.0,
+          "q25": 38.8,
+          "q75": 43.5
+        }
+      }
+    },
+    "Immunological": {
+      "CD4 cell count (cells/\u00b5L)": {
+        "description": "CD4 count",
+        "available_records": 1283,
+        "total_records": 9103,
+        "availability_percentage": 14.09,
+        "statistics": {
+          "mean": 280.0522213561964,
+          "median": 228.0,
+          "std": 227.95388711293762,
+          "min": 2.0,
+          "max": 1596.0,
+          "q25": 143.0,
+          "q75": 318.0
+        }
+      },
+      "HIV viral load (copies/mL)": {
+        "description": "HIV viral load",
+        "available_records": 221,
+        "total_records": 9103,
+        "availability_percentage": 2.43,
+        "statistics": {
+          "mean": 7.710407239819005,
+          "median": 0.0,
+          "std": 16.02717380850246,
+          "min": 0.0,
+          "max": 63.0,
+          "q25": 0.0,
+          "q75": 0.0
+        }
+      }
+    }
+  },
+  "study_specific_analysis": {
+    "JHB_WRHI_003": {
+      "total_records": 221,
+      "biomarker_availability": {
+        "systolic blood pressure": {
+          "count": 221,
+          "percentage": 100.0
+        },
+        "diastolic blood pressure": {
+          "count": 221,
+          "percentage": 100.0
+        },
+        "FASTING TOTAL CHOLESTEROL": {
+          "count": 221,
+          "percentage": 100.0
+        },
+        "CD4 cell count (cells/\u00b5L)": {
+          "count": 216,
+          "percentage": 97.7
+        }
+      }
+    },
+    "JHB_DPHRU_013": {
+      "total_records": 784,
+      "biomarker_availability": {
+        "FASTING GLUCOSE": {
+          "count": 750,
+          "percentage": 95.7
+        },
+        "systolic blood pressure": {
+          "count": 563,
+          "percentage": 71.8
+        },
+        "diastolic blood pressure": {
+          "count": 563,
+          "percentage": 71.8
+        },
+        "FASTING TOTAL CHOLESTEROL": {
+          "count": 724,
+          "percentage": 92.3
+        }
+      }
+    },
+    "JHB_ACTG_016": {
+      "total_records": 78,
+      "biomarker_availability": {}
+    },
+    "JHB_ACTG_015": {
+      "total_records": 177,
+      "biomarker_availability": {}
+    },
+    "JHB_ACTG_017": {
+      "total_records": 20,
+      "biomarker_availability": {}
+    },
+    "JHB_ACTG_018": {
+      "total_records": 240,
+      "biomarker_availability": {}
+    },
+    "JHB_ACTG_019": {
+      "total_records": 183,
+      "biomarker_availability": {}
+    },
+    "JHB_ACTG_021": {
+      "total_records": 78,
+      "biomarker_availability": {}
+    },
+    "JHB_DPHRU_053": {
+      "total_records": 998,
+      "biomarker_availability": {
+        "FASTING GLUCOSE": {
+          "count": 974,
+          "percentage": 97.6
+        },
+        "systolic blood pressure": {
+          "count": 991,
+          "percentage": 99.3
+        },
+        "diastolic blood pressure": {
+          "count": 991,
+          "percentage": 99.3
+        },
+        "FASTING TOTAL CHOLESTEROL": {
+          "count": 972,
+          "percentage": 97.4
+        }
+      }
+    },
+    "JHB_EZIN_025": {
+      "total_records": 179,
+      "biomarker_availability": {}
+    },
+    "JHB_Ezin_002": {
+      "total_records": 1053,
+      "biomarker_availability": {
+        "systolic blood pressure": {
+          "count": 1053,
+          "percentage": 100.0
+        },
+        "diastolic blood pressure": {
+          "count": 1053,
+          "percentage": 100.0
+        }
+      }
+    },
+    "JHB_JHSPH_005": {
+      "total_records": 1182,
+      "biomarker_availability": {}
+    },
+    "JHB_SCHARP_004": {
+      "total_records": 2,
+      "biomarker_availability": {}
+    },
+    "JHB_SCHARP_006": {
+      "total_records": 162,
+      "biomarker_availability": {}
+    },
+    "JHB_VIDA_007": {
+      "total_records": 2129,
+      "biomarker_availability": {
+        "systolic blood pressure": {
+          "count": 2129,
+          "percentage": 100.0
+        },
+        "diastolic blood pressure": {
+          "count": 2129,
+          "percentage": 100.0
+        }
+      }
+    },
+    "JHB_VIDA_008": {
+      "total_records": 550,
+      "biomarker_availability": {}
+    },
+    "JHB_WRHI_001": {
+      "total_records": 1067,
+      "biomarker_availability": {
+        "FASTING GLUCOSE": {
+          "count": 1012,
+          "percentage": 94.8
+        },
+        "FASTING TOTAL CHOLESTEROL": {
+          "count": 1019,
+          "percentage": 95.5
+        },
+        "CD4 cell count (cells/\u00b5L)": {
+          "count": 1067,
+          "percentage": 100.0
+        }
+      }
+    }
+  }
+}

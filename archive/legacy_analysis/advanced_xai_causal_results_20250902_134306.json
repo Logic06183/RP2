@@ -1,0 +1,17 @@
+{
+  "glucose": {
+    "error": "No models successfully trained"
+  },
+  "total_cholesterol": {
+    "error": "No models successfully trained"
+  },
+  "systolic_bp": {
+    "error": "No models successfully trained"
+  },
+  "cross_biomarker_insights": {
+    "common_predictors": {},
+    "pathway_convergence": [],
+    "intervention_priorities": [],
+    "methodological_insights": []
+  }
+}

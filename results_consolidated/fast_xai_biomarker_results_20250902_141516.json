@@ -1,0 +1,32 @@
+{
+  "total_cholesterol": {
+    "n_samples": 304,
+    "model_r2": 0.11790418852763906,
+    "model_rmse": 0.9010128401847814,
+    "climate_contribution": 0.6136253647294231,
+    "top_predictor": "Age (at enrolment)",
+    "temperature_effect_plus3": 0.014423975039648174,
+    "temperature_effect_minus3": -8.70981684721592e-05,
+    "temperature_sensitivity": 0.0024185122013533887
+  },
+  "hdl": {
+    "n_samples": 304,
+    "model_r2": -0.03693805038896225,
+    "model_rmse": 0.49736063893959387,
+    "climate_contribution": 0.6473468041727237,
+    "top_predictor": "weight",
+    "temperature_effect_plus3": 0.03130238085661145,
+    "temperature_effect_minus3": -0.007270767990659999,
+    "temperature_sensitivity": 0.0064288581412119085
+  },
+  "ldl": {
+    "n_samples": 304,
+    "model_r2": 0.06017730590623438,
+    "model_rmse": 0.8827165927576253,
+    "climate_contribution": 0.6585824895966207,
+    "top_predictor": "temp_lag_21",
+    "temperature_effect_plus3": -0.0006818531878836804,
+    "temperature_effect_minus3": -0.009417878601663541,
+    "temperature_sensitivity": 0.0014560042356299768
+  }
+}

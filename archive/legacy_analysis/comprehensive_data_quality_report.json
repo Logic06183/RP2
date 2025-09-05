@@ -1,0 +1,853 @@
+{
+  "health_data": {
+    "total_records": 9103,
+    "total_columns": 137,
+    "date_range": {
+      "start": "2002-11-27T00:00:00",
+      "end": "2021-08-10T00:00:00",
+      "span_days": 6831
+    },
+    "missing_data_summary": {
+      "Age (at enrolment)": {
+        "missing_count": 2540,
+        "missing_percentage": 27.9
+      },
+      "Sex": {
+        "missing_count": 2244,
+        "missing_percentage": 24.65
+      },
+      "Race": {
+        "missing_count": 5137,
+        "missing_percentage": 56.43
+      },
+      "CD4 cell count (cells/\u00b5L)": {
+        "missing_count": 7820,
+        "missing_percentage": 85.91
+      },
+      "HIV viral load (copies/mL)": {
+        "missing_count": 8882,
+        "missing_percentage": 97.57
+      },
+      "Hemoglobin (g/dL)": {
+        "missing_count": 7820,
+        "missing_percentage": 85.91
+      },
+      "Hematocrit (%)": {
+        "missing_count": 8037,
+        "missing_percentage": 88.29
+      },
+      "White blood cell count (\u00d710\u00b3/\u00b5L)": {
+        "missing_count": 7820,
+        "missing_percentage": 85.91
+      },
+      "Platelet count (\u00d710\u00b3/\u00b5L)": {
+        "missing_count": 7836,
+        "missing_percentage": 86.08
+      },
+      "Lymphocytes (%)": {
+        "missing_count": 7820,
+        "missing_percentage": 85.91
+      },
+      "Neutrophils (%)": {
+        "missing_count": 7820,
+        "missing_percentage": 85.91
+      },
+      "Monocytes (%)": {
+        "missing_count": 8886,
+        "missing_percentage": 97.62
+      },
+      "Eosinophils (%)": {
+        "missing_count": 8886,
+        "missing_percentage": 97.62
+      },
+      "Basophils (%)": {
+        "missing_count": 8886,
+        "missing_percentage": 97.62
+      },
+      "Creatinine (mg/dL)": {
+        "missing_count": 7852,
+        "missing_percentage": 86.26
+      },
+      "ALT (U/L)": {
+        "missing_count": 7849,
+        "missing_percentage": 86.22
+      },
+      "AST (U/L)": {
+        "missing_count": 7849,
+        "missing_percentage": 86.22
+      },
+      "systolic blood pressure": {
+        "missing_count": 4146,
+        "missing_percentage": 45.55
+      },
+      "diastolic blood pressure": {
+        "missing_count": 4146,
+        "missing_percentage": 45.55
+      },
+      "heart rate": {
+        "missing_count": 7779,
+        "missing_percentage": 85.46
+      },
+      "weight": {
+        "missing_count": 2482,
+        "missing_percentage": 27.27
+      },
+      "Height": {
+        "missing_count": 2486,
+        "missing_percentage": 27.31
+      },
+      "oral temperature": {
+        "missing_count": 5659,
+        "missing_percentage": 62.17
+      },
+      "date": {
+        "missing_count": 940,
+        "missing_percentage": 10.33
+      },
+      "time (local)": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Date of Birth (N)": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Country": {
+        "missing_count": 6710,
+        "missing_percentage": 73.71
+      },
+      "Clinical Study ID": {
+        "missing_count": 8924,
+        "missing_percentage": 98.03
+      },
+      "Location of study follow-up": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Location of participant": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Housing type": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "No. of people in household": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Air conditioning access": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Socio-economic status indices": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Personal income": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Household income": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Substance use": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Smoking or alcohol use": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Employment status": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Education (highest level achieved)": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Marital status": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Religion": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Loss to follow-up": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "CD4 CELL %": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Mean Cell Haemoglobin": {
+        "missing_count": 8886,
+        "missing_percentage": 97.62
+      },
+      "MCV (MEAN CELL VOLUME)": {
+        "missing_count": 8886,
+        "missing_percentage": 97.62
+      },
+      "Mean Cell Haemoglobin Concentration": {
+        "missing_count": 8886,
+        "missing_percentage": 97.62
+      },
+      "Erythrocytes": {
+        "missing_count": 8885,
+        "missing_percentage": 97.61
+      },
+      "RDW": {
+        "missing_count": 8886,
+        "missing_percentage": 97.62
+      },
+      "Antiretroviral Therapy Status": {
+        "missing_count": 8882,
+        "missing_percentage": 97.57
+      },
+      "Drug Resistance": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Mother-to-Child Transmission": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Gestational Age at Enrollment": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Mode of Infection": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Pregnancy Outcome": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "ALL ALBUMIN": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "APPEARANCE": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "BILIRUBIN": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "COLOR": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Glucose (mg/dL)": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "KETONES": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "NITRITE": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "OCCULT BLOOD": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "PH": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "PROTEIN": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "SPECIFIC GRAVITY": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "UROBILINOGEN": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "creatinine clearance": {
+        "missing_count": 8882,
+        "missing_percentage": 97.57
+      },
+      "Albumin (g/dL)": {
+        "missing_count": 7131,
+        "missing_percentage": 78.34
+      },
+      "Alkaline phosphatase (U/L)": {
+        "missing_count": 8072,
+        "missing_percentage": 88.67
+      },
+      "PHOSPHATE inorganic, serum": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "ANION GAP": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Blood urea nitrogen (mg/dL)": {
+        "missing_count": 9013,
+        "missing_percentage": 99.01
+      },
+      "Calcium (mg/dL)": {
+        "missing_count": 9102,
+        "missing_percentage": 99.99
+      },
+      "Carbon dioxide (mEq/L)": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Chloride (mEq/L)": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Direct bilirubin (mg/dL)": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "GAMMA-GLOBULIN": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "FASTING GLUCOSE": {
+        "missing_count": 6367,
+        "missing_percentage": 69.94
+      },
+      "FASTING HDL": {
+        "missing_count": 6166,
+        "missing_percentage": 67.74
+      },
+      "FASTING INSULIN": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Potassium (mEq/L)": {
+        "missing_count": 7893,
+        "missing_percentage": 86.71
+      },
+      "SERUM MARKER LACTATE": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "LDH": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "FASTING LDL": {
+        "missing_count": 6167,
+        "missing_percentage": 67.75
+      },
+      "SERUM LIPASE": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Phosphorus (mg/dL)": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Sodium (mEq/L)": {
+        "missing_count": 8072,
+        "missing_percentage": 88.67
+      },
+      "FASTING TOTAL CHOLESTEROL": {
+        "missing_count": 6167,
+        "missing_percentage": 67.75
+      },
+      "Total bilirubin (mg/dL)": {
+        "missing_count": 8072,
+        "missing_percentage": 88.67
+      },
+      "Total protein (g/dL)": {
+        "missing_count": 8174,
+        "missing_percentage": 89.79
+      },
+      "FASTING TRIGLYCERIDES": {
+        "missing_count": 8131,
+        "missing_percentage": 89.32
+      },
+      "URIC ACID": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Oral glucose tolerance test fasting plasma glucose ": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Oral glucose tolerance test 1-h plasma glucose ": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Oral glucose tolerance test 2-h plasma glucose ": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "respiration rate": {
+        "missing_count": 7766,
+        "missing_percentage": 85.31
+      },
+      "Signs of dehydration": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Other measures of obesity": {
+        "missing_count": 7779,
+        "missing_percentage": 85.46
+      },
+      "GA_Delivery": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "GA_Enrolment": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "GA_Visit": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "GA_Source": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Gestational age at delivery": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "mode of delivery": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "anaemia": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "GDM": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "DM_preexisting ": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "DM_unspecified": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "APGAR Score": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Birth Weight": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Gestational Age": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Neonatal Mortality": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "Congenital Abnormalities": {
+        "missing_count": 9103,
+        "missing_percentage": 100.0
+      },
+      "study_week": {
+        "missing_count": 8347,
+        "missing_percentage": 91.7
+      },
+      "visit_date": {
+        "missing_count": 8163,
+        "missing_percentage": 89.67
+      },
+      "treatment_arm": {
+        "missing_count": 7666,
+        "missing_percentage": 84.21
+      },
+      "neurological_assessment_available": {
+        "missing_count": 9025,
+        "missing_percentage": 99.14
+      }
+    },
+    "geographic_coverage": {
+      "unique_coordinates": 3,
+      "lat_range": [
+        -26.2309,
+        -26.2041
+      ],
+      "lon_range": [
+        27.8585,
+        28.0473
+      ],
+      "subregions": {
+        "Central_JHB": 8128,
+        "Western_JHB": 975
+      }
+    },
+    "study_sources": {
+      "JHB_VIDA_007": 2129,
+      "JHB_JHSPH_005": 1182,
+      "JHB_WRHI_001": 1067,
+      "JHB_Ezin_002": 1053,
+      "JHB_DPHRU_053": 998,
+      "JHB_DPHRU_013": 784,
+      "JHB_VIDA_008": 550,
+      "JHB_ACTG_018": 240,
+      "JHB_WRHI_003": 221,
+      "JHB_ACTG_019": 183,
+      "JHB_EZIN_025": 179,
+      "JHB_ACTG_015": 177,
+      "JHB_SCHARP_006": 162,
+      "JHB_ACTG_016": 78,
+      "JHB_ACTG_021": 78,
+      "JHB_ACTG_017": 20,
+      "JHB_SCHARP_004": 2
+    },
+    "key_biomarkers_availability": {
+      "Glucose (mg/dL)": {
+        "available_records": 0,
+        "availability_percentage": 0.0,
+        "value_range": [
+          null,
+          null
+        ]
+      },
+      "systolic blood pressure": {
+        "available_records": 4957,
+        "availability_percentage": 54.45,
+        "value_range": [
+          81.0,
+          258.5
+        ]
+      },
+      "diastolic blood pressure": {
+        "available_records": 4957,
+        "availability_percentage": 54.45,
+        "value_range": [
+          39.0,
+          150.0
+        ]
+      },
+      "Total protein (g/dL)": {
+        "available_records": 929,
+        "availability_percentage": 10.21,
+        "value_range": [
+          12.09,
+          261.25
+        ]
+      },
+      "FASTING TOTAL CHOLESTEROL": {
+        "available_records": 2936,
+        "availability_percentage": 32.25,
+        "value_range": [
+          1.12,
+          251.93
+        ]
+      },
+      "Creatinine (mg/dL)": {
+        "available_records": 1251,
+        "availability_percentage": 13.74,
+        "value_range": [
+          0.42,
+          237.0
+        ]
+      },
+      "CD4 cell count (cells/\u00b5L)": {
+        "available_records": 1283,
+        "availability_percentage": 14.09,
+        "value_range": [
+          2.0,
+          1596.0
+        ]
+      },
+      "Hemoglobin (g/dL)": {
+        "available_records": 1283,
+        "availability_percentage": 14.09,
+        "value_range": [
+          5.4,
+          20.5
+        ]
+      }
+    }
+  },
+  "socio_data": {
+    "total_records": 500,
+    "total_columns": 359,
+    "survey_years": {
+      "2020-2021": 500
+    },
+    "geographic_coverage": {
+      "municipalities": {
+        "City of Johannesburg": 123,
+        "City of Ekurhuleni": 115,
+        "City of Tshwane": 98,
+        "Emfuleni": 34,
+        "Midvaal": 32,
+        "Rand West": 27,
+        "Mogale City": 27,
+        "Merafong": 22,
+        "Lesedi": 22
+      },
+      "planning_regions": {
+        "Emfuleni": 34,
+        "Midvaal": 32,
+        "Tshwane_1": 31,
+        "Ekurhuleni_F": 31,
+        "Johannesburg_D": 31,
+        "Ekurhuleni_B": 29,
+        "Rand West": 27,
+        "Mogale City": 27,
+        "Tshwane_6": 22,
+        "Merafong City": 22,
+        "Johannesburg_C": 22,
+        "Lesedi": 22,
+        "Ekurhuleni_E": 21,
+        "Johannesburg_F": 20,
+        "Tshwane_3": 18,
+        "Johannesburg_E": 18,
+        "Ekurhuleni_C": 16,
+        "Tshwane_4": 15,
+        "Johannesburg_A": 14,
+        "Ekurhuleni_A": 13,
+        "Johannesburg_G": 9,
+        "Tshwane_2": 9,
+        "Johannesburg_B": 9,
+        "Ekurhuleni_D": 5,
+        "Tshwane_5": 2,
+        "Tshwane_7": 1
+      }
+    },
+    "key_variables_availability": {
+      "q15_3_income_recode": {
+        "available_records": 367,
+        "availability_percentage": 73.4,
+        "unique_values": 6
+      },
+      "q14_1_education_recode": {
+        "available_records": 500,
+        "availability_percentage": 100.0,
+        "unique_values": 6
+      },
+      "q10_2_working": {
+        "available_records": 500,
+        "availability_percentage": 100.0,
+        "unique_values": 2
+      },
+      "q1_3_tenure": {
+        "available_records": 500,
+        "availability_percentage": 100.0,
+        "unique_values": 6
+      },
+      "q1_4_water": {
+        "available_records": 500,
+        "availability_percentage": 100.0,
+        "unique_values": 7
+      },
+      "q13_5_medical_aid": {
+        "available_records": 500,
+        "availability_percentage": 100.0,
+        "unique_values": 3
+      },
+      "q13_6_health_status": {
+        "available_records": 500,
+        "availability_percentage": 100.0,
+        "unique_values": 4
+      },
+      "QoLIndex_Data_Driven": {
+        "available_records": 500,
+        "availability_percentage": 100.0,
+        "unique_values": 500
+      },
+      "q6_4_skip_meal": {
+        "available_records": 500,
+        "availability_percentage": 100.0,
+        "unique_values": 2
+      },
+      "q8_13_poverty": {
+        "available_records": 500,
+        "availability_percentage": 100.0,
+        "unique_values": 7
+      }
+    },
+    "climate_integration_status": {
+      "era5_temp_1d_mean": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      },
+      "era5_temp_1d_max": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      },
+      "era5_temp_1d_extreme_days": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      },
+      "era5_temp_7d_mean": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      },
+      "era5_temp_7d_max": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      },
+      "era5_temp_7d_extreme_days": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      },
+      "era5_temp_30d_mean": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      },
+      "era5_temp_30d_max": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      },
+      "era5_temp_30d_extreme_days": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      },
+      "era5_lst_1d_mean": {
+        "available_records": 500,
+        "availability_percentage": 100.0
+      }
+    },
+    "missing_data_patterns": {
+      "high_missing_variables_50_plus_pct": [
+        [
+          "q1_2d_households",
+          77.4
+        ],
+        [
+          "q1_3b_renting",
+          76.6
+        ],
+        [
+          "q1_12_2_postpaid",
+          65.4
+        ],
+        [
+          "q1_12_8_dont_know",
+          92.4
+        ],
+        [
+          "q1_12_9_none",
+          93.8
+        ],
+        [
+          "q1_12a_elec_generation",
+          91.2
+        ],
+        [
+          "q1_12b_elec_gen_plans",
+          94.4
+        ],
+        [
+          "q1_13a_elec_plans_orig",
+          93.6
+        ],
+        [
+          "q1_13a_elec_plans",
+          93.6
+        ],
+        [
+          "q1_18_arrears_reason",
+          82.2
+        ],
+        [
+          "q3_2_birth_country",
+          87.8
+        ],
+        [
+          "q3_3_prev_residence",
+          52.6
+        ],
+        [
+          "q3_4_year_gp",
+          52.6
+        ],
+        [
+          "q3_4_year_gp_recode",
+          52.6
+        ],
+        [
+          "q3_6a_municipality",
+          57.4
+        ],
+        [
+          "q5_2_non_movement",
+          98.2
+        ],
+        [
+          "q5_8_pub_transport_waiting",
+          57.0
+        ],
+        [
+          "q5_9_pub_transport_safety",
+          57.0
+        ],
+        [
+          "q6_2a_missed",
+          64.0
+        ],
+        [
+          "q7_3_rx_novote",
+          90.2
+        ]
+      ],
+      "total_high_missing_vars": 43
+    }
+  },
+  "integration_analysis": {
+    "temporal_alignment": {
+      "health_date_range": [
+        "2002-11-27T00:00:00",
+        "2021-08-10T00:00:00"
+      ],
+      "socio_date_range": [
+        "2020-10-07T00:00:00",
+        "2021-05-26T00:00:00"
+      ],
+      "overlap_period": [
+        "2020-10-07T00:00:00",
+        "2021-05-26T00:00:00"
+      ],
+      "overlap_days": 231
+    },
+    "spatial_alignment": {
+      "health_geographic_bounds": {
+        "lat_min": -26.2309,
+        "lat_max": -26.2041,
+        "lon_min": 27.8585,
+        "lon_max": 28.0473
+      },
+      "socio_has_climate_data": true,
+      "integration_feasible": true
+    },
+    "sample_size_implications": {
+      "health_records": 9103,
+      "socio_records": 500,
+      "integration_approach": "climate_based",
+      "expected_analytical_power": "high"
+    },
+    "methodological_considerations": [
+      "Health data spans multiple studies with different protocols",
+      "Socioeconomic data from cross-sectional survey with climate integration",
+      "Integration possible through climate exposure variables",
+      "Temporal alignment allows examination of climate-health relationships",
+      "Geographic alignment within Johannesburg metropolitan area",
+      "Different sampling frameworks require careful statistical handling"
+    ]
+  }
+}

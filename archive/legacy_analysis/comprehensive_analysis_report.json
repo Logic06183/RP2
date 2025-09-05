@@ -1,0 +1,979 @@
+{
+  "analysis_metadata": {
+    "timestamp": "2025-09-02T10:52:01.364837",
+    "analyst": "Claude Code Assistant",
+    "analysis_type": "Comprehensive Heat-Health-Socioeconomic Analysis"
+  },
+  "datasets": {
+    "health_data": {
+      "source": "HEAT_Johannesburg_FINAL_20250811_163049.csv",
+      "total_records": 9103,
+      "biomarker_observations": 21459,
+      "date_range": {
+        "start": "2002-11-27T00:00:00",
+        "end": "2021-08-10T00:00:00"
+      }
+    },
+    "socioeconomic_data": {
+      "source": "GCRO_combined_climate_SUBSET.csv",
+      "total_records": 500,
+      "climate_variables": 18
+    }
+  },
+  "methodology_log": [
+    {
+      "step": "HEALTH_DATA_LOAD",
+      "details": "Loading comprehensive health dataset (HEAT_Johannesburg_FINAL)",
+      "timestamp": "2025-09-02T10:51:58.886010",
+      "critical_assumptions": [
+        "Multiple studies with different protocols",
+        "Harmonized variables may have different measurement standards",
+        "Missing data patterns may be study-specific"
+      ]
+    },
+    {
+      "step": "BIOMARKER_RESHAPE",
+      "details": "Reshaped to 21459 biomarker observations",
+      "timestamp": "2025-09-02T10:52:00.814647",
+      "critical_assumptions": [
+        "Each biomarker treated as separate observation",
+        "Accounts for different measurement frequencies across biomarkers",
+        "Preserves all available data without imputation"
+      ]
+    },
+    {
+      "step": "SOCIO_DATA_LOAD",
+      "details": "Loading GCRO Quality of Life Survey with climate integration",
+      "timestamp": "2025-09-02T10:52:00.866944",
+      "critical_assumptions": [
+        "Cross-sectional survey from 2020-2021",
+        "Climate data already integrated at individual level",
+        "Representative sample of Johannesburg metropolitan area"
+      ]
+    },
+    {
+      "step": "CLIMATE_INTEGRATION_VERIFIED",
+      "details": "Found 9 climate variables pre-integrated",
+      "timestamp": "2025-09-02T10:52:00.960050",
+      "critical_assumptions": [
+        "ERA5 temperature data with 1, 7, and 30-day windows",
+        "Climate exposure calculated at individual interview location/date",
+        "Accounts for temporal and spatial climate variation"
+      ]
+    },
+    {
+      "step": "CLIMATE_LINKAGE_STRATEGY",
+      "details": "Creating climate-health linkage via spatial-temporal modeling",
+      "timestamp": "2025-09-02T10:52:00.960113",
+      "critical_assumptions": [
+        "Health data: individual clinical measurements with coordinates/dates",
+        "Socio data: survey responses with climate exposure already calculated",
+        "Linkage: Use climate patterns to understand heat-health relationships",
+        "Cannot directly merge due to different sampling frameworks"
+      ]
+    },
+    {
+      "step": "HEAT_BIOMARKER_ANALYSIS",
+      "details": "Analyzed 6 biomarkers for heat relationships",
+      "timestamp": "2025-09-02T10:52:01.240207",
+      "critical_assumptions": [
+        "Seasonal temperature proxy used for heat exposure classification",
+        "ANOVA tests for heat exposure group differences",
+        "Linear regression for temporal trends",
+        "Minimum thresholds applied for statistical reliability"
+      ]
+    },
+    {
+      "step": "SOCIO_CLIMATE_ANALYSIS",
+      "details": "Analyzing socioeconomic vulnerability and climate exposure patterns",
+      "timestamp": "2025-09-02T10:52:01.240747",
+      "critical_assumptions": [
+        "Direct analysis of GCRO data with integrated climate variables",
+        "Examines differential climate exposure by socioeconomic status",
+        "Tests for environmental justice patterns"
+      ]
+    },
+    {
+      "step": "SOCIO_CLIMATE_COMPLETED",
+      "details": "Analyzed 6 socioeconomic variables",
+      "timestamp": "2025-09-02T10:52:01.364737",
+      "critical_assumptions": [
+        "Pearson correlations for continuous relationships",
+        "Group analysis for categorical socioeconomic variables",
+        "Tests for differential climate exposure by social status"
+      ]
+    },
+    {
+      "step": "REPORT_GENERATION",
+      "details": "Generating comprehensive analysis report",
+      "timestamp": "2025-09-02T10:52:01.364812",
+      "critical_assumptions": [
+        "All methodological decisions documented",
+        "Statistical assumptions explicitly stated",
+        "Limitations clearly acknowledged"
+      ]
+    }
+  ],
+  "heat_biomarker_results": {
+    "systolic_bp": {
+      "n_observations": 4957,
+      "heat_exposure_analysis": {
+        "Low": {
+          "n": 2496,
+          "mean": 127.97489316239317,
+          "std": 14.802385419441837,
+          "median": 127.75,
+          "q25": 118.0,
+          "q75": 136.125
+        },
+        "Moderate": {
+          "n": 1830,
+          "mean": 124.99635701275047,
+          "std": 18.04851961489404,
+          "median": 123.0,
+          "q25": 113.0,
+          "q75": 135.0
+        },
+        "High": {
+          "n": 631,
+          "mean": 123.49207606973059,
+          "std": 17.682937218723858,
+          "median": 122.0,
+          "q25": 110.0,
+          "q75": 135.0
+        }
+      },
+      "temporal_trends": {
+        "slope": 1.1513561643063452,
+        "r_squared": 0.56914940478748,
+        "p_value": 0.05003471562242149,
+        "years_analyzed": 7
+      },
+      "statistical_tests": {
+        "anova_heat_exposure": {
+          "f_statistic": 27.899457778561988,
+          "p_value": 8.936106314436121e-13,
+          "significant": "True"
+        }
+      }
+    },
+    "diastolic_bp": {
+      "n_observations": 4957,
+      "heat_exposure_analysis": {
+        "Low": {
+          "n": 2496,
+          "mean": 80.37319711538461,
+          "std": 11.08910601392523,
+          "median": 80.0,
+          "q25": 73.0,
+          "q75": 87.0
+        },
+        "Moderate": {
+          "n": 1830,
+          "mean": 81.2504553734062,
+          "std": 12.595710661776486,
+          "median": 80.5,
+          "q25": 73.0,
+          "q75": 88.0
+        },
+        "High": {
+          "n": 631,
+          "mean": 80.37031167459061,
+          "std": 12.52273230710186,
+          "median": 80.0,
+          "q25": 72.0,
+          "q75": 87.25
+        }
+      },
+      "temporal_trends": {
+        "slope": 0.13963508867929164,
+        "r_squared": 0.024037880357734177,
+        "p_value": 0.7399453264375702,
+        "years_analyzed": 7
+      },
+      "statistical_tests": {
+        "anova_heat_exposure": {
+          "f_statistic": 3.167013076746978,
+          "p_value": 0.04221455636088729,
+          "significant": "True"
+        }
+      }
+    },
+    "total_cholesterol": {
+      "n_observations": 2936,
+      "heat_exposure_analysis": {
+        "Low": {
+          "n": 617,
+          "mean": 17.614230145867097,
+          "std": 43.531470167012415,
+          "median": 4.24,
+          "q25": 3.51,
+          "q75": 5.1
+        },
+        "Moderate": {
+          "n": 1686,
+          "mean": 21.10186832740213,
+          "std": 47.80100767728913,
+          "median": 4.33,
+          "q25": 3.6,
+          "q75": 5.37
+        },
+        "High": {
+          "n": 633,
+          "mean": 45.8577093206951,
+          "std": 66.90989590650376,
+          "median": 4.64,
+          "q25": 3.7,
+          "q75": 115.29
+        }
+      },
+      "temporal_trends": {
+        "slope": -4.476304321771456,
+        "r_squared": 0.12154497017031014,
+        "p_value": 0.4434452861969872,
+        "years_analyzed": 7
+      },
+      "statistical_tests": {
+        "anova_heat_exposure": {
+          "f_statistic": 62.27085733482692,
+          "p_value": 3.269859410885204e-27,
+          "significant": "True"
+        }
+      }
+    },
+    "hdl_cholesterol": {
+      "n_observations": 2937,
+      "heat_exposure_analysis": {
+        "Low": {
+          "n": 618,
+          "mean": 4.84163430420712,
+          "std": 12.056543906584437,
+          "median": 1.2,
+          "q25": 0.99,
+          "q75": 1.5
+        },
+        "Moderate": {
+          "n": 1686,
+          "mean": 5.395800711743772,
+          "std": 12.23948021309198,
+          "median": 1.22,
+          "q25": 0.98,
+          "q75": 1.58
+        },
+        "High": {
+          "n": 633,
+          "mean": 11.875450236966824,
+          "std": 17.743919438830666,
+          "median": 1.4,
+          "q25": 1.07,
+          "q75": 26.0
+        }
+      },
+      "temporal_trends": {
+        "slope": -1.093982666929351,
+        "r_squared": 0.10994452642746987,
+        "p_value": 0.46752125586646853,
+        "years_analyzed": 7
+      },
+      "statistical_tests": {
+        "anova_heat_exposure": {
+          "f_statistic": 59.525202597149985,
+          "p_value": 4.5628911373219555e-26,
+          "significant": "True"
+        }
+      }
+    },
+    "ldl_cholesterol": {
+      "n_observations": 2936,
+      "heat_exposure_analysis": {
+        "Low": {
+          "n": 618,
+          "mean": 10.463284789644012,
+          "std": 26.866589864422217,
+          "median": 2.425,
+          "q25": 1.7,
+          "q75": 3.1975000000000002
+        },
+        "Moderate": {
+          "n": 1686,
+          "mean": 12.685344009489917,
+          "std": 30.362103561362556,
+          "median": 2.35,
+          "q25": 1.64,
+          "q75": 3.2675
+        },
+        "High": {
+          "n": 632,
+          "mean": 27.451645569620258,
+          "std": 41.70550638582335,
+          "median": 2.9,
+          "q25": 1.93,
+          "q75": 58.2475
+        }
+      },
+      "temporal_trends": {
+        "slope": -2.673388594153791,
+        "r_squared": 0.115505788076349,
+        "p_value": 0.4557692775187863,
+        "years_analyzed": 7
+      },
+      "statistical_tests": {
+        "anova_heat_exposure": {
+          "f_statistic": 56.49564103329176,
+          "p_value": 8.415236508777866e-25,
+          "significant": "True"
+        }
+      }
+    },
+    "glucose": {
+      "n_observations": 2736,
+      "heat_exposure_analysis": {
+        "Low": {
+          "n": 572,
+          "mean": 12.246853146853146,
+          "std": 21.790112506356923,
+          "median": 5.055,
+          "q25": 4.5,
+          "q75": 5.7925
+        },
+        "Moderate": {
+          "n": 1595,
+          "mean": 14.073366771159876,
+          "std": 25.417441213262116,
+          "median": 4.9,
+          "q25": 4.4,
+          "q75": 5.6
+        },
+        "High": {
+          "n": 569,
+          "mean": 28.633497363796135,
+          "std": 34.736280632046956,
+          "median": 5.37,
+          "q25": 4.59,
+          "q75": 71.0
+        }
+      },
+      "temporal_trends": {
+        "slope": -1.7694950874033515,
+        "r_squared": 0.07733535627670259,
+        "p_value": 0.5936146574657832,
+        "years_analyzed": 6
+      },
+      "statistical_tests": {
+        "anova_heat_exposure": {
+          "f_statistic": 71.12037784041217,
+          "p_value": 7.757839899326945e-31,
+          "significant": "True"
+        }
+      }
+    }
+  },
+  "socio_climate_results": {
+    "income": {
+      "variable": "q15_3_income_recode",
+      "climate_relationships": {
+        "temp_30d_mean": {
+          "n_observations": 367,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "R25 601 - R51 200": {
+              "n": 23,
+              "mean": 19.738356548806895,
+              "std": 1.4071447335680851,
+              "median": 19.89890480041504
+            },
+            "R3 201 - R12 800": {
+              "n": 109,
+              "mean": 20.114796725981826,
+              "std": 1.2184551927581484,
+              "median": 20.04378318786621
+            },
+            "R801 - R3 200": {
+              "n": 127,
+              "mean": 20.209043998417894,
+              "std": 1.274213318138587,
+              "median": 20.19862937927246
+            },
+            "R1 - R800": {
+              "n": 64,
+              "mean": 20.34249320626259,
+              "std": 1.3846762350846629,
+              "median": 20.22068977355957
+            },
+            "R12 801 - R25 600": {
+              "n": 32,
+              "mean": 19.93568393588066,
+              "std": 1.4077795306888061,
+              "median": 20.152488708496094
+            },
+            "R51 201 and more": {
+              "n": 12,
+              "mean": 19.274064858754475,
+              "std": 1.4522817243749058,
+              "median": 19.052541732788086
+            }
+          }
+        },
+        "temp_30d_max": {
+          "n_observations": 367,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "R25 601 - R51 200": {
+              "n": 23,
+              "mean": 31.019135848335598,
+              "std": 1.7325990392781123,
+              "median": 30.76202392578125
+            },
+            "R3 201 - R12 800": {
+              "n": 109,
+              "mean": 31.532651848749282,
+              "std": 1.407497227313209,
+              "median": 31.18695068359375
+            },
+            "R801 - R3 200": {
+              "n": 127,
+              "mean": 31.81817386657234,
+              "std": 1.4133811629807174,
+              "median": 32.19854736328125
+            },
+            "R1 - R800": {
+              "n": 64,
+              "mean": 31.8542537689209,
+              "std": 1.382811585964261,
+              "median": 32.321441650390625
+            },
+            "R12 801 - R25 600": {
+              "n": 32,
+              "mean": 31.266379356384277,
+              "std": 1.5847969126345203,
+              "median": 30.76202392578125
+            },
+            "R51 201 and more": {
+              "n": 12,
+              "mean": 30.846811930338543,
+              "std": 1.9058187337440038,
+              "median": 29.95758056640625
+            }
+          }
+        },
+        "temp_extreme_days": {
+          "n_observations": 367,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "R25 601 - R51 200": {
+              "n": 23,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "R3 201 - R12 800": {
+              "n": 109,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "R801 - R3 200": {
+              "n": 127,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "R1 - R800": {
+              "n": 64,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "R12 801 - R25 600": {
+              "n": 32,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "R51 201 and more": {
+              "n": 12,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            }
+          }
+        }
+      }
+    },
+    "education": {
+      "variable": "q14_1_education_recode",
+      "climate_relationships": {
+        "temp_30d_mean": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "More": {
+              "n": 130,
+              "mean": 19.788151264190674,
+              "std": 1.5825771908325632,
+              "median": 19.901984214782715
+            },
+            "Matric": {
+              "n": 151,
+              "mean": 19.878524521328757,
+              "std": 1.6096611523187638,
+              "median": 20.10239601135254
+            },
+            "Secondary incomplete": {
+              "n": 166,
+              "mean": 20.254551226834216,
+              "std": 1.35204423794576,
+              "median": 20.1841983795166
+            },
+            "Primary only": {
+              "n": 40,
+              "mean": 20.163633871078492,
+              "std": 1.4508429934888611,
+              "median": 20.19232749938965
+            }
+          }
+        },
+        "temp_30d_max": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "More": {
+              "n": 130,
+              "mean": 31.274473689152643,
+              "std": 1.6663875402564687,
+              "median": 30.918609619140625
+            },
+            "Matric": {
+              "n": 151,
+              "mean": 31.496485425936466,
+              "std": 1.6064942849855646,
+              "median": 31.63510131835937
+            },
+            "Secondary incomplete": {
+              "n": 166,
+              "mean": 31.654961275767132,
+              "std": 1.4935004460387935,
+              "median": 31.65292358398437
+            },
+            "Primary only": {
+              "n": 40,
+              "mean": 31.59027557373047,
+              "std": 1.410758711851596,
+              "median": 31.411026000976562
+            }
+          }
+        },
+        "temp_extreme_days": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "More": {
+              "n": 130,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "Matric": {
+              "n": 151,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "Secondary incomplete": {
+              "n": 166,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "Primary only": {
+              "n": 40,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            }
+          }
+        }
+      }
+    },
+    "employment": {
+      "variable": "q10_2_working",
+      "climate_relationships": {
+        "temp_30d_mean": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Yes": {
+              "n": 195,
+              "mean": 19.851449120350374,
+              "std": 1.5856763816392128,
+              "median": 20.03353500366211
+            },
+            "No": {
+              "n": 305,
+              "mean": 20.127789525516697,
+              "std": 1.4450483999087596,
+              "median": 20.123538970947266
+            }
+          }
+        },
+        "temp_30d_max": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Yes": {
+              "n": 195,
+              "mean": 31.20008748372396,
+              "std": 1.6019503623952558,
+              "median": 30.76202392578125
+            },
+            "No": {
+              "n": 305,
+              "mean": 31.72859377001153,
+              "std": 1.5051939936878027,
+              "median": 32.19854736328125
+            }
+          }
+        },
+        "temp_extreme_days": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Yes": {
+              "n": 195,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "No": {
+              "n": 305,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            }
+          }
+        }
+      }
+    },
+    "medical_aid": {
+      "variable": "q13_5_medical_aid",
+      "climate_relationships": {
+        "temp_30d_mean": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Yes": {
+              "n": 118,
+              "mean": 19.51074705285541,
+              "std": 1.7888337436441246,
+              "median": 19.865777015686035
+            },
+            "No": {
+              "n": 381,
+              "mean": 20.17458766276442,
+              "std": 1.3727896307311638,
+              "median": 20.178503036499023
+            }
+          }
+        },
+        "temp_30d_max": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Yes": {
+              "n": 118,
+              "mean": 30.973618846828654,
+              "std": 1.7313615746954039,
+              "median": 30.760604858398438
+            },
+            "No": {
+              "n": 381,
+              "mean": 31.693344316457512,
+              "std": 1.4710521301785964,
+              "median": 32.19854736328125
+            }
+          }
+        },
+        "temp_extreme_days": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Yes": {
+              "n": 118,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "No": {
+              "n": 381,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            }
+          }
+        }
+      }
+    },
+    "dwelling_satisfaction": {
+      "variable": "q2_1_dwelling",
+      "climate_relationships": {
+        "temp_30d_mean": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Very satisfied": {
+              "n": 131,
+              "mean": 19.82536198710667,
+              "std": 1.6405782343952267,
+              "median": 20.009431838989254
+            },
+            "Satisfied": {
+              "n": 215,
+              "mean": 20.11960565433946,
+              "std": 1.4789386864476575,
+              "median": 20.13665580749512
+            },
+            "Very dissatisfied": {
+              "n": 49,
+              "mean": 20.172118751370178,
+              "std": 1.448010684652898,
+              "median": 20.19486618041992
+            },
+            "Dissatisfied": {
+              "n": 72,
+              "mean": 19.980896181530422,
+              "std": 1.3206576104409675,
+              "median": 20.09293556213379
+            },
+            "Neither satisfied nor dissatisfied": {
+              "n": 33,
+              "mean": 20.003406177867543,
+              "std": 1.5898040809734926,
+              "median": 19.99323844909668
+            }
+          }
+        },
+        "temp_30d_max": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Very satisfied": {
+              "n": 131,
+              "mean": 31.304769268472686,
+              "std": 1.5952676792491618,
+              "median": 31.119781494140625
+            },
+            "Satisfied": {
+              "n": 215,
+              "mean": 31.60166384674782,
+              "std": 1.5085903224216801,
+              "median": 31.63510131835937
+            },
+            "Very dissatisfied": {
+              "n": 49,
+              "mean": 31.812069017059947,
+              "std": 1.4892655745631362,
+              "median": 32.376861572265625
+            },
+            "Dissatisfied": {
+              "n": 72,
+              "mean": 31.547889709472656,
+              "std": 1.6673132488005347,
+              "median": 31.119781494140625
+            },
+            "Neither satisfied nor dissatisfied": {
+              "n": 33,
+              "mean": 31.38533991033381,
+              "std": 1.637337529795859,
+              "median": 31.836669921875
+            }
+          }
+        },
+        "temp_extreme_days": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Very satisfied": {
+              "n": 131,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "Satisfied": {
+              "n": 215,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "Very dissatisfied": {
+              "n": 49,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "Dissatisfied": {
+              "n": 72,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "Neither satisfied nor dissatisfied": {
+              "n": 33,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            }
+          }
+        }
+      }
+    },
+    "health_status": {
+      "variable": "q13_6_health_status",
+      "climate_relationships": {
+        "temp_30d_mean": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Excellent": {
+              "n": 164,
+              "mean": 20.066105104074246,
+              "std": 1.542469801262614,
+              "median": 20.1467342376709
+            },
+            "Good": {
+              "n": 269,
+              "mean": 19.932488671909034,
+              "std": 1.4711137502446936,
+              "median": 20.03301239013672
+            },
+            "Poor": {
+              "n": 58,
+              "mean": 20.11267247693292,
+              "std": 1.506005104195524,
+              "median": 20.18226432800293
+            }
+          }
+        },
+        "temp_30d_max": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Excellent": {
+              "n": 164,
+              "mean": 31.610081742449506,
+              "std": 1.601189819376917,
+              "median": 31.63510131835937
+            },
+            "Good": {
+              "n": 269,
+              "mean": 31.39615424060467,
+              "std": 1.5590413828817322,
+              "median": 31.119781494140625
+            },
+            "Poor": {
+              "n": 58,
+              "mean": 31.738054472824622,
+              "std": 1.4913423694484458,
+              "median": 32.07905578613281
+            }
+          }
+        },
+        "temp_extreme_days": {
+          "n_observations": 500,
+          "correlation": {
+            "coefficient": NaN,
+            "p_value": NaN,
+            "significant": "False"
+          },
+          "group_analysis": {
+            "Excellent": {
+              "n": 164,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "Good": {
+              "n": 269,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            },
+            "Poor": {
+              "n": 58,
+              "mean": 0.0,
+              "std": 0.0,
+              "median": 0.0
+            }
+          }
+        }
+      }
+    }
+  }
+}

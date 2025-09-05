@@ -1,0 +1,491 @@
+[
+  {
+    "study": "JHB_WRHI_003",
+    "n_participants": 305,
+    "n_biomarkers": 9,
+    "biomarkers": {
+      "total_cholesterol": {
+        "original_column": "FASTING TOTAL CHOLESTEROL",
+        "valid_count": "305",
+        "total_count": "305",
+        "percent_valid": 100.0
+      },
+      "hdl_cholesterol": {
+        "original_column": "FASTING HDL",
+        "valid_count": "304",
+        "total_count": "305",
+        "percent_valid": 99.672131147541
+      },
+      "ldl_cholesterol": {
+        "original_column": "FASTING LDL",
+        "valid_count": "305",
+        "total_count": "305",
+        "percent_valid": 100.0
+      },
+      "systolic_bp": {
+        "original_column": "systolic blood pressure",
+        "valid_count": "305",
+        "total_count": "305",
+        "percent_valid": 100.0
+      },
+      "diastolic_bp": {
+        "original_column": "diastolic blood pressure",
+        "valid_count": "305",
+        "total_count": "305",
+        "percent_valid": 100.0
+      },
+      "creatinine": {
+        "original_column": "CREATININE",
+        "valid_count": "305",
+        "total_count": "305",
+        "percent_valid": 100.0
+      },
+      "hemoglobin": {
+        "original_column": "HEMOGLOBIN",
+        "valid_count": "301",
+        "total_count": "301",
+        "percent_valid": 98.68852459016394
+      },
+      "cd4_count": {
+        "original_column": "CD4 Count",
+        "valid_count": "300",
+        "total_count": "300",
+        "percent_valid": 98.36065573770492
+      },
+      "alt": {
+        "original_column": "ALT",
+        "valid_count": "305",
+        "total_count": "305",
+        "percent_valid": 100.0
+      }
+    },
+    "date_coverage": {
+      "start_date": "2016-07-18T00:00:00",
+      "end_date": "2017-06-15T00:00:00",
+      "n_dates": 305,
+      "date_range_days": 332,
+      "unique_dates": 128,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_DPHRU_013",
+    "n_participants": 784,
+    "n_biomarkers": 6,
+    "biomarkers": {
+      "glucose": {
+        "original_column": "FASTING GLUCOSE",
+        "valid_count": "736",
+        "total_count": "750",
+        "percent_valid": 93.87755102040816
+      },
+      "total_cholesterol": {
+        "original_column": "FASTING TOTAL CHOLESTEROL",
+        "valid_count": "715",
+        "total_count": "724",
+        "percent_valid": 91.19897959183673
+      },
+      "hdl_cholesterol": {
+        "original_column": "FASTING HDL",
+        "valid_count": "696",
+        "total_count": "725",
+        "percent_valid": 88.77551020408163
+      },
+      "ldl_cholesterol": {
+        "original_column": "FASTING LDL",
+        "valid_count": "717",
+        "total_count": "725",
+        "percent_valid": 91.45408163265306
+      },
+      "systolic_bp": {
+        "original_column": "systolic blood pressure",
+        "valid_count": "563",
+        "total_count": "563",
+        "percent_valid": 71.81122448979592
+      },
+      "diastolic_bp": {
+        "original_column": "diastolic blood pressure",
+        "valid_count": "563",
+        "total_count": "563",
+        "percent_valid": 71.81122448979592
+      }
+    },
+    "date_coverage": {
+      "start_date": "2011-02-10T00:00:00",
+      "end_date": "2013-06-19T00:00:00",
+      "n_dates": 768,
+      "date_range_days": 860,
+      "unique_dates": 232,
+      "date_completeness": 0.9795918367346939
+    }
+  },
+  {
+    "study": "JHB_ACTG_015",
+    "n_participants": 177,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2005-11-11T00:00:00",
+      "end_date": "2008-03-06T00:00:00",
+      "n_dates": 177,
+      "date_range_days": 846,
+      "unique_dates": 45,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_ACTG_016",
+    "n_participants": 78,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2007-10-10T00:00:00",
+      "end_date": "2009-08-17T00:00:00",
+      "n_dates": 78,
+      "date_range_days": 677,
+      "unique_dates": 66,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_ACTG_017",
+    "n_participants": 20,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2003-10-20T00:00:00",
+      "end_date": "2004-08-26T00:00:00",
+      "n_dates": 20,
+      "date_range_days": 311,
+      "unique_dates": 7,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_ACTG_018",
+    "n_participants": 240,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2011-05-17T00:00:00",
+      "end_date": "2012-05-22T00:00:00",
+      "n_dates": 240,
+      "date_range_days": 371,
+      "unique_dates": 139,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_ACTG_019",
+    "n_participants": 183,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2005-05-31T00:00:00",
+      "end_date": "2007-06-12T00:00:00",
+      "n_dates": 183,
+      "date_range_days": 742,
+      "unique_dates": 40,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_ACTG_021",
+    "n_participants": 78,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2006-03-30T00:00:00",
+      "end_date": "2007-06-12T00:00:00",
+      "n_dates": 78,
+      "date_range_days": 439,
+      "unique_dates": 33,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_Aurum_009",
+    "n_participants": 2930,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2013-03-14T00:00:00",
+      "end_date": "2015-08-01T00:00:00",
+      "n_dates": 2930,
+      "date_range_days": 870,
+      "unique_dates": 447,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_DPHRU_053",
+    "n_participants": 1013,
+    "n_biomarkers": 6,
+    "biomarkers": {
+      "glucose": {
+        "original_column": "FASTING GLUCOSE",
+        "valid_count": "981",
+        "total_count": "988",
+        "percent_valid": 96.84106614017769
+      },
+      "total_cholesterol": {
+        "original_column": "FASTING TOTAL CHOLESTEROL",
+        "valid_count": "983",
+        "total_count": "986",
+        "percent_valid": 97.03849950641658
+      },
+      "hdl_cholesterol": {
+        "original_column": "FASTING HDL",
+        "valid_count": "985",
+        "total_count": "986",
+        "percent_valid": 97.23593287265548
+      },
+      "ldl_cholesterol": {
+        "original_column": "FASTING LDL",
+        "valid_count": "974",
+        "total_count": "986",
+        "percent_valid": 96.15004935834156
+      },
+      "systolic_bp": {
+        "original_column": "systolic blood pressure",
+        "valid_count": "1003",
+        "total_count": "1005",
+        "percent_valid": 99.01283316880553
+      },
+      "diastolic_bp": {
+        "original_column": "diastolic blood pressure",
+        "valid_count": "1003",
+        "total_count": "1005",
+        "percent_valid": 99.01283316880553
+      }
+    },
+    "date_coverage": {
+      "start_date": "2017-01-23T00:00:00",
+      "end_date": "2018-07-24T00:00:00",
+      "n_dates": 998,
+      "date_range_days": 547,
+      "unique_dates": 301,
+      "date_completeness": 0.9851924975320829
+    }
+  },
+  {
+    "study": "JHB_EZIN_025",
+    "n_participants": 192,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2020-09-08T00:00:00",
+      "end_date": "2021-07-29T00:00:00",
+      "n_dates": 192,
+      "date_range_days": 324,
+      "unique_dates": 89,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_EZIN_002",
+    "n_participants": 1053,
+    "n_biomarkers": 3,
+    "biomarkers": {
+      "systolic_bp": {
+        "original_column": "systolic blood pressure",
+        "valid_count": "1053",
+        "total_count": "1053",
+        "percent_valid": 100.0
+      },
+      "diastolic_bp": {
+        "original_column": "diastolic blood pressure",
+        "valid_count": "1052",
+        "total_count": "1053",
+        "percent_valid": 99.90503323836657
+      },
+      "hemoglobin": {
+        "original_column": "hemoglobin",
+        "valid_count": "1052",
+        "total_count": "1052",
+        "percent_valid": 99.90503323836657
+      }
+    },
+    "date_coverage": {
+      "start_date": "2017-01-17T00:00:00",
+      "end_date": "2018-05-07T00:00:00",
+      "n_dates": 1053,
+      "date_range_days": 475,
+      "unique_dates": 268,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_JHSPH_005",
+    "n_participants": 1182,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2002-11-27T00:00:00",
+      "end_date": "2009-02-03T00:00:00",
+      "n_dates": 1182,
+      "date_range_days": 2260,
+      "unique_dates": 649,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_SCHARP_004",
+    "n_participants": 401,
+    "n_biomarkers": 2,
+    "biomarkers": {
+      "hemoglobin": {
+        "original_column": "hemoglobin",
+        "valid_count": "401",
+        "total_count": "401",
+        "percent_valid": 100.0
+      },
+      "alt": {
+        "original_column": "ALT",
+        "valid_count": "400",
+        "total_count": "401",
+        "percent_valid": 99.75062344139651
+      }
+    },
+    "date_coverage": {
+      "start_date": "2015-01-01T00:00:00",
+      "end_date": "2016-01-06T00:00:00",
+      "n_dates": 4,
+      "date_range_days": 370,
+      "unique_dates": 3,
+      "date_completeness": 0.00997506234413965
+    }
+  },
+  {
+    "study": "JHB_SCHARP_006",
+    "n_participants": 451,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2017-01-01T00:00:00",
+      "end_date": "2017-01-01T00:00:00",
+      "n_dates": 451,
+      "date_range_days": 0,
+      "unique_dates": 1,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_VIDA_007",
+    "n_participants": 2129,
+    "n_biomarkers": 2,
+    "biomarkers": {
+      "systolic_bp": {
+        "original_column": "systolic blood pressure",
+        "valid_count": "2129",
+        "total_count": "2129",
+        "percent_valid": 100.0
+      },
+      "diastolic_bp": {
+        "original_column": "diastolic blood pressure",
+        "valid_count": "2129",
+        "total_count": "2129",
+        "percent_valid": 100.0
+      }
+    },
+    "date_coverage": {
+      "start_date": "2020-06-15T00:00:00",
+      "end_date": "2020-11-10T00:00:00",
+      "n_dates": 2129,
+      "date_range_days": 148,
+      "unique_dates": 107,
+      "date_completeness": 1.0
+    }
+  },
+  {
+    "study": "JHB_VIDA_008",
+    "n_participants": 557,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2020-04-22T00:00:00",
+      "end_date": "2021-08-10T00:00:00",
+      "n_dates": 550,
+      "date_range_days": 475,
+      "unique_dates": 117,
+      "date_completeness": 0.9874326750448833
+    }
+  },
+  {
+    "study": "JHB_WRHI_001",
+    "n_participants": 1072,
+    "n_biomarkers": 8,
+    "biomarkers": {
+      "glucose": {
+        "original_column": "FASTING GLUCOSE",
+        "valid_count": "575",
+        "total_count": "1012",
+        "percent_valid": 53.63805970149254
+      },
+      "total_cholesterol": {
+        "original_column": "FASTING TOTAL CHOLESTEROL",
+        "valid_count": "578",
+        "total_count": "1019",
+        "percent_valid": 53.917910447761194
+      },
+      "hdl_cholesterol": {
+        "original_column": "FASTING HDL",
+        "valid_count": "575",
+        "total_count": "1019",
+        "percent_valid": 53.63805970149254
+      },
+      "ldl_cholesterol": {
+        "original_column": "FASTING LDL",
+        "valid_count": "578",
+        "total_count": "1018",
+        "percent_valid": 53.917910447761194
+      },
+      "creatinine": {
+        "original_column": "CREATININE",
+        "valid_count": "589",
+        "total_count": "1030",
+        "percent_valid": 54.94402985074627
+      },
+      "hemoglobin": {
+        "original_column": "HEMOGLOBIN",
+        "valid_count": "1064",
+        "total_count": "1066",
+        "percent_valid": 99.25373134328358
+      },
+      "cd4_count": {
+        "original_column": "CD4 Count",
+        "valid_count": "1067",
+        "total_count": "1067",
+        "percent_valid": 99.53358208955224
+      },
+      "alt": {
+        "original_column": "ALT",
+        "valid_count": "1031",
+        "total_count": "1031",
+        "percent_valid": 96.17537313432835
+      }
+    },
+    "date_coverage": {
+      "start_date": "2012-07-30T00:00:00",
+      "end_date": "2014-01-30T00:00:00",
+      "n_dates": 1067,
+      "date_range_days": 549,
+      "unique_dates": 326,
+      "date_completeness": 0.9953358208955224
+    }
+  },
+  {
+    "study": "JHB_EZIN_025",
+    "n_participants": 192,
+    "n_biomarkers": 0,
+    "biomarkers": {},
+    "date_coverage": {
+      "start_date": "2020-09-08T00:00:00",
+      "end_date": "2021-07-29T00:00:00",
+      "n_dates": 192,
+      "date_range_days": 324,
+      "unique_dates": 89,
+      "date_completeness": 1.0
+    }
+  }
+]

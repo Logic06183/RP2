@@ -1,0 +1,657 @@
+{
+  "glucose": {
+    "xai_analysis": {
+      "global_importance": "DataFrame with shape (17, 2)",
+      "climate_importance": "DataFrame with shape (9, 2)",
+      "socio_importance": "DataFrame with shape (8, 2)",
+      "top_interactions": [
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_1d_extreme_days",
+          "interaction_strength": NaN
+        },
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_7d_mean",
+          "interaction_strength": 0.51107197453134
+        },
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_1d_max",
+          "interaction_strength": 0.4960345657371731
+        },
+        {
+          "feature1": "era5_temp_1d_max",
+          "feature2": "era5_temp_1d_extreme_days",
+          "interaction_strength": NaN
+        },
+        {
+          "feature1": "era5_temp_1d_max",
+          "feature2": "era5_temp_7d_max",
+          "interaction_strength": 0.20739509287977442
+        }
+      ],
+      "high_impact_samples": [
+        4,
+        20,
+        26,
+        27,
+        38,
+        44,
+        52,
+        54,
+        63,
+        78
+      ],
+      "summary_stats": {
+        "mean_abs_shap": 0.04997061065262734,
+        "climate_contribution": 0.5427607187376796,
+        "socio_contribution": 0.3067396623569851,
+        "top_predictor": "era5_temp_1d_mean",
+        "prediction_variability": 0.23473855823576545
+      }
+    },
+    "causal_analysis": {
+      "interventions": {
+        "era5_temp_1d_mean": {
+          "hot_scenario": {
+            "mean_effect": 0.13172609061702467,
+            "effect_range": [
+              -0.41516283740373794,
+              0.7515667613529331
+            ],
+            "percent_affected": 56.99999999999999
+          },
+          "cool_scenario": {
+            "mean_effect": -0.16788967529022272,
+            "effect_range": [
+              -0.929051460786555,
+              0.2299022547003977
+            ],
+            "percent_affected": 60.0
+          },
+          "sensitivity": 0.04993596098454123
+        },
+        "era5_temp_1d_max": {
+          "hot_scenario": {
+            "mean_effect": 0.015033176225885124,
+            "effect_range": [
+              -0.4740930598716018,
+              0.5166946105269412
+            ],
+            "percent_affected": 50.0
+          },
+          "cool_scenario": {
+            "mean_effect": -0.07322476591977302,
+            "effect_range": [
+              -0.825082980032871,
+              0.6904546084861272
+            ],
+            "percent_affected": 55.00000000000001
+          },
+          "sensitivity": 0.014709657024276358
+        },
+        "era5_temp_1d_extreme_days": {
+          "hot_scenario": {
+            "mean_effect": 7.993605777301127e-17,
+            "effect_range": [
+              -2.6645352591003757e-15,
+              4.440892098500626e-15
+            ],
+            "percent_affected": 0.0
+          },
+          "cool_scenario": {
+            "mean_effect": 5.950795411990839e-16,
+            "effect_range": [
+              -2.6645352591003757e-15,
+              4.440892098500626e-15
+            ],
+            "percent_affected": 0.0
+          },
+          "sensitivity": 8.585724723767878e-17
+        },
+        "income_level": {
+          "improvement_effect": {
+            "mean_effect": 0.01126717632849144,
+            "effect_range": [
+              -0.22582798053078346,
+              0.21016488184642768
+            ],
+            "percent_benefited": 33.0
+          }
+        },
+        "education_level": {
+          "improvement_effect": {
+            "mean_effect": 0.00852713736831336,
+            "effect_range": [
+              -0.08994563425574764,
+              0.12617827952817695
+            ],
+            "percent_benefited": 48.0
+          }
+        }
+      },
+      "causal_pathways": {},
+      "policy_implications": [
+        {
+          "domain": "Climate Adaptation",
+          "intervention": "Heat mitigation strategies",
+          "rationale": "Temperature changes in era5_temp_1d_mean show 0.050 effect per \u00b0C",
+          "target_population": "Urban residents",
+          "implementation": "Green infrastructure, cooling centers, heat warnings"
+        },
+        {
+          "domain": "Social Policy",
+          "intervention": "Socioeconomic vulnerability reduction",
+          "rationale": "Socioeconomic improvements show protective effects",
+          "target_population": "Vulnerable communities",
+          "implementation": "Education, healthcare access, income support programs"
+        },
+        {
+          "domain": "Integrated Policy",
+          "intervention": "Multi-modal climate-health adaptation",
+          "rationale": "Combined climate and socioeconomic interventions needed",
+          "target_population": "All urban residents with priority for vulnerable groups",
+          "implementation": "Coordinated climate adaptation and social protection policies"
+        }
+      ]
+    },
+    "hypotheses": [
+      {
+        "hypothesis_id": 1,
+        "type": "Direct climate effect",
+        "statement": "era5_temp_1d_mean causally influences glucose through heat stress \u2192 physiological dysregulation \u2192 biomarker alteration",
+        "mechanism": "Heat stress \u2192 physiological dysregulation \u2192 biomarker alteration",
+        "evidence_strength": 0.14905824242798624,
+        "testability": "High - observable dose-response relationship",
+        "intervention_potential": "High - directly modifiable factor",
+        "policy_relevance": "Very High - actionable intervention target",
+        "priority_score": 0.07452912121399312
+      },
+      {
+        "hypothesis_id": 2,
+        "type": "Synergistic interaction",
+        "statement": "era5_temp_1d_mean and era5_temp_1d_extreme_days interact synergistically to influence glucose",
+        "mechanism": "Multiple pathway convergence amplifies individual effects",
+        "evidence_strength": NaN,
+        "testability": "Medium - requires factorial design",
+        "intervention_potential": "Very High - combined interventions more effective",
+        "policy_relevance": "High - multi-sectoral coordination needed",
+        "priority_score": NaN
+      },
+      {
+        "hypothesis_id": 3,
+        "type": "Differential vulnerability",
+        "statement": "Socioeconomic factors modify climate-glucose relationships through differential vulnerability",
+        "mechanism": "SES \u2192 adaptive capacity \u2192 differential climate sensitivity \u2192 health outcomes",
+        "evidence_strength": 0.3067396623569851,
+        "testability": "High - stratified analysis possible",
+        "intervention_potential": "Very High - targeted interventions for vulnerable groups",
+        "policy_relevance": "Very High - environmental justice implications",
+        "priority_score": 0.15336983117849254
+      },
+      {
+        "hypothesis_id": 4,
+        "type": "Causal intervention",
+        "statement": "Interventions on era5_temp_1d_mean will causally alter glucose levels",
+        "mechanism": "Direct causal pathway: era5_temp_1d_mean \u2192 glucose",
+        "evidence_strength": 0.04993596098454123,
+        "testability": "Very High - randomized controlled trial feasible",
+        "intervention_potential": "Very High - quantifiable intervention effect",
+        "policy_relevance": "Very High - immediate policy action possible",
+        "priority_score": 0.024967980492270614
+      }
+    ],
+    "model_performance": {
+      "RandomForest": {
+        "r2": -0.05616747783197629,
+        "rmse": 1.3183421065566217
+      },
+      "GradientBoosting": {
+        "r2": -0.2670339812710163,
+        "rmse": 1.4439623162683835
+      }
+    }
+  },
+  "total_cholesterol": {
+    "xai_analysis": {
+      "global_importance": "DataFrame with shape (17, 2)",
+      "climate_importance": "DataFrame with shape (9, 2)",
+      "socio_importance": "DataFrame with shape (8, 2)",
+      "top_interactions": [
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_1d_max",
+          "interaction_strength": 0.1699724511703913
+        },
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_1d_extreme_days",
+          "interaction_strength": NaN
+        },
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_7d_mean",
+          "interaction_strength": 0.3385109999808718
+        },
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_7d_max",
+          "interaction_strength": 0.13621713355931347
+        },
+        {
+          "feature1": "era5_temp_1d_max",
+          "feature2": "era5_temp_1d_extreme_days",
+          "interaction_strength": NaN
+        }
+      ],
+      "high_impact_samples": [
+        20,
+        29,
+        41,
+        44,
+        49,
+        52,
+        57,
+        84,
+        87,
+        93
+      ],
+      "summary_stats": {
+        "mean_abs_shap": 0.04350560385192887,
+        "climate_contribution": 0.42754163334895195,
+        "socio_contribution": 0.3120536321338389,
+        "top_predictor": "era5_temp_1d_mean",
+        "prediction_variability": 0.2653888516157383
+      }
+    },
+    "causal_analysis": {
+      "interventions": {
+        "era5_temp_1d_mean": {
+          "hot_scenario": {
+            "mean_effect": 0.1856820673848676,
+            "effect_range": [
+              -0.10556492830777042,
+              0.7191459789548338
+            ],
+            "percent_affected": 61.0
+          },
+          "cool_scenario": {
+            "mean_effect": -0.1664466288586697,
+            "effect_range": [
+              -0.9254678123368238,
+              0.2577362005294761
+            ],
+            "percent_affected": 63.0
+          },
+          "sensitivity": 0.058688116040589544
+        },
+        "era5_temp_1d_max": {
+          "hot_scenario": {
+            "mean_effect": 0.010134293873084604,
+            "effect_range": [
+              -0.5794471929715845,
+              0.39641081291874514
+            ],
+            "percent_affected": 35.0
+          },
+          "cool_scenario": {
+            "mean_effect": -0.002828049435914641,
+            "effect_range": [
+              -0.3856587339699358,
+              0.3045069718665063
+            ],
+            "percent_affected": 54.0
+          },
+          "sensitivity": 0.002160390551499874
+        },
+        "era5_temp_1d_extreme_days": {
+          "hot_scenario": {
+            "mean_effect": 2.042810365310288e-16,
+            "effect_range": [
+              -2.6645352591003757e-15,
+              2.6645352591003757e-15
+            ],
+            "percent_affected": 0.0
+          },
+          "cool_scenario": {
+            "mean_effect": 1.509903313490213e-16,
+            "effect_range": [
+              -1.7763568394002505e-15,
+              3.552713678800501e-15
+            ],
+            "percent_affected": 0.0
+          },
+          "sensitivity": 8.881784197001253e-18
+        },
+        "income_level": {
+          "improvement_effect": {
+            "mean_effect": -0.0005783125520494626,
+            "effect_range": [
+              -0.11264457624969548,
+              0.14985654658624004
+            ],
+            "percent_benefited": 34.0
+          }
+        },
+        "education_level": {
+          "improvement_effect": {
+            "mean_effect": -0.011197412875921672,
+            "effect_range": [
+              -0.17238697540361692,
+              0.12018736871758406
+            ],
+            "percent_benefited": 55.00000000000001
+          }
+        }
+      },
+      "causal_pathways": {},
+      "policy_implications": [
+        {
+          "domain": "Climate Adaptation",
+          "intervention": "Heat mitigation strategies",
+          "rationale": "Temperature changes in era5_temp_1d_mean show 0.059 effect per \u00b0C",
+          "target_population": "Urban residents",
+          "implementation": "Green infrastructure, cooling centers, heat warnings"
+        },
+        {
+          "domain": "Social Policy",
+          "intervention": "Socioeconomic vulnerability reduction",
+          "rationale": "Socioeconomic improvements show protective effects",
+          "target_population": "Vulnerable communities",
+          "implementation": "Education, healthcare access, income support programs"
+        },
+        {
+          "domain": "Integrated Policy",
+          "intervention": "Multi-modal climate-health adaptation",
+          "rationale": "Combined climate and socioeconomic interventions needed",
+          "target_population": "All urban residents with priority for vulnerable groups",
+          "implementation": "Coordinated climate adaptation and social protection policies"
+        }
+      ]
+    },
+    "hypotheses": [
+      {
+        "hypothesis_id": 3,
+        "type": "Differential vulnerability",
+        "statement": "Socioeconomic factors modify climate-total_cholesterol relationships through differential vulnerability",
+        "mechanism": "SES \u2192 adaptive capacity \u2192 differential climate sensitivity \u2192 health outcomes",
+        "evidence_strength": 0.3120536321338389,
+        "testability": "High - stratified analysis possible",
+        "intervention_potential": "Very High - targeted interventions for vulnerable groups",
+        "policy_relevance": "Very High - environmental justice implications",
+        "priority_score": 0.15602681606691945
+      },
+      {
+        "hypothesis_id": 2,
+        "type": "Synergistic interaction",
+        "statement": "era5_temp_1d_mean and era5_temp_1d_max interact synergistically to influence total_cholesterol",
+        "mechanism": "Multiple pathway convergence amplifies individual effects",
+        "evidence_strength": 0.1699724511703913,
+        "testability": "Medium - requires factorial design",
+        "intervention_potential": "Very High - combined interventions more effective",
+        "policy_relevance": "High - multi-sectoral coordination needed",
+        "priority_score": 0.08498622558519565
+      },
+      {
+        "hypothesis_id": 1,
+        "type": "Direct climate effect",
+        "statement": "era5_temp_1d_mean causally influences total_cholesterol through heat stress \u2192 physiological dysregulation \u2192 biomarker alteration",
+        "mechanism": "Heat stress \u2192 physiological dysregulation \u2192 biomarker alteration",
+        "evidence_strength": 0.12508183548503313,
+        "testability": "High - observable dose-response relationship",
+        "intervention_potential": "High - directly modifiable factor",
+        "policy_relevance": "Very High - actionable intervention target",
+        "priority_score": 0.06254091774251656
+      },
+      {
+        "hypothesis_id": 4,
+        "type": "Causal intervention",
+        "statement": "Interventions on era5_temp_1d_mean will causally alter total_cholesterol levels",
+        "mechanism": "Direct causal pathway: era5_temp_1d_mean \u2192 total_cholesterol",
+        "evidence_strength": 0.058688116040589544,
+        "testability": "Very High - randomized controlled trial feasible",
+        "intervention_potential": "Very High - quantifiable intervention effect",
+        "policy_relevance": "Very High - immediate policy action possible",
+        "priority_score": 0.029344058020294772
+      }
+    ],
+    "model_performance": {
+      "RandomForest": {
+        "r2": -0.12093092906733194,
+        "rmse": 1.0756447869196548
+      },
+      "GradientBoosting": {
+        "r2": -0.3671053845069756,
+        "rmse": 1.18790154565969
+      }
+    }
+  },
+  "systolic_bp": {
+    "xai_analysis": {
+      "global_importance": "DataFrame with shape (17, 2)",
+      "climate_importance": "DataFrame with shape (9, 2)",
+      "socio_importance": "DataFrame with shape (8, 2)",
+      "top_interactions": [
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_1d_max",
+          "interaction_strength": 0.6697954298684037
+        },
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_1d_extreme_days",
+          "interaction_strength": NaN
+        },
+        {
+          "feature1": "era5_temp_1d_mean",
+          "feature2": "era5_temp_7d_mean",
+          "interaction_strength": 0.20137089009686066
+        },
+        {
+          "feature1": "era5_temp_1d_max",
+          "feature2": "era5_temp_7d_max",
+          "interaction_strength": 0.10594989627361445
+        },
+        {
+          "feature1": "era5_temp_1d_extreme_days",
+          "feature2": "era5_temp_7d_mean",
+          "interaction_strength": NaN
+        }
+      ],
+      "high_impact_samples": [
+        16,
+        20,
+        30,
+        33,
+        36,
+        38,
+        44,
+        67,
+        71,
+        87
+      ],
+      "summary_stats": {
+        "mean_abs_shap": 0.6242558995648193,
+        "climate_contribution": 7.137247016009126,
+        "socio_contribution": 3.475103276592803,
+        "top_predictor": "era5_temp_1d_max",
+        "prediction_variability": 2.7426756619311057
+      }
+    },
+    "causal_analysis": {
+      "interventions": {
+        "era5_temp_1d_mean": {
+          "hot_scenario": {
+            "mean_effect": 1.2194968707044134,
+            "effect_range": [
+              -4.5620812248126015,
+              5.771594764411859
+            ],
+            "percent_affected": 99.0
+          },
+          "cool_scenario": {
+            "mean_effect": -1.151835486962699,
+            "effect_range": [
+              -6.733935247549823,
+              5.728795039678658
+            ],
+            "percent_affected": 99.0
+          },
+          "sensitivity": 0.39522205961118545
+        },
+        "era5_temp_1d_max": {
+          "hot_scenario": {
+            "mean_effect": 1.2273079863113254,
+            "effect_range": [
+              -5.613273687705288,
+              14.978166164016471
+            ],
+            "percent_affected": 99.0
+          },
+          "cool_scenario": {
+            "mean_effect": -0.4183718683744223,
+            "effect_range": [
+              -11.735785947607923,
+              6.7085452327376345
+            ],
+            "percent_affected": 98.0
+          },
+          "sensitivity": 0.274279975780958
+        },
+        "era5_temp_1d_extreme_days": {
+          "hot_scenario": {
+            "mean_effect": 7.247535904753022e-15,
+            "effect_range": [
+              -5.684341886080802e-14,
+              1.1368683772161603e-13
+            ],
+            "percent_affected": 0.0
+          },
+          "cool_scenario": {
+            "mean_effect": 5.542233338928782e-15,
+            "effect_range": [
+              -5.684341886080802e-14,
+              8.526512829121202e-14
+            ],
+            "percent_affected": 0.0
+          },
+          "sensitivity": 2.842170943040401e-16
+        },
+        "income_level": {
+          "improvement_effect": {
+            "mean_effect": -0.00603602857285523,
+            "effect_range": [
+              -4.195040877819082,
+              1.5625608560962405
+            ],
+            "percent_benefited": 44.0
+          }
+        },
+        "education_level": {
+          "improvement_effect": {
+            "mean_effect": -0.25853302968977004,
+            "effect_range": [
+              -3.4282172448607184,
+              1.6271714871656116
+            ],
+            "percent_benefited": 60.0
+          }
+        }
+      },
+      "causal_pathways": {},
+      "policy_implications": [
+        {
+          "domain": "Climate Adaptation",
+          "intervention": "Heat mitigation strategies",
+          "rationale": "Temperature changes in era5_temp_1d_mean show 0.395 effect per \u00b0C",
+          "target_population": "Urban residents",
+          "implementation": "Green infrastructure, cooling centers, heat warnings"
+        },
+        {
+          "domain": "Social Policy",
+          "intervention": "Socioeconomic vulnerability reduction",
+          "rationale": "Socioeconomic improvements show protective effects",
+          "target_population": "Vulnerable communities",
+          "implementation": "Education, healthcare access, income support programs"
+        },
+        {
+          "domain": "Integrated Policy",
+          "intervention": "Multi-modal climate-health adaptation",
+          "rationale": "Combined climate and socioeconomic interventions needed",
+          "target_population": "All urban residents with priority for vulnerable groups",
+          "implementation": "Coordinated climate adaptation and social protection policies"
+        }
+      ]
+    },
+    "hypotheses": [
+      {
+        "hypothesis_id": 3,
+        "type": "Differential vulnerability",
+        "statement": "Socioeconomic factors modify climate-systolic_bp relationships through differential vulnerability",
+        "mechanism": "SES \u2192 adaptive capacity \u2192 differential climate sensitivity \u2192 health outcomes",
+        "evidence_strength": 3.475103276592803,
+        "testability": "High - stratified analysis possible",
+        "intervention_potential": "Very High - targeted interventions for vulnerable groups",
+        "policy_relevance": "Very High - environmental justice implications",
+        "priority_score": 1.7375516382964016
+      },
+      {
+        "hypothesis_id": 1,
+        "type": "Direct climate effect",
+        "statement": "era5_temp_1d_max causally influences systolic_bp through heat stress \u2192 physiological dysregulation \u2192 biomarker alteration",
+        "mechanism": "Heat stress \u2192 physiological dysregulation \u2192 biomarker alteration",
+        "evidence_strength": 2.27866638884167,
+        "testability": "High - observable dose-response relationship",
+        "intervention_potential": "High - directly modifiable factor",
+        "policy_relevance": "Very High - actionable intervention target",
+        "priority_score": 1.139333194420835
+      },
+      {
+        "hypothesis_id": 2,
+        "type": "Synergistic interaction",
+        "statement": "era5_temp_1d_mean and era5_temp_1d_max interact synergistically to influence systolic_bp",
+        "mechanism": "Multiple pathway convergence amplifies individual effects",
+        "evidence_strength": 0.6697954298684037,
+        "testability": "Medium - requires factorial design",
+        "intervention_potential": "Very High - combined interventions more effective",
+        "policy_relevance": "High - multi-sectoral coordination needed",
+        "priority_score": 0.33489771493420184
+      },
+      {
+        "hypothesis_id": 4,
+        "type": "Causal intervention",
+        "statement": "Interventions on era5_temp_1d_mean will causally alter systolic_bp levels",
+        "mechanism": "Direct causal pathway: era5_temp_1d_mean \u2192 systolic_bp",
+        "evidence_strength": 0.39522205961118545,
+        "testability": "Very High - randomized controlled trial feasible",
+        "intervention_potential": "Very High - quantifiable intervention effect",
+        "policy_relevance": "Very High - immediate policy action possible",
+        "priority_score": 0.19761102980559273
+      }
+    ],
+    "model_performance": {
+      "RandomForest": {
+        "r2": -0.058235157713823815,
+        "rmse": 17.634957025126926
+      },
+      "GradientBoosting": {
+        "r2": -0.21828973273625696,
+        "rmse": 18.92163256472594
+      }
+    }
+  },
+  "cross_biomarker_insights": {
+    "common_predictors": [
+      "era5_temp_1d_mean influences glucose, total_cholesterol"
+    ],
+    "shared_pathways": [
+      "Climate pathway affects: glucose, total_cholesterol, systolic_bp"
+    ],
+    "intervention_synergies": [],
+    "policy_priorities": [
+      "systolic_bp: Differential vulnerability",
+      "systolic_bp: Direct climate effect"
+    ]
+  }
+}

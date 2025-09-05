@@ -1,0 +1,23 @@
+{
+  "cd4_count": {
+    "error": "Insufficient samples: 0"
+  },
+  "creatinine": {
+    "error": "Insufficient samples: 0"
+  },
+  "alt": {
+    "error": "Insufficient samples: 0"
+  },
+  "hemoglobin": {
+    "error": "Insufficient samples: 0"
+  },
+  "glucose": {
+    "error": "Insufficient samples: 0"
+  },
+  "causal_discoveries": {
+    "error": "Insufficient successful analyses for causal discovery"
+  },
+  "meta_analysis": {
+    "error": "No valid biomarker results for meta-analysis"
+  }
+}

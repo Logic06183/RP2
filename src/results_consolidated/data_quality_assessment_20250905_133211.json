@@ -1,0 +1,59 @@
+{
+  "assessment_timestamp": "2025-09-05T13:31:29.901851",
+  "health_data_quality": {
+    "error": "Health data directory not found"
+  },
+  "climate_data_quality": {
+    "era5_accessible": true,
+    "temporal_coverage": {
+      "start": "1990-01-01T00:00:00.000000000",
+      "end": "2023-12-31T23:00:00.000000000",
+      "n_timesteps": 298032,
+      "frequency": "hourly"
+    },
+    "spatial_coverage": {
+      "lat_min": -27.0,
+      "lat_max": -25.0,
+      "lon_min": 27.0,
+      "lon_max": 29.0,
+      "n_grid_points": 81
+    },
+    "data_quality_metrics": {
+      "completeness_percent": 100.0,
+      "temp_mean_kelvin": 290.9197998046875,
+      "temp_std_kelvin": 6.763302326202393,
+      "temp_min_kelvin": 261.3888244628906,
+      "temp_max_kelvin": 315.1642761230469,
+      "reasonable_range": "True"
+    },
+    "quality_score": 10.0
+  },
+  "socioeconomic_data_quality": {
+    "error": "Socioeconomic data directory not found"
+  },
+  "harmonization_assessment": {
+    "column_consistency": {},
+    "date_format_consistency": [],
+    "coordinate_consistency": [],
+    "harmonization_score": 0.0
+  },
+  "representativeness_analysis": {
+    "geographic_coverage": {},
+    "temporal_coverage": {},
+    "demographic_coverage": {},
+    "clinical_coverage": {},
+    "representativeness_score": 0.0
+  },
+  "integration_quality": {
+    "temporal_alignment": [],
+    "spatial_alignment": [],
+    "variable_consistency": {},
+    "integration_score": 0.0
+  },
+  "quality_score": 3.55,
+  "recommendations": [
+    "Consider data cleaning to improve health dataset quality",
+    "\u274c Significant data quality issues require attention"
+  ],
+  "critical_issues": []
+}
