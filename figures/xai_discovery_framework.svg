@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="1100" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1100">
+  <!-- Define gradients and filters for ENBEL branding -->
+  <defs>
+    <!-- ENBEL Blue-Green gradient scheme -->
+    <linearGradient id="enbelPrimary" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B5E5E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2E8B8B;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="xaiGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3571B8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="hypothesisGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5CB85C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#449D44;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="validationGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0AD4E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC971F;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="africanGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#8B4513;stop-opacity:0.8" />
+      <stop offset="50%" style="stop-color:#CD853F;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#DEB887;stop-opacity:0.8" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Arrow markers -->
+    <marker id="arrow" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M2,2 L2,10 L10,6 z" fill="#1B5E5E"/>
+    </marker>
+    
+    <marker id="discoveryArrow" markerWidth="12" markerHeight="12" refX="11" refY="6" orient="auto">
+      <path d="M2,2 L2,10 L10,6 z" fill="#4A90E2"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="1100" fill="#F8FFFE"/>
+  
+  <!-- Title Section -->
+  <text x="700" y="40" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#1B5E5E">
+    XAI-Driven Discovery Framework
+  </text>
+  <text x="700" y="70" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#2E8B8B">
+    Environmental Health Research Methodology for African Urban Settings
+  </text>
+  
+  <!-- ENBEL Conference Context -->
+  <rect x="50" y="90" width="1300" height="40" fill="#E8F4F8" stroke="#1B5E5E" stroke-width="1" rx="8"/>
+  <text x="70" y="108" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#1B5E5E">
+    ENBEL Conference Context:
+  </text>
+  <text x="230" y="108" font-family="Arial, sans-serif" font-size="14" fill="#666">
+    Novel methodology bridging machine learning discoveries with epidemiological validation
+  </text>
+  <text x="70" y="125" font-family="Arial, sans-serif" font-size="14" fill="#666">
+    Addressing environmental burden of disease in African cities through data-driven hypothesis generation
+  </text>
+  
+  <!-- Stage 1: Comprehensive XAI Analysis -->
+  <g id="stage1" transform="translate(100, 180)">
+    <rect width="380" height="200" fill="url(#xaiGradient)" rx="10" filter="url(#dropShadow)"/>
+    
+    <!-- Stage header -->
+    <rect x="10" y="10" width="360" height="35" fill="white" stroke="#3571B8" stroke-width="2" rx="5"/>
+    <text x="190" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#3571B8">
+      STAGE 1: COMPREHENSIVE XAI ANALYSIS
+    </text>
+    
+    <!-- XAI Components -->
+    <g transform="translate(20, 60)">
+      <!-- SHAP Analysis -->
+      <rect x="0" y="0" width="160" height="50" fill="white" stroke="#4A90E2" stroke-width="1" rx="3"/>
+      <text x="80" y="18" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        SHAP Feature Importance
+      </text>
+      <text x="5" y="32" font-family="Arial, sans-serif" font-size="9" fill="#666">• Global feature rankings</text>
+      <text x="5" y="44" font-family="Arial, sans-serif" font-size="9" fill="#666">• Pathway-specific analysis</text>
+      
+      <!-- Interaction Detection -->
+      <rect x="180" y="0" width="160" height="50" fill="white" stroke="#4A90E2" stroke-width="1" rx="3"/>
+      <text x="260" y="18" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Interaction Effect Detection
+      </text>
+      <text x="185" y="32" font-family="Arial, sans-serif" font-size="9" fill="#666">• Variable interactions</text>
+      <text x="185" y="44" font-family="Arial, sans-serif" font-size="9" fill="#666">• Cross-pathway effects</text>
+      
+      <!-- Novel Pattern Identification -->
+      <rect x="0" y="65" width="160" height="50" fill="white" stroke="#4A90E2" stroke-width="1" rx="3"/>
+      <text x="80" y="83" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Novel Pattern Identification
+      </text>
+      <text x="5" y="97" font-family="Arial, sans-serif" font-size="9" fill="#666">• Unexpected relationships</text>
+      <text x="5" y="109" font-family="Arial, sans-serif" font-size="9" fill="#666">• Non-obvious connections</text>
+      
+      <!-- Relationship Discovery -->
+      <rect x="180" y="65" width="160" height="50" fill="white" stroke="#4A90E2" stroke-width="1" rx="3"/>
+      <text x="260" y="83" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Unexpected Relationships
+      </text>
+      <text x="185" y="97" font-family="Arial, sans-serif" font-size="9" fill="#666">• Data-driven discoveries</text>
+      <text x="185" y="109" font-family="Arial, sans-serif" font-size="9" fill="#666">• Context-specific insights</text>
+    </g>
+    
+    <!-- Key References -->
+    <rect x="10" y="140" width="360" height="50" fill="#F0F8FF" stroke="#3571B8" stroke-width="1" rx="5"/>
+    <text x="20" y="155" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">
+      Key References:
+    </text>
+    <text x="20" y="168" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      • Lundberg & Lee (2017). A unified approach to interpreting model predictions. NIPS.
+    </text>
+    <text x="20" y="180" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      • Chen & Guestrin (2016). XGBoost: A scalable tree boosting system. KDD.
+    </text>
+  </g>
+  
+  <!-- Stage 2: Hypothesis Generation -->
+  <g id="stage2" transform="translate(550, 180)">
+    <rect width="380" height="200" fill="url(#hypothesisGradient)" rx="10" filter="url(#dropShadow)"/>
+    
+    <!-- Stage header -->
+    <rect x="10" y="10" width="360" height="35" fill="white" stroke="#449D44" stroke-width="2" rx="5"/>
+    <text x="190" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#449D44">
+      STAGE 2: HYPOTHESIS GENERATION
+    </text>
+    
+    <!-- Hypothesis Types -->
+    <g transform="translate(20, 60)">
+      <!-- Pathway-specific -->
+      <rect x="0" y="0" width="160" height="50" fill="white" stroke="#5CB85C" stroke-width="1" rx="3"/>
+      <text x="80" y="18" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Pathway-Specific Hypotheses
+      </text>
+      <text x="5" y="32" font-family="Arial, sans-serif" font-size="9" fill="#666">• Mechanistic pathways</text>
+      <text x="5" y="44" font-family="Arial, sans-serif" font-size="9" fill="#666">• Biomarker relationships</text>
+      
+      <!-- Vulnerability Interactions -->
+      <rect x="180" y="0" width="160" height="50" fill="white" stroke="#5CB85C" stroke-width="1" rx="3"/>
+      <text x="260" y="18" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Vulnerability Interactions
+      </text>
+      <text x="185" y="32" font-family="Arial, sans-serif" font-size="9" fill="#666">• Socioeconomic modifiers</text>
+      <text x="185" y="44" font-family="Arial, sans-serif" font-size="9" fill="#666">• Population heterogeneity</text>
+      
+      <!-- Temporal Relationships -->
+      <rect x="0" y="65" width="160" height="50" fill="white" stroke="#5CB85C" stroke-width="1" rx="3"/>
+      <text x="80" y="83" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Temporal Relationships
+      </text>
+      <text x="5" y="97" font-family="Arial, sans-serif" font-size="9" fill="#666">• Lag structures</text>
+      <text x="5" y="109" font-family="Arial, sans-serif" font-size="9" fill="#666">• Delayed effects</text>
+      
+      <!-- African Context -->
+      <rect x="180" y="65" width="160" height="50" fill="white" stroke="#5CB85C" stroke-width="1" rx="3"/>
+      <text x="260" y="83" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        African-Specific Context
+      </text>
+      <text x="185" y="97" font-family="Arial, sans-serif" font-size="9" fill="#666">• Urban health patterns</text>
+      <text x="185" y="109" font-family="Arial, sans-serif" font-size="9" fill="#666">• Disease burden context</text>
+    </g>
+    
+    <!-- Conversion Process -->
+    <rect x="10" y="140" width="360" height="50" fill="#F0FFF0" stroke="#449D44" stroke-width="1" rx="5"/>
+    <text x="20" y="155" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">
+      XAI → Testable Hypothesis Conversion Process:
+    </text>
+    <text x="20" y="168" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      1. Extract top SHAP features → Mechanistic pathway hypotheses
+    </text>
+    <text x="20" y="180" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      2. Identify interactions → Population vulnerability hypotheses
+    </text>
+  </g>
+  
+  <!-- Stage 3: DLNM Validation -->
+  <g id="stage3" transform="translate(1000, 180)">
+    <rect width="350" height="200" fill="url(#validationGradient)" rx="10" filter="url(#dropShadow)"/>
+    
+    <!-- Stage header -->
+    <rect x="10" y="10" width="330" height="35" fill="white" stroke="#EC971F" stroke-width="2" rx="5"/>
+    <text x="175" y="32" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#EC971F">
+      STAGE 3: DLNM VALIDATION
+    </text>
+    
+    <!-- Validation Components -->
+    <g transform="translate(20, 60)">
+      <!-- Hypothesis Testing -->
+      <rect x="0" y="0" width="150" height="50" fill="white" stroke="#F0AD4E" stroke-width="1" rx="3"/>
+      <text x="75" y="18" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Test XAI Hypotheses
+      </text>
+      <text x="5" y="32" font-family="Arial, sans-serif" font-size="9" fill="#666">• Directed testing</text>
+      <text x="5" y="44" font-family="Arial, sans-serif" font-size="9" fill="#666">• Hypothesis validation</text>
+      
+      <!-- Non-linear Confirmation -->
+      <rect x="160" y="0" width="150" height="50" fill="white" stroke="#F0AD4E" stroke-width="1" rx="3"/>
+      <text x="235" y="18" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Non-linear Relationships
+      </text>
+      <text x="165" y="32" font-family="Arial, sans-serif" font-size="9" fill="#666">• Dose-response curves</text>
+      <text x="165" y="44" font-family="Arial, sans-serif" font-size="9" fill="#666">• Threshold identification</text>
+      
+      <!-- Lag Validation -->
+      <rect x="0" y="65" width="150" height="50" fill="white" stroke="#F0AD4E" stroke-width="1" rx="3"/>
+      <text x="75" y="83" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Validate Lag Structures
+      </text>
+      <text x="5" y="97" font-family="Arial, sans-serif" font-size="9" fill="#666">• Temporal patterns</text>
+      <text x="5" y="109" font-family="Arial, sans-serif" font-size="9" fill="#666">• Effect timing</text>
+      
+      <!-- Effect Quantification -->
+      <rect x="160" y="65" width="150" height="50" fill="white" stroke="#F0AD4E" stroke-width="1" rx="3"/>
+      <text x="235" y="83" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#333">
+        Quantify Effect Sizes
+      </text>
+      <text x="165" y="97" font-family="Arial, sans-serif" font-size="9" fill="#666">• Statistical significance</text>
+      <text x="165" y="109" font-family="Arial, sans-serif" font-size="9" fill="#666">• Clinical relevance</text>
+    </g>
+    
+    <!-- DLNM Reference -->
+    <rect x="10" y="140" width="330" height="50" fill="#FFF8DC" stroke="#EC971F" stroke-width="1" rx="5"/>
+    <text x="20" y="155" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#333">
+      DLNM Framework Reference:
+    </text>
+    <text x="20" y="168" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      • Gasparrini et al. (2010). Distributed lag non-linear models. Statistics in Medicine.
+    </text>
+    <text x="20" y="180" font-family="Arial, sans-serif" font-size="9" fill="#666">
+      • Cross-basis functions with natural cubic splines for African urban populations
+    </text>
+  </g>
+  
+  <!-- Flow arrows between stages -->
+  <g stroke="#1B5E5E" stroke-width="3" fill="none">
+    <path d="M 490 280 L 540 280" marker-end="url(#arrow)"/>
+    <path d="M 940 280 L 990 280" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- African Urban Context Panel -->
+  <g id="african-context" transform="translate(100, 420)">
+    <rect width="1200" height="160" fill="url(#africanGradient)" rx="10" filter="url(#dropShadow)"/>
+    
+    <!-- Panel header -->
+    <rect x="20" y="20" width="1160" height="35" fill="white" stroke="#8B4513" stroke-width="2" rx="5"/>
+    <text x="600" y="42" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#8B4513">
+      AFRICAN URBAN HEALTH CONTEXT: JOHANNESBURG CASE STUDY
+    </text>
+    
+    <!-- Context elements -->
+    <g transform="translate(30, 70)">
+      <!-- Methodological Advantages -->
+      <rect x="0" y="0" width="280" height="70" fill="white" stroke="#CD853F" stroke-width="1" rx="5"/>
+      <text x="140" y="18" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#8B4513">
+        XAI Advantages for African Settings
+      </text>
+      <text x="10" y="32" font-family="Arial, sans-serif" font-size="10" fill="#666">• Works with incomplete data</text>
+      <text x="10" y="44" font-family="Arial, sans-serif" font-size="10" fill="#666">• Identifies unexpected relationships</text>
+      <text x="10" y="56" font-family="Arial, sans-serif" font-size="10" fill="#666">• Generates locally relevant hypotheses</text>
+      
+      <!-- Urban Characteristics -->
+      <rect x="300" y="0" width="280" height="70" fill="white" stroke="#CD853F" stroke-width="1" rx="5"/>
+      <text x="440" y="18" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#8B4513">
+        Johannesburg Urban Context
+      </text>
+      <text x="310" y="32" font-family="Arial, sans-serif" font-size="10" fill="#666">• 4.4 million people, rapid urbanization</text>
+      <text x="310" y="44" font-family="Arial, sans-serif" font-size="10" fill="#666">• High inequality, diverse climate zones</text>
+      <text x="310" y="56" font-family="Arial, sans-serif" font-size="10" fill="#666">• Limited adaptive capacity</text>
+      
+      <!-- Health System Context -->
+      <rect x="600" y="0" width="280" height="70" fill="white" stroke="#CD853F" stroke-width="1" rx="5"/>
+      <text x="740" y="18" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#8B4513">
+        Health System Context
+      </text>
+      <text x="610" y="32" font-family="Arial, sans-serif" font-size="10" fill="#666">• Dual burden: communicable/NCDs</text>
+      <text x="610" y="44" font-family="Arial, sans-serif" font-size="10" fill="#666">• HIV epidemic intersection</text>
+      <text x="610" y="56" font-family="Arial, sans-serif" font-size="10" fill="#666">• Healthcare access disparities</text>
+      
+      <!-- Climate Challenges -->
+      <rect x="900" y="0" width="280" height="70" fill="white" stroke="#CD853F" stroke-width="1" rx="5"/>
+      <text x="1040" y="18" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#8B4513">
+        Climate Challenges
+      </text>
+      <text x="910" y="32" font-family="Arial, sans-serif" font-size="10" fill="#666">• Increasing temperatures, heat islands</text>
+      <text x="910" y="44" font-family="Arial, sans-serif" font-size="10" fill="#666">• Seasonal variability</text>
+      <text x="910" y="56" font-family="Arial, sans-serif" font-size="10" fill="#666">• Future climate projections</text>
+    </g>
+  </g>
+  
+  <!-- Innovation Highlights -->
+  <g id="innovation" transform="translate(100, 620)">
+    <rect width="1200" height="120" fill="#E8F8FF" stroke="#1B5E5E" stroke-width="2" rx="10"/>
+    
+    <text x="600" y="30" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1B5E5E">
+      METHODOLOGICAL INNOVATION FOR ENVIRONMENTAL HEALTH RESEARCH
+    </text>
+    
+    <!-- Innovation comparison -->
+    <g transform="translate(50, 50)">
+      <!-- Traditional Approach -->
+      <rect x="0" y="0" width="280" height="50" fill="white" stroke="#999" stroke-width="1" rx="5"/>
+      <text x="140" y="18" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#666">
+        Traditional Approach Limitations
+      </text>
+      <text x="10" y="32" font-family="Arial, sans-serif" font-size="10" fill="#666">• Hypothesis-driven only</text>
+      <text x="10" y="44" font-family="Arial, sans-serif" font-size="10" fill="#666">• Limited feature exploration, single-pathway focus</text>
+      
+      <!-- Arrow -->
+      <path d="M 290 25 L 330 25" stroke="#1B5E5E" stroke-width="2" marker-end="url(#arrow)"/>
+      
+      <!-- XAI Innovation -->
+      <rect x="340" y="0" width="280" height="50" fill="white" stroke="#1B5E5E" stroke-width="2" rx="5"/>
+      <text x="480" y="18" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1B5E5E">
+        XAI-DLNM Innovation
+      </text>
+      <text x="350" y="32" font-family="Arial, sans-serif" font-size="10" fill="#333">• Data-driven discovery</text>
+      <text x="350" y="44" font-family="Arial, sans-serif" font-size="10" fill="#333">• Multi-pathway interactions, African-specific</text>
+      
+      <!-- Benefits -->
+      <rect x="640" y="0" width="480" height="50" fill="white" stroke="#1B5E5E" stroke-width="2" rx="5"/>
+      <text x="880" y="18" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1B5E5E">
+        ENBEL Conference Relevance
+      </text>
+      <text x="650" y="32" font-family="Arial, sans-serif" font-size="10" fill="#333">• Addresses data scarcity in LMICs • Framework for other African cities</text>
+      <text x="650" y="44" font-family="Arial, sans-serif" font-size="10" fill="#333">• Evidence-based policy • Advances environmental health methods</text>
+    </g>
+  </g>
+  
+  <!-- References Section -->
+  <g id="references" transform="translate(100, 780)">
+    <rect width="1200" height="140" fill="#F0F8FF" stroke="#4A90E2" stroke-width="1" rx="8"/>
+    
+    <text x="600" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="#2166ac">
+      KEY REFERENCES
+    </text>
+    
+    <g transform="translate(30, 40)" font-family="Arial, sans-serif" font-size="11" fill="#333">
+      <text x="0" y="15" font-weight="bold" fill="#4A90E2">Machine Learning & XAI:</text>
+      <text x="0" y="30">• Lundberg, S. M., & Lee, S. I. (2017). A unified approach to interpreting model predictions. NIPS, 4765-4774.</text>
+      <text x="0" y="45">• Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. ACM SIGKDD, 785-794.</text>
+      
+      <text x="600" y="15" font-weight="bold" fill="#4A90E2">Climate Health & DLNM:</text>
+      <text x="600" y="30">• Gasparrini, A., et al. (2010). Distributed lag non-linear models. Statistics in Medicine, 29(21), 2224-2234.</text>
+      <text x="600" y="45">• Watts, N., et al. (2021). The 2020 report of The Lancet Countdown on health and climate change. Lancet, 397(10269), 129-170.</text>
+      
+      <text x="0" y="75" font-weight="bold" fill="#4A90E2">African Urban Health:</text>
+      <text x="0" y="90">• UN-Habitat. (2020). The state of African cities 2018: The geography of African investment. UN-Habitat.</text>
+      <text x="0" y="105">• Pillay-van Wyk, V., et al. (2016). Mortality trends and differentials in South Africa from 1997 to 2012. Lancet Global Health, 4(9), e642-e653.</text>
+    </g>
+  </g>
+  
+  <!-- Footer with conference info -->
+  <rect x="50" y="950" width="1300" height="80" fill="#1B5E5E" rx="10"/>
+  <text x="700" y="975" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    Environmental Burden of Disease (ENBEL) Conference 2025
+  </text>
+  <text x="700" y="995" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#A0E0E0">
+    Advancing Environmental Health Research Through Explainable AI
+  </text>
+  
+  <!-- QR Code placeholder -->
+  <rect x="1220" y="960" width="60" height="60" fill="white" stroke="#A0E0E0" stroke-width="2" rx="5"/>
+  <text x="1250" y="985" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">
+    QR Code
+  </text>
+  <text x="1250" y="995" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">
+    Full Methods
+  </text>
+  
+  <!-- Work in Progress disclaimer -->
+  <text x="70" y="1015" font-family="Arial, sans-serif" font-size="12" fill="#A0E0E0">
+    Preliminary Findings - Work in Progress
+  </text>
+  
+  <!-- Attribution -->
+  <text x="1330" y="1015" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#A0E0E0">
+    XAI-Driven Discovery Framework | African Urban Health Research
+  </text>
+</svg>

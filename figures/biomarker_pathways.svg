@@ -198,7 +198,7 @@
       <!-- Physiological response -->
       <rect x="-70" y="35" width="220" height="25" fill="#ffffff" stroke="#31a354" stroke-width="1" rx="3" opacity="0.9"/>
       <text x="40" y="51" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
-        ↑ Cytokines, Altered Cell Function
+        ↑ Cytokines, HIV interaction effects
       </text>
       
       <!-- Arrow -->
@@ -210,7 +210,7 @@
         Measured Biomarkers:
       </text>
       <text x="40" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
-        CD4 Count, Hemoglobin
+        CD4 Count, Hemoglobin (HIV context)
       </text>
       
       <!-- Effect size -->
@@ -346,4 +346,28 @@
       R² values indicate variance explained by temperature in machine learning models
     </text>
   </g>
+  
+  <!-- References Section -->
+  <g id=\"references\" transform=\"translate(50, 970)\">
+    <rect x=\"0\" y=\"0\" width=\"1100\" height=\"80\" fill=\"#F0F8FF\" stroke=\"#4A90E2\" stroke-width=\"1\" rx=\"8\"/>
+    
+    <text x=\"550\" y=\"20\" text-anchor=\"middle\" font-family=\"Helvetica, Arial, sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#2166ac\">
+      KEY REFERENCES: AFRICAN DISEASE BURDEN & CLIMATE HEALTH
+    </text>
+    
+    <g transform=\"translate(20, 35)\" font-family=\"Helvetica, Arial, sans-serif\" font-size=\"10\" fill=\"#333\">
+      <text x=\"0\" y=\"12\">• Mayosi, B. M., et al. (2009). The burden of non-communicable diseases in South Africa. Lancet, 374(9693), 934-947.</text>
+      <text x=\"0\" y=\"25\">• van Zyl Smit, R. N., et al. (2010). The convergence of tuberculosis and lung cancer epidemics. Lancet, 376(9750), 1407-1414.</text>
+      <text x=\"0\" y=\"38\">• Wernecke, B., et al. (2018). The effect of temperature on renal function in CKD patients. Nephrology, 23(9), 848-854.</text>
+      <text x=\"550\" y=\"12\">• IPCC. (2022). Climate Change 2022: Impacts, Adaptation and Vulnerability. Working Group II Contribution to AR6.</text>
+      <text x=\"550\" y=\"25\">• Pillay-van Wyk, V., et al. (2016). Mortality trends in South Africa 1997-2012. Lancet Global Health, 4(9), e642-e653.</text>
+      <text x=\"550\" y=\"38\">• Engelbrecht, F., et al. (2015). Projections of rising surface temperatures over Africa. Environ. Res. Lett., 10(8).</text>
+    </g>
+  </g>
+  
+  <!-- ENBEL Footer -->
+  <rect x=\"50\" y=\"1060\" width=\"1100\" height=\"30\" fill=\"#1B5E5E\" rx=\"8\"/>
+  <text x=\"600\" y=\"1078\" text-anchor=\"middle\" font-family=\"Helvetica, Arial, sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"white\">
+    ENBEL Conference 2025 | Biomarker Pathways in African Urban Health | Johannesburg Case Study
+  </text>
 </svg>

@@ -54,11 +54,11 @@
   <rect width="1400" height="1000" fill="#F8F9FA"/>
   
   <!-- Title and Subtitle -->
-  <text x="700" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#2C3E50">
-    HEAT Center Climate-Health Analysis Pipeline
+  <text x="700" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#1B5E5E">
+    ENBEL Conference: XAI-Driven Climate-Health Analysis Framework
   </text>
-  <text x="700" y="65" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#5A6C7D">
-    Explainable AI Framework for Temperature-Health Relationships in Johannesburg
+  <text x="700" y="65" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#2E8B8B">
+    Machine Learning Insights for African Urban Health - Johannesburg Case Study
   </text>
   
   <!-- Main container with subtle border -->
@@ -180,54 +180,54 @@
       <text x="10" y="66" font-family="Arial, sans-serif" font-size="9" fill="#666">• Renal pathway</text>
     </g>
     
-    <!-- Stage 3: Advanced Analytics -->
+    <!-- Stage 3: XAI-Driven Discovery Process -->
     <text x="700" y="380" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#2C3E50">
-      Stage 3: Advanced Analytics
+      Stage 3: XAI-Driven Discovery Process
     </text>
     
-    <!-- Track A: Machine Learning -->
+    <!-- Phase A: Comprehensive XAI Analysis -->
     <g transform="translate(380, 400)">
       <rect width="280" height="120" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
-        Track A: Machine Learning
+        Phase A: Comprehensive XAI Analysis
       </text>
       <text x="140" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">
-        XGBoost + Random Forest
+        SHAP + Feature Discovery
       </text>
-      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Temporal cross-validation (5 folds)</text>
-      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Model training for 6 health outcomes</text>
-      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Performance evaluation (R² scores)</text>
-      <text x="10" y="94" font-family="Arial, sans-serif" font-size="10" fill="white">• Feature importance ranking</text>
-      <text x="10" y="108" font-family="Arial, sans-serif" font-size="10" fill="white">• 6 ML models deployed</text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Multi-pathway feature importance</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Interaction effect detection</text>
+      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Novel pattern identification</text>
+      <text x="10" y="94" font-family="Arial, sans-serif" font-size="10" fill="white">• Unexpected relationship discovery</text>
+      <text x="10" y="108" font-family="Arial, sans-serif" font-size="10" fill="white">• Hypothesis generation framework</text>
     </g>
     
-    <!-- Track B: DLNM Analysis -->
+    <!-- Phase B: Hypothesis Generation -->
     <g transform="translate(720, 400)">
-      <rect width="280" height="120" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
+      <rect width="280" height="120" fill="url(#processGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
-        Track B: DLNM Analysis
+        Phase B: Hypothesis Generation
       </text>
       <text x="140" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">
-        Distributed Lag Non-linear Models
+        Convert XAI insights to testable hypotheses
       </text>
-      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Cross-basis functions (21-day lags)</text>
-      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Natural cubic splines</text>
-      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Non-linear dose-response curves</text>
-      <text x="10" y="94" font-family="Arial, sans-serif" font-size="10" fill="white">• Seasonal vulnerability patterns</text>
-      <text x="10" y="108" font-family="Arial, sans-serif" font-size="10" fill="white">• Lag effects: 0-3d acute, 7-21d delayed</text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Pathway-specific mechanistic hypotheses</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Vulnerability interaction hypotheses</text>
+      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Temporal relationship hypotheses</text>
+      <text x="10" y="94" font-family="Arial, sans-serif" font-size="10" fill="white">• African-specific context hypotheses</text>
+      <text x="10" y="108" font-family="Arial, sans-serif" font-size="10" fill="white">• Novel climate-health connections</text>
     </g>
     
-    <!-- Stage 4: Explainable AI -->
+    <!-- Stage 4: DLNM Validation -->
     <g transform="translate(550, 550)">
       <rect width="300" height="100" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="150" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
-        Stage 4: Explainable AI &amp; Interpretation
+        Stage 4: DLNM Validation
       </text>
-      <text x="10" y="42" font-family="Arial, sans-serif" font-size="10" fill="white">• SHAP (TreeExplainer) analysis</text>
-      <text x="10" y="56" font-family="Arial, sans-serif" font-size="10" fill="white">• Feature importance visualization</text>
-      <text x="10" y="70" font-family="Arial, sans-serif" font-size="10" fill="white">• Interaction effects</text>
-      <text x="150" y="42" font-family="Arial, sans-serif" font-size="10" fill="white">• Pathway-specific insights</text>
-      <text x="150" y="56" font-family="Arial, sans-serif" font-size="10" fill="white">• Socioeconomic modification</text>
+      <text x="10" y="42" font-family="Arial, sans-serif" font-size="10" fill="white">• Test XAI-derived hypotheses</text>
+      <text x="10" y="56" font-family="Arial, sans-serif" font-size="10" fill="white">• Confirm non-linear relationships</text>
+      <text x="10" y="70" font-family="Arial, sans-serif" font-size="10" fill="white">• Validate lag structures</text>
+      <text x="150" y="42" font-family="Arial, sans-serif" font-size="10" fill="white">• Quantify effect sizes</text>
+      <text x="150" y="56" font-family="Arial, sans-serif" font-size="10" fill="white">• African urban context validation</text>
       <text x="150" y="70" font-family="Arial, sans-serif" font-size="10" fill="white">• Uncertainty quantification</text>
     </g>
   </g>
@@ -243,29 +243,29 @@
       Results Layer
     </text>
     
-    <!-- Model Performance Metrics -->
+    <!-- Model Performance Assessment -->
     <g transform="translate(1050, 180)">
       <rect width="280" height="90" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
-        Model Performance Metrics
+        Model Performance Assessment
       </text>
-      <text x="10" y="38" font-family="Arial, sans-serif" font-size="10" fill="white">• R² scores by biomarker</text>
-      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• RMSE values</text>
-      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Cross-validation results</text>
-      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Confidence intervals</text>
+      <text x="10" y="38" font-family="Arial, sans-serif" font-size="10" fill="white">• Cross-validation framework</text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Temporal validation</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Pathway-specific evaluation</text>
+      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Uncertainty quantification</text>
     </g>
     
-    <!-- Scientific Insights -->
+    <!-- Policy-Relevant Findings -->
     <g transform="translate(1050, 290)">
       <rect width="280" height="110" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
-        Scientific Insights
+        Policy-Relevant Findings
       </text>
-      <text x="10" y="38" font-family="Arial, sans-serif" font-size="10" fill="white">• Temperature thresholds identified</text>
-      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Lag effects (0-3 days acute)</text>
-      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Delayed effects (7-21 days)</text>
-      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Vulnerability patterns</text>
-      <text x="10" y="94" font-family="Arial, sans-serif" font-size="10" fill="white">• Environmental justice implications</text>
+      <text x="10" y="38" font-family="Arial, sans-serif" font-size="10" fill="white">• XAI-discovered climate-health pathways</text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• DLNM-validated effect sizes</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• African urban vulnerability patterns</text>
+      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Temporal matching insights</text>
+      <text x="10" y="94" font-family="Arial, sans-serif" font-size="10" fill="white">• Environmental burden implications</text>
     </g>
     
     <!-- Deliverables -->
@@ -291,13 +291,12 @@
     <!-- From Stage 1 to Stage 2 -->
     <path d="M 685 210 L 715 210" marker-end="url(#arrow)"/>
     
-    <!-- From Stage 2 to Track A and Track B -->
+    <!-- From Stage 2 to Phase A and Phase B -->
     <path d="M 870 265 L 520 395" marker-end="url(#arrow)"/>
-    <path d="M 870 265 L 860 395" marker-end="url(#arrow)"/>
+    <path d="M 665 460 L 715 460" marker-end="url(#arrow)"/>
     
-    <!-- From Track A and Track B to Stage 4 -->
-    <path d="M 520 525 L 545 580" marker-end="url(#arrow)"/>
-    <path d="M 860 525 L 855 580" marker-end="url(#arrow)"/>
+    <!-- From Phase B to Stage 4 -->
+    <path d="M 860 525 L 700 545" marker-end="url(#arrow)"/>
     
     <!-- From Stage 4 to Outputs -->
     <path d="M 855 600 L 1045 225" marker-end="url(#arrow)"/>
@@ -358,8 +357,35 @@
     <text x="595" y="16" font-family="Arial, sans-serif" font-size="10" fill="#666">Data Flow</text>
   </g>
   
-  <!-- Watermark/Attribution -->
-  <text x="1360" y="960" font-family="Arial, sans-serif" font-size="9" text-anchor="end" fill="#999">
-    HEAT Center Research Project | Climate-Health Analysis Pipeline | 2025
+  <!-- ENBEL Conference Note -->
+  <rect x="30" y="880" width="800" height="40" fill="#E8F4F8" stroke="#1B5E5E" stroke-width="1" rx="5"/>
+  <text x="50" y="898" font-family="Arial, sans-serif" font-size="11" fill="#1B5E5E" font-weight="bold">
+    Temporal Matching Note:
+  </text>
+  <text x="180" y="898" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    Clinical and GCRO survey data aligned temporally to enable comprehensive XAI analysis
+  </text>
+  <text x="50" y="912" font-family="Arial, sans-serif" font-size="11" fill="#1B5E5E" font-weight="bold">
+    ENBEL Context:
+  </text>
+  <text x="150" y="912" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    Environmental Burden of Disease framework for African urban health research
+  </text>
+  
+  <!-- QR Code placeholder -->
+  <rect x="1250" y="880" width="80" height="80" fill="white" stroke="#1B5E5E" stroke-width="2" rx="5"/>
+  <text x="1290" y="900" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#666">
+    QR Code:
+  </text>
+  <text x="1290" y="915" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">
+    Full Methodology
+  </text>
+  <text x="1290" y="925" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">
+    Details
+  </text>
+  
+  <!-- Conference Attribution -->
+  <text x="1320" y="975" font-family="Arial, sans-serif" font-size="9" text-anchor="end" fill="#999">
+    ENBEL Conference 2025 | XAI-Driven Climate-Health Analysis | Johannesburg Case Study
   </text>
 </svg>
