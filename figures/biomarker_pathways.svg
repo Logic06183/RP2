@@ -1,0 +1,349 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Pathway-specific gradients -->
+    <linearGradient id="cardioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#de2d26;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#fc9272;stop-opacity:0.8"/>
+    </linearGradient>
+    
+    <linearGradient id="renalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3182bd;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#9ecae1;stop-opacity:0.8"/>
+    </linearGradient>
+    
+    <linearGradient id="immuneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#31a354;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#a1d99b;stop-opacity:0.8"/>
+    </linearGradient>
+    
+    <linearGradient id="metabolicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fd8d3c;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#fdd0a2;stop-opacity:0.8"/>
+    </linearGradient>
+    
+    <linearGradient id="heatGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fff5f0;stop-opacity:1"/>
+      <stop offset="25%" style="stop-color:#fee0d2;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#fcbba1;stop-opacity:1"/>
+      <stop offset="75%" style="stop-color:#fc9272;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#fb6a4a;stop-opacity:1"/>
+    </linearGradient>
+    
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.4"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <pattern id="dotPattern" patternUnits="userSpaceOnUse" width="10" height="10">
+      <circle cx="2" cy="2" r="1" fill="#cccccc" opacity="0.3"/>
+      <circle cx="7" cy="7" r="1" fill="#cccccc" opacity="0.3"/>
+    </pattern>
+    
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666666"/>
+    </marker>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="900" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" fill="#1a1a1a">
+    Biomarker Pathway Analysis Framework
+  </text>
+  
+  <text x="600" y="60" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#4a4a4a">
+    Physiological Pathways Linking Temperature Exposure to Health Outcomes
+  </text>
+  
+  <!-- Central Heat Exposure -->
+  <g id="heat-exposure" transform="translate(600, 150)">
+    <circle cx="0" cy="0" r="50" fill="url(#heatGradient)" stroke="#d62728" stroke-width="3" filter="url(#dropShadow)"/>
+    <text x="0" y="-5" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333">
+      Temperature
+    </text>
+    <text x="0" y="8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#333333">
+      Exposure
+    </text>
+    <text x="0" y="22" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#666666">
+      &gt;26.2°C (90th)
+    </text>
+  </g>
+  
+  <!-- Cardiovascular Pathway -->
+  <g id="cardiovascular" transform="translate(200, 300)">
+    <!-- Pathway box -->
+    <rect x="-100" y="-40" width="280" height="200" fill="url(#cardioGradient)" stroke="#de2d26" stroke-width="2" rx="10" filter="url(#dropShadow)"/>
+    
+    <!-- Pathway title -->
+    <rect x="-80" y="-30" width="240" height="30" fill="#ffffff" stroke="#de2d26" stroke-width="1.5" rx="5"/>
+    <text x="40" y="-8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#de2d26">
+      CARDIOVASCULAR PATHWAY
+    </text>
+    
+    <!-- Mechanism flow -->
+    <g transform="translate(0, 20)">
+      <!-- Temperature effect -->
+      <rect x="-70" y="0" width="220" height="25" fill="#ffffff" stroke="#de2d26" stroke-width="1" rx="3" opacity="0.9"/>
+      <text x="40" y="16" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Heat → Peripheral Vasodilation
+      </text>
+      
+      <!-- Arrow -->
+      <line x1="40" y1="25" x2="40" y2="35" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow)"/>
+      
+      <!-- Physiological response -->
+      <rect x="-70" y="35" width="220" height="25" fill="#ffffff" stroke="#de2d26" stroke-width="1" rx="3" opacity="0.9"/>
+      <text x="40" y="51" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        ↑ Cardiac Output, ↓ Blood Pressure
+      </text>
+      
+      <!-- Arrow -->
+      <line x1="40" y1="60" x2="40" y2="70" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow)"/>
+      
+      <!-- Biomarkers -->
+      <rect x="-70" y="70" width="220" height="35" fill="#fee0d2" stroke="#de2d26" stroke-width="1" rx="3"/>
+      <text x="40" y="83" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#333333">
+        Measured Biomarkers:
+      </text>
+      <text x="40" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        Systolic BP, Diastolic BP
+      </text>
+      
+      <!-- Effect size -->
+      <rect x="-50" y="115" width="180" height="20" fill="#ffffff" stroke="#de2d26" stroke-width="1.5" rx="10"/>
+      <text x="40" y="128" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#de2d26" font-weight="bold">
+        Heat Effect: R² = 0.076 (Moderate)
+      </text>
+    </g>
+  </g>
+  
+  <!-- Renal Pathway -->
+  <g id="renal" transform="translate(550, 300)">
+    <!-- Pathway box -->
+    <rect x="-100" y="-40" width="280" height="200" fill="url(#renalGradient)" stroke="#3182bd" stroke-width="2" rx="10" filter="url(#dropShadow)"/>
+    
+    <!-- Pathway title -->
+    <rect x="-80" y="-30" width="240" height="30" fill="#ffffff" stroke="#3182bd" stroke-width="1.5" rx="5"/>
+    <text x="40" y="-8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#3182bd">
+      RENAL PATHWAY
+    </text>
+    
+    <!-- Mechanism flow -->
+    <g transform="translate(0, 20)">
+      <!-- Temperature effect -->
+      <rect x="-70" y="0" width="220" height="25" fill="#ffffff" stroke="#3182bd" stroke-width="1" rx="3" opacity="0.9"/>
+      <text x="40" y="16" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Heat → Fluid Loss (Perspiration)
+      </text>
+      
+      <!-- Arrow -->
+      <line x1="40" y1="25" x2="40" y2="35" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow)"/>
+      
+      <!-- Physiological response -->
+      <rect x="-70" y="35" width="220" height="25" fill="#ffffff" stroke="#3182bd" stroke-width="1" rx="3" opacity="0.9"/>
+      <text x="40" y="51" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Dehydration → ↓ Kidney Perfusion
+      </text>
+      
+      <!-- Arrow -->
+      <line x1="40" y1="60" x2="40" y2="70" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow)"/>
+      
+      <!-- Biomarkers -->
+      <rect x="-70" y="70" width="220" height="35" fill="#deebf7" stroke="#3182bd" stroke-width="1" rx="3"/>
+      <text x="40" y="83" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#333333">
+        Measured Biomarkers:
+      </text>
+      <text x="40" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        Creatinine
+      </text>
+      
+      <!-- Effect size -->
+      <rect x="-50" y="115" width="180" height="20" fill="#ffffff" stroke="#3182bd" stroke-width="1.5" rx="10"/>
+      <text x="40" y="128" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#3182bd" font-weight="bold">
+        Heat Effect: R² = 0.029 (Strong)
+      </text>
+    </g>
+  </g>
+  
+  <!-- Immune Pathway -->
+  <g id="immune" transform="translate(900, 300)">
+    <!-- Pathway box -->
+    <rect x="-100" y="-40" width="280" height="200" fill="url(#immuneGradient)" stroke="#31a354" stroke-width="2" rx="10" filter="url(#dropShadow)"/>
+    
+    <!-- Pathway title -->
+    <rect x="-80" y="-30" width="240" height="30" fill="#ffffff" stroke="#31a354" stroke-width="1.5" rx="5"/>
+    <text x="40" y="-8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#31a354">
+      IMMUNE PATHWAY
+    </text>
+    
+    <!-- Mechanism flow -->
+    <g transform="translate(0, 20)">
+      <!-- Temperature effect -->
+      <rect x="-70" y="0" width="220" height="25" fill="#ffffff" stroke="#31a354" stroke-width="1" rx="3" opacity="0.9"/>
+      <text x="40" y="16" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Heat → Inflammatory Response
+      </text>
+      
+      <!-- Arrow -->
+      <line x1="40" y1="25" x2="40" y2="35" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow)"/>
+      
+      <!-- Physiological response -->
+      <rect x="-70" y="35" width="220" height="25" fill="#ffffff" stroke="#31a354" stroke-width="1" rx="3" opacity="0.9"/>
+      <text x="40" y="51" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        ↑ Cytokines, Altered Cell Function
+      </text>
+      
+      <!-- Arrow -->
+      <line x1="40" y1="60" x2="40" y2="70" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow)"/>
+      
+      <!-- Biomarkers -->
+      <rect x="-70" y="70" width="220" height="35" fill="#e5f5e0" stroke="#31a354" stroke-width="1" rx="3"/>
+      <text x="40" y="83" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#333333">
+        Measured Biomarkers:
+      </text>
+      <text x="40" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        CD4 Count, Hemoglobin
+      </text>
+      
+      <!-- Effect size -->
+      <rect x="-50" y="115" width="180" height="20" fill="#ffffff" stroke="#31a354" stroke-width="1.5" rx="10"/>
+      <text x="40" y="128" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#31a354" font-weight="bold">
+        Heat Effect: R² = 0.202 (Variable)
+      </text>
+    </g>
+  </g>
+  
+  <!-- Metabolic Pathway -->
+  <g id="metabolic" transform="translate(375, 580)">
+    <!-- Pathway box -->
+    <rect x="-100" y="-40" width="280" height="200" fill="url(#metabolicGradient)" stroke="#fd8d3c" stroke-width="2" rx="10" filter="url(#dropShadow)"/>
+    
+    <!-- Pathway title -->
+    <rect x="-80" y="-30" width="240" height="30" fill="#ffffff" stroke="#fd8d3c" stroke-width="1.5" rx="5"/>
+    <text x="40" y="-8" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#fd8d3c">
+      METABOLIC PATHWAY
+    </text>
+    
+    <!-- Mechanism flow -->
+    <g transform="translate(0, 20)">
+      <!-- Temperature effect -->
+      <rect x="-70" y="0" width="220" height="25" fill="#ffffff" stroke="#fd8d3c" stroke-width="1" rx="3" opacity="0.9"/>
+      <text x="40" y="16" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Heat → ↑ Metabolic Rate
+      </text>
+      
+      <!-- Arrow -->
+      <line x1="40" y1="25" x2="40" y2="35" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow)"/>
+      
+      <!-- Physiological response -->
+      <rect x="-70" y="35" width="220" height="25" fill="#ffffff" stroke="#fd8d3c" stroke-width="1" rx="3" opacity="0.9"/>
+      <text x="40" y="51" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Altered Glucose/Lipid Metabolism
+      </text>
+      
+      <!-- Arrow -->
+      <line x1="40" y1="60" x2="40" y2="70" stroke="#666666" stroke-width="1.5" marker-end="url(#arrow)"/>
+      
+      <!-- Biomarkers -->
+      <rect x="-70" y="70" width="220" height="35" fill="#fff7e6" stroke="#fd8d3c" stroke-width="1" rx="3"/>
+      <text x="40" y="83" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#333333">
+        Measured Biomarkers:
+      </text>
+      <text x="40" y="96" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        Glucose, Cholesterol, HDL, LDL
+      </text>
+      
+      <!-- Effect size -->
+      <rect x="-50" y="115" width="180" height="20" fill="#ffffff" stroke="#fd8d3c" stroke-width="1.5" rx="10"/>
+      <text x="40" y="128" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#fd8d3c" font-weight="bold">
+        Heat Effect: Under Investigation
+      </text>
+    </g>
+  </g>
+  
+  <!-- Integration Points -->
+  <g id="integration" transform="translate(750, 580)">
+    <rect x="-50" y="-40" width="400" height="200" fill="#f8f8f8" stroke="#666666" stroke-width="2" rx="10" filter="url(#dropShadow)"/>
+    
+    <text x="150" y="-15" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#333333">
+      PATHWAY INTEGRATION
+    </text>
+    
+    <g transform="translate(20, 10)">
+      <!-- Shared exposures -->
+      <rect x="0" y="0" width="310" height="35" fill="#ffffff" stroke="#666666" stroke-width="1" rx="5"/>
+      <circle cx="15" cy="17.5" r="10" fill="#666666"/>
+      <text x="15" y="21" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">1</text>
+      <text x="35" y="13" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">
+        Shared Environmental Exposures
+      </text>
+      <text x="35" y="26" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">
+        Temperature affects all pathways simultaneously
+      </text>
+      
+      <!-- Cumulative effects -->
+      <rect x="0" y="45" width="310" height="35" fill="#ffffff" stroke="#666666" stroke-width="1" rx="5"/>
+      <circle cx="15" cy="62.5" r="10" fill="#666666"/>
+      <text x="15" y="66" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">2</text>
+      <text x="35" y="58" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">
+        Cumulative Effects
+      </text>
+      <text x="35" y="71" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">
+        Multiple pathway dysfunction amplifies risk
+      </text>
+      
+      <!-- Vulnerability modifiers -->
+      <rect x="0" y="90" width="310" height="35" fill="#ffffff" stroke="#666666" stroke-width="1" rx="5"/>
+      <circle cx="15" cy="107.5" r="10" fill="#666666"/>
+      <text x="15" y="111" text-anchor="middle" fill="#ffffff" font-size="10" font-weight="bold">3</text>
+      <text x="35" y="103" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">
+        Vulnerability Modifiers
+      </text>
+      <text x="35" y="116" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">
+        Age, comorbidities, medications alter response
+      </text>
+    </g>
+  </g>
+  
+  <!-- Connecting lines from heat exposure to pathways -->
+  <g stroke="#666666" stroke-width="2" fill="none" opacity="0.6">
+    <path d="M 570,170 Q 400,200 240,260" marker-end="url(#arrow)"/>
+    <path d="M 600,190 L 590,260" marker-end="url(#arrow)"/>
+    <path d="M 630,170 Q 800,200 940,260" marker-end="url(#arrow)"/>
+    <path d="M 580,190 Q 480,350 415,540" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- Summary Statistics -->
+  <g id="summary" transform="translate(100, 780)">
+    <rect x="0" y="0" width="1000" height="90" fill="#e8f4f8" stroke="#2166ac" stroke-width="2" rx="5"/>
+    
+    <text x="500" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#2166ac">
+      Key Findings from Pathway Analysis
+    </text>
+    
+    <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333">
+      <text x="50" y="40">• Renal pathway shows strongest direct heat response (R² = 0.029) indicating dehydration as primary mechanism</text>
+      <text x="50" y="55">• Immune pathway exhibits highest overall variance explained (R² = 0.202 for hemoglobin) with complex interactions</text>
+      <text x="50" y="70">• Cardiovascular response moderate (R² = 0.076) but clinically significant for at-risk populations</text>
+      <text x="550" y="40">• Pathways interact: dehydration affects blood pressure and immune function</text>
+      <text x="550" y="55">• Temperature thresholds vary by pathway: renal sensitive at lower temps</text>
+      <text x="550" y="70">• Combined pathway dysfunction explains population-level health impacts</text>
+    </g>
+  </g>
+  
+  <!-- Legend -->
+  <g id="legend" transform="translate(50, 90)">
+    <rect x="0" y="0" width="200" height="30" fill="#f0f0f0" stroke="#999999" stroke-width="1" rx="3"/>
+    <text x="10" y="20" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#666666">
+      R² values indicate variance explained by temperature in machine learning models
+    </text>
+  </g>
+</svg>

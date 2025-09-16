@@ -1,0 +1,396 @@
+<svg viewBox="0 0 1200 700" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="trainGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#08519c;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#3182bd;stop-opacity:1"/>
+    </linearGradient>
+    
+    <linearGradient id="testGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#fd8d3c;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#fdae6b;stop-opacity:1"/>
+    </linearGradient>
+    
+    <linearGradient id="performanceGradient" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#2ca02c;stop-opacity:0.3"/>
+      <stop offset="100%" style="stop-color:#2ca02c;stop-opacity:0.8"/>
+    </linearGradient>
+    
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="2" dy="2"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <pattern id="diagonalHatch" patternUnits="userSpaceOnUse" width="4" height="4">
+      <path d="M-1,1 l2,-2 M0,4 l4,-4 M3,5 l2,-2" stroke="#ffffff" stroke-width="0.5" opacity="0.3"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="700" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" fill="#1a1a1a">
+    Temporal Cross-Validation Strategy
+  </text>
+  
+  <text x="600" y="60" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#4a4a4a">
+    Forward-Chaining Validation with No Data Leakage (2002-2021)
+  </text>
+  
+  <!-- Timeline Visualization -->
+  <g id="timeline" transform="translate(100, 100)">
+    <text x="500" y="-10" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+      A. Timeline-Based Data Splitting
+    </text>
+    
+    <!-- Timeline axis -->
+    <line x1="0" y1="300" x2="1000" y2="300" stroke="#333333" stroke-width="2"/>
+    
+    <!-- Year markers -->
+    <g font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">
+      <line x1="0" y1="295" x2="0" y2="305" stroke="#333333" stroke-width="2"/>
+      <text x="0" y="320" text-anchor="middle">2002</text>
+      
+      <line x1="200" y1="295" x2="200" y2="305" stroke="#333333" stroke-width="1"/>
+      <text x="200" y="320" text-anchor="middle">2006</text>
+      
+      <line x1="350" y1="295" x2="350" y2="305" stroke="#333333" stroke-width="1"/>
+      <text x="350" y="320" text-anchor="middle">2009</text>
+      
+      <line x1="500" y1="295" x2="500" y2="305" stroke="#333333" stroke-width="1"/>
+      <text x="500" y="320" text-anchor="middle">2012</text>
+      
+      <line x1="650" y1="295" x2="650" y2="305" stroke="#333333" stroke-width="1"/>
+      <text x="650" y="320" text-anchor="middle">2015</text>
+      
+      <line x1="750" y1="295" x2="750" y2="305" stroke="#333333" stroke-width="1"/>
+      <text x="750" y="320" text-anchor="middle">2017</text>
+      
+      <line x1="850" y1="295" x2="850" y2="305" stroke="#333333" stroke-width="1"/>
+      <text x="850" y="320" text-anchor="middle">2019</text>
+      
+      <line x1="1000" y1="295" x2="1000" y2="305" stroke="#333333" stroke-width="2"/>
+      <text x="1000" y="320" text-anchor="middle">2021</text>
+    </g>
+    
+    <!-- Fold 1 -->
+    <g id="fold1" transform="translate(0, 20)">
+      <text x="-50" y="15" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        Fold 1
+      </text>
+      <rect x="0" y="0" width="200" height="30" fill="url(#trainGradient)" filter="url(#shadow)"/>
+      <rect x="0" y="0" width="200" height="30" fill="url(#diagonalHatch)"/>
+      <text x="100" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Training: 2002-2005
+      </text>
+      
+      <rect x="200" y="0" width="100" height="30" fill="url(#testGradient)" filter="url(#shadow)"/>
+      <text x="250" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Test: 2006-07
+      </text>
+      
+      <!-- Gap indicator -->
+      <rect x="300" y="10" width="700" height="10" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" stroke-dasharray="5,3"/>
+      <text x="650" y="19" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#999999" font-style="italic">
+        Future data (not used)
+      </text>
+    </g>
+    
+    <!-- Fold 2 -->
+    <g id="fold2" transform="translate(0, 70)">
+      <text x="-50" y="15" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        Fold 2
+      </text>
+      <rect x="0" y="0" width="350" height="30" fill="url(#trainGradient)" filter="url(#shadow)"/>
+      <rect x="0" y="0" width="350" height="30" fill="url(#diagonalHatch)"/>
+      <text x="175" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Training: 2002-2008
+      </text>
+      
+      <rect x="350" y="0" width="150" height="30" fill="url(#testGradient)" filter="url(#shadow)"/>
+      <text x="425" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Test: 2009-11
+      </text>
+      
+      <rect x="500" y="10" width="500" height="10" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" stroke-dasharray="5,3"/>
+    </g>
+    
+    <!-- Fold 3 -->
+    <g id="fold3" transform="translate(0, 120)">
+      <text x="-50" y="15" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        Fold 3
+      </text>
+      <rect x="0" y="0" width="550" height="30" fill="url(#trainGradient)" filter="url(#shadow)"/>
+      <rect x="0" y="0" width="550" height="30" fill="url(#diagonalHatch)"/>
+      <text x="275" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Training: 2002-2012
+      </text>
+      
+      <rect x="550" y="0" width="150" height="30" fill="url(#testGradient)" filter="url(#shadow)"/>
+      <text x="625" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Test: 2013-15
+      </text>
+      
+      <rect x="700" y="10" width="300" height="10" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" stroke-dasharray="5,3"/>
+    </g>
+    
+    <!-- Fold 4 -->
+    <g id="fold4" transform="translate(0, 170)">
+      <text x="-50" y="15" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        Fold 4
+      </text>
+      <rect x="0" y="0" width="750" height="30" fill="url(#trainGradient)" filter="url(#shadow)"/>
+      <rect x="0" y="0" width="750" height="30" fill="url(#diagonalHatch)"/>
+      <text x="375" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Training: 2002-2016
+      </text>
+      
+      <rect x="750" y="0" width="100" height="30" fill="url(#testGradient)" filter="url(#shadow)"/>
+      <text x="800" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Test: 2017-18
+      </text>
+      
+      <rect x="850" y="10" width="150" height="10" fill="#f0f0f0" stroke="#cccccc" stroke-width="1" stroke-dasharray="5,3"/>
+    </g>
+    
+    <!-- Fold 5 -->
+    <g id="fold5" transform="translate(0, 220)">
+      <text x="-50" y="15" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        Fold 5
+      </text>
+      <rect x="0" y="0" width="900" height="30" fill="url(#trainGradient)" filter="url(#shadow)"/>
+      <rect x="0" y="0" width="900" height="30" fill="url(#diagonalHatch)"/>
+      <text x="450" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Training: 2002-2019
+      </text>
+      
+      <rect x="900" y="0" width="100" height="30" fill="url(#testGradient)" filter="url(#shadow)"/>
+      <text x="950" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#ffffff" font-weight="bold">
+        Test: 2020-21
+      </text>
+    </g>
+    
+    <!-- Key principles annotations -->
+    <g id="principles" transform="translate(200, 350)">
+      <rect x="-20" y="0" width="640" height="80" fill="#f8f8f8" stroke="#666666" stroke-width="1" rx="5"/>
+      
+      <text x="300" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        Key Validation Principles
+      </text>
+      
+      <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#555555">
+        <circle cx="20" cy="40" r="3" fill="#08519c"/>
+        <text x="30" y="44">Training data always precedes test data temporally (no future information)</text>
+        
+        <circle cx="20" cy="60" r="3" fill="#fd8d3c"/>
+        <text x="30" y="64">Test sets are strictly sequential and non-overlapping</text>
+        
+        <circle cx="320" cy="40" r="3" fill="#2ca02c"/>
+        <text x="330" y="44">Expanding window approach maintains temporal order</text>
+        
+        <circle cx="320" cy="60" r="3" fill="#d62728"/>
+        <text x="330" y="64">Prevents data leakage and ensures realistic performance</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Performance Metrics Section -->
+  <g id="performance" transform="translate(100, 480)">
+    <text x="500" y="0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+      B. Performance Metrics Across Folds
+    </text>
+    
+    <!-- R² Chart -->
+    <g id="r2-chart" transform="translate(0, 30)">
+      <text x="200" y="0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        R² Score by Fold
+      </text>
+      
+      <rect x="0" y="10" width="400" height="120" fill="#fafafa" stroke="#333333" stroke-width="1.5"/>
+      
+      <!-- Grid lines -->
+      <g stroke="#e0e0e0" stroke-width="0.5">
+        <line x1="0" y1="30" x2="400" y2="30"/>
+        <line x1="0" y1="50" x2="400" y2="50"/>
+        <line x1="0" y1="70" x2="400" y2="70"/>
+        <line x1="0" y1="90" x2="400" y2="90"/>
+        <line x1="0" y1="110" x2="400" y2="110"/>
+      </g>
+      
+      <!-- Bars -->
+      <rect x="30" y="35" width="60" height="75" fill="url(#performanceGradient)"/>
+      <text x="60" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Fold 1
+      </text>
+      <text x="60" y="30" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2ca02c" font-weight="bold">
+        0.812
+      </text>
+      
+      <rect x="110" y="38" width="60" height="72" fill="url(#performanceGradient)"/>
+      <text x="140" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Fold 2
+      </text>
+      <text x="140" y="33" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2ca02c" font-weight="bold">
+        0.798
+      </text>
+      
+      <rect x="190" y="32" width="60" height="78" fill="url(#performanceGradient)"/>
+      <text x="220" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Fold 3
+      </text>
+      <text x="220" y="27" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2ca02c" font-weight="bold">
+        0.825
+      </text>
+      
+      <rect x="270" y="36" width="60" height="74" fill="url(#performanceGradient)"/>
+      <text x="300" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Fold 4
+      </text>
+      <text x="300" y="31" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2ca02c" font-weight="bold">
+        0.806
+      </text>
+      
+      <rect x="350" y="34" width="60" height="76" fill="url(#performanceGradient)"/>
+      <text x="380" y="125" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        Fold 5
+      </text>
+      <text x="380" y="29" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2ca02c" font-weight="bold">
+        0.819
+      </text>
+      
+      <!-- Mean line -->
+      <line x1="0" y1="36" x2="400" y2="36" stroke="#d62728" stroke-width="2" stroke-dasharray="8,4"/>
+      <text x="10" y="33" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#d62728">
+        Mean: 0.812
+      </text>
+      
+      <!-- Y-axis labels -->
+      <g font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        <text x="-5" y="113" text-anchor="end">0.70</text>
+        <text x="-5" y="93" text-anchor="end">0.75</text>
+        <text x="-5" y="73" text-anchor="end">0.80</text>
+        <text x="-5" y="53" text-anchor="end">0.85</text>
+        <text x="-5" y="33" text-anchor="end">0.90</text>
+      </g>
+    </g>
+    
+    <!-- RMSE Chart -->
+    <g id="rmse-chart" transform="translate(450, 30)">
+      <text x="200" y="0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        RMSE by Fold
+      </text>
+      
+      <rect x="0" y="10" width="400" height="120" fill="#fafafa" stroke="#333333" stroke-width="1.5"/>
+      
+      <!-- Grid lines -->
+      <g stroke="#e0e0e0" stroke-width="0.5">
+        <line x1="0" y1="30" x2="400" y2="30"/>
+        <line x1="0" y1="50" x2="400" y2="50"/>
+        <line x1="0" y1="70" x2="400" y2="70"/>
+        <line x1="0" y1="90" x2="400" y2="90"/>
+        <line x1="0" y1="110" x2="400" y2="110"/>
+      </g>
+      
+      <!-- Line chart -->
+      <polyline points="60,65 140,68 220,62 300,66 380,64" 
+                stroke="#d62728" stroke-width="2" fill="none"/>
+      
+      <!-- Data points -->
+      <circle cx="60" cy="65" r="4" fill="#d62728"/>
+      <circle cx="140" cy="68" r="4" fill="#d62728"/>
+      <circle cx="220" cy="62" r="4" fill="#d62728"/>
+      <circle cx="300" cy="66" r="4" fill="#d62728"/>
+      <circle cx="380" cy="64" r="4" fill="#d62728"/>
+      
+      <!-- Error bars -->
+      <g stroke="#d62728" stroke-width="1">
+        <line x1="60" y1="61" x2="60" y2="69"/>
+        <line x1="55" y1="61" x2="65" y2="61"/>
+        <line x1="55" y1="69" x2="65" y2="69"/>
+        
+        <line x1="140" y1="63" x2="140" y2="73"/>
+        <line x1="135" y1="63" x2="145" y2="63"/>
+        <line x1="135" y1="73" x2="145" y2="73"/>
+        
+        <line x1="220" y1="59" x2="220" y2="65"/>
+        <line x1="215" y1="59" x2="225" y2="59"/>
+        <line x1="215" y1="65" x2="225" y2="65"/>
+        
+        <line x1="300" y1="62" x2="300" y2="70"/>
+        <line x1="295" y1="62" x2="305" y2="62"/>
+        <line x1="295" y1="70" x2="305" y2="70"/>
+        
+        <line x1="380" y1="61" x2="380" y2="67"/>
+        <line x1="375" y1="61" x2="385" y2="61"/>
+        <line x1="375" y1="67" x2="385" y2="67"/>
+      </g>
+      
+      <!-- X-axis labels -->
+      <g font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        <text x="60" y="125" text-anchor="middle">Fold 1</text>
+        <text x="140" y="125" text-anchor="middle">Fold 2</text>
+        <text x="220" y="125" text-anchor="middle">Fold 3</text>
+        <text x="300" y="125" text-anchor="middle">Fold 4</text>
+        <text x="380" y="125" text-anchor="middle">Fold 5</text>
+      </g>
+      
+      <!-- Y-axis labels -->
+      <g font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        <text x="-5" y="113" text-anchor="end">0.10</text>
+        <text x="-5" y="93" text-anchor="end">0.15</text>
+        <text x="-5" y="73" text-anchor="end">0.20</text>
+        <text x="-5" y="53" text-anchor="end">0.25</text>
+        <text x="-5" y="33" text-anchor="end">0.30</text>
+      </g>
+      
+      <!-- Values -->
+      <g font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#d62728">
+        <text x="60" y="60" text-anchor="middle">0.198</text>
+        <text x="140" y="85" text-anchor="middle">0.207</text>
+        <text x="220" y="57" text-anchor="middle">0.186</text>
+        <text x="300" y="61" text-anchor="middle">0.201</text>
+        <text x="380" y="59" text-anchor="middle">0.194</text>
+      </g>
+    </g>
+    
+    <!-- Stability Analysis -->
+    <g transform="translate(900, 30)">
+      <rect x="0" y="0" width="200" height="130" fill="#f0f8ff" stroke="#1f77b4" stroke-width="1.5" rx="5"/>
+      
+      <text x="100" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f77b4">
+        Stability Analysis
+      </text>
+      
+      <g font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#333333">
+        <text x="10" y="40" font-weight="bold">Overall Performance:</text>
+        <text x="20" y="55">Mean R²: 0.812 ± 0.010</text>
+        <text x="20" y="70">Mean RMSE: 0.197 ± 0.008</text>
+        
+        <text x="10" y="90" font-weight="bold">Consistency:</text>
+        <text x="20" y="105">CV(R²): 1.23%</text>
+        <text x="20" y="120">Max-Min R²: 0.027</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Summary Box -->
+  <g id="summary" transform="translate(100, 640)">
+    <rect x="0" y="0" width="1000" height="50" fill="#e8f4f8" stroke="#2166ac" stroke-width="2" rx="5"/>
+    
+    <text x="500" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2166ac">
+      Validation Strategy Ensures Robust and Generalizable Results
+    </text>
+    
+    <text x="500" y="38" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333">
+      Low variance across folds (std &lt; 0.01) demonstrates model stability • Temporal ordering prevents optimistic bias • Results generalizable to future time periods
+    </text>
+  </g>
+</svg>

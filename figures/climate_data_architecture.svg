@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 900">
+  <!-- Define gradients and filters -->
+  <defs>
+    <!-- Professional gradients for different data sources -->
+    <linearGradient id="climateHeaderGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#0F766E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#134E4A;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="era5Grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0EA5E9;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0284C7;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="modisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#A855F7;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#9333EA;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="saaqisGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F59E0B;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#D97706;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="derivedGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10B981;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#059669;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="integrationGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#6366F1;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#4F46E5;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Professional shadows -->
+    <filter id="dropShadow" x="-15%" y="-15%" width="130%" height="130%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.25"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <filter id="subtleShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="1.5"/>
+      <feOffset dx="0" dy="1" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.15"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Arrow marker -->
+    <marker id="arrowMarker" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#64748B"/>
+    </marker>
+    
+    <!-- Database cylinder symbol -->
+    <symbol id="database" viewBox="0 0 100 120">
+      <ellipse cx="50" cy="15" rx="45" ry="12" opacity="0.95"/>
+      <rect x="5" y="15" width="90" height="90" opacity="0.95"/>
+      <ellipse cx="50" cy="105" rx="45" ry="12"/>
+      <path d="M5,15 Q5,27 50,27 Q95,27 95,15" fill="none" stroke-width="0.5" opacity="0.5"/>
+    </symbol>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="900" fill="#F8FAFC"/>
+  
+  <!-- Header Section -->
+  <rect x="0" y="0" width="1200" height="100" fill="url(#climateHeaderGrad)"/>
+  <text x="600" y="40" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="white">
+    Multi-Source Climate Data Integration Framework
+  </text>
+  <text x="600" y="70" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#A7F3D0">
+    High-Resolution Temperature and Environmental Data Architecture
+  </text>
+  
+  <!-- Main Data Sources Section -->
+  <text x="100" y="140" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E293B">
+    Primary Data Sources
+  </text>
+  
+  <!-- ERA5 Reanalysis Data -->
+  <g transform="translate(100, 170)">
+    <rect width="350" height="240" fill="white" rx="10" filter="url(#dropShadow)"/>
+    <rect x="0" y="0" width="350" height="50" fill="url(#era5Grad)" rx="10"/>
+    <use href="#database" x="10" y="5" width="40" height="40" fill="#0EA5E9" stroke="#0284C7"/>
+    <text x="60" y="32" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      ERA5 Reanalysis Data
+    </text>
+    
+    <!-- Content -->
+    <text x="15" y="75" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#334155">
+      Primary Temperature Source
+    </text>
+    
+    <g transform="translate(15, 90)">
+      <rect x="0" y="0" width="320" height="30" fill="#EFF6FF" rx="4"/>
+      <text x="10" y="20" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#475569">
+        Variable: tas_native (native temperature)
+      </text>
+    </g>
+    
+    <text x="15" y="140" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Hourly resolution → daily aggregation
+    </text>
+    <text x="15" y="156" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • 1-day, 7-day, 30-day temporal windows
+    </text>
+    <text x="15" y="172" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Mean, minimum, maximum temperatures
+    </text>
+    <text x="15" y="188" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Humidity, wind speed, precipitation
+    </text>
+    
+    <rect x="15" y="205" width="320" height="25" fill="#DBEAFE" rx="4"/>
+    <text x="175" y="222" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#1E40AF">
+      78 Total Climate Features
+    </text>
+  </g>
+  
+  <!-- MODIS Satellite Data -->
+  <g transform="translate(480, 170)">
+    <rect width="330" height="240" fill="white" rx="10" filter="url(#dropShadow)"/>
+    <rect x="0" y="0" width="330" height="50" fill="url(#modisGrad)" rx="10"/>
+    <use href="#database" x="10" y="5" width="40" height="40" fill="#A855F7" stroke="#9333EA"/>
+    <text x="60" y="32" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      MODIS Satellite Data
+    </text>
+    
+    <!-- Content -->
+    <text x="15" y="75" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#334155">
+      Validation Dataset
+    </text>
+    
+    <g transform="translate(15, 90)">
+      <rect x="0" y="0" width="300" height="30" fill="#FAF5FF" rx="4"/>
+      <text x="10" y="20" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#475569">
+        Land Surface Temperature (LST)
+      </text>
+    </g>
+    
+    <text x="15" y="140" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Day/Night observations
+    </text>
+    <text x="15" y="156" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • 1km spatial resolution
+    </text>
+    <text x="15" y="172" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Quality flags and cloud masks
+    </text>
+    <text x="15" y="188" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Validation for ERA5 estimates
+    </text>
+    
+    <rect x="15" y="205" width="300" height="25" fill="#EDE9FE" rx="4"/>
+    <text x="165" y="222" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#6B21A8">
+      Cross-Validation Reference
+    </text>
+  </g>
+  
+  <!-- SAAQIS Ground Stations -->
+  <g transform="translate(840, 170)">
+    <rect width="280" height="240" fill="white" rx="10" filter="url(#dropShadow)"/>
+    <rect x="0" y="0" width="280" height="50" fill="url(#saaqisGrad)" rx="10"/>
+    <use href="#database" x="10" y="5" width="40" height="40" fill="#F59E0B" stroke="#D97706"/>
+    <text x="60" y="32" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="white">
+      SAAQIS Stations
+    </text>
+    
+    <!-- Content -->
+    <text x="15" y="75" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#334155">
+      Ground Truth Data
+    </text>
+    
+    <g transform="translate(15, 90)">
+      <rect x="0" y="0" width="250" height="30" fill="#FEF3C7" rx="4"/>
+      <text x="10" y="20" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#475569">
+        Direct Temperature Measurements
+      </text>
+    </g>
+    
+    <text x="15" y="140" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Station network coverage
+    </text>
+    <text x="15" y="156" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Air quality indices
+    </text>
+    <text x="15" y="172" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Real-time monitoring
+    </text>
+    <text x="15" y="188" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#64748B">
+      • Calibration reference
+    </text>
+    
+    <rect x="15" y="205" width="250" height="25" fill="#FED7AA" rx="4"/>
+    <text x="140" y="222" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#C2410C">
+      Calibration Standard
+    </text>
+  </g>
+  
+  <!-- Integration Layer -->
+  <g transform="translate(100, 440)">
+    <rect width="1020" height="80" fill="url(#integrationGrad)" rx="10" filter="url(#dropShadow)"/>
+    <text x="510" y="30" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+      Data Integration and Harmonization Layer
+    </text>
+    <text x="150" y="55" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="white">
+      • Temporal alignment
+    </text>
+    <text x="350" y="55" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="white">
+      • Spatial interpolation
+    </text>
+    <text x="550" y="55" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="white">
+      • Quality control
+    </text>
+    <text x="750" y="55" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="white">
+      • Missing data imputation
+    </text>
+    <text x="900" y="55" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="white">
+      • Validation
+    </text>
+  </g>
+  
+  <!-- Derived Variables Section -->
+  <text x="100" y="570" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E293B">
+    Derived Climate Variables
+  </text>
+  
+  <g transform="translate(100, 600)">
+    <rect width="1020" height="240" fill="white" rx="10" filter="url(#dropShadow)"/>
+    <rect x="0" y="0" width="1020" height="40" fill="url(#derivedGrad)" rx="10"/>
+    <text x="510" y="27" font-family="Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
+      Advanced Climate Metrics and Indicators
+    </text>
+    
+    <!-- Four columns of derived variables -->
+    <g transform="translate(30, 60)">
+      <rect x="0" y="0" width="230" height="160" fill="#F0FDF4" rx="6"/>
+      <text x="115" y="25" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#14532D">
+        Heat Wave Definitions
+      </text>
+      <line x1="20" y1="35" x2="210" y2="35" stroke="#86EFAC" stroke-width="1"/>
+      <text x="15" y="55" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Consecutive days &gt;90th %ile
+      </text>
+      <text x="15" y="75" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Duration metrics
+      </text>
+      <text x="15" y="95" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Intensity measures
+      </text>
+      <text x="15" y="115" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Frequency analysis
+      </text>
+      <rect x="15" y="130" width="200" height="25" fill="#BBF7D0" rx="4"/>
+      <text x="115" y="147" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#14532D">
+        Threshold: 26.2°C (90th)
+      </text>
+    </g>
+    
+    <g transform="translate(280, 60)">
+      <rect x="0" y="0" width="230" height="160" fill="#F0FDF4" rx="6"/>
+      <text x="115" y="25" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#14532D">
+        Temperature Extremes
+      </text>
+      <line x1="20" y1="35" x2="210" y2="35" stroke="#86EFAC" stroke-width="1"/>
+      <text x="15" y="55" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • 90th percentile: 26.2°C
+      </text>
+      <text x="15" y="75" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • 95th percentile: 27.1°C
+      </text>
+      <text x="15" y="95" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Daily maximum temps
+      </text>
+      <text x="15" y="115" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Exceedance days
+      </text>
+      <rect x="15" y="130" width="200" height="25" fill="#BBF7D0" rx="4"/>
+      <text x="115" y="147" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#14532D">
+        Critical: 27.1°C (95th)
+      </text>
+    </g>
+    
+    <g transform="translate(530, 60)">
+      <rect x="0" y="0" width="230" height="160" fill="#F0FDF4" rx="6"/>
+      <text x="115" y="25" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#14532D">
+        Thermal Indices
+      </text>
+      <line x1="20" y1="35" x2="210" y2="35" stroke="#86EFAC" stroke-width="1"/>
+      <text x="15" y="55" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Diurnal temperature range
+      </text>
+      <text x="15" y="75" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Cooling degree days
+      </text>
+      <text x="15" y="95" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Heat stress indices
+      </text>
+      <text x="15" y="115" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Apparent temperature
+      </text>
+      <rect x="15" y="130" width="200" height="25" fill="#BBF7D0" rx="4"/>
+      <text x="115" y="147" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#14532D">
+        Multi-scale Metrics
+      </text>
+    </g>
+    
+    <g transform="translate(780, 60)">
+      <rect x="0" y="0" width="220" height="160" fill="#F0FDF4" rx="6"/>
+      <text x="110" y="25" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#14532D">
+        Temporal Aggregations
+      </text>
+      <line x1="20" y1="35" x2="200" y2="35" stroke="#86EFAC" stroke-width="1"/>
+      <text x="15" y="55" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • 1-day averages
+      </text>
+      <text x="15" y="75" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • 7-day rolling means
+      </text>
+      <text x="15" y="95" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • 30-day climatology
+      </text>
+      <text x="15" y="115" font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#475569">
+        • Seasonal patterns
+      </text>
+      <rect x="15" y="130" width="190" height="25" fill="#BBF7D0" rx="4"/>
+      <text x="110" y="147" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="#14532D">
+        Multiple Time Scales
+      </text>
+    </g>
+  </g>
+  
+  <!-- Flow arrows -->
+  <g stroke="#64748B" stroke-width="2" fill="none">
+    <path d="M 275 415 L 360 435" marker-end="url(#arrowMarker)"/>
+    <path d="M 645 415 L 560 435" marker-end="url(#arrowMarker)"/>
+    <path d="M 980 415 L 860 435" marker-end="url(#arrowMarker)"/>
+    <path d="M 610 525 L 610 595" marker-end="url(#arrowMarker)"/>
+  </g>
+  
+  <!-- Footer -->
+  <text x="600" y="875" font-family="Helvetica, Arial, sans-serif" font-size="10" text-anchor="middle" fill="#94A3B8">
+    Integrated climate data architecture supporting high-resolution temperature-health analysis for Johannesburg metropolitan area
+  </text>
+</svg>

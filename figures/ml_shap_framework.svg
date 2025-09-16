@@ -1,0 +1,539 @@
+<svg viewBox="0 0 1200 900" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="mlGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1f77b4;stop-opacity:1"/>
+      <stop offset="50%" style="stop-color:#2ca02c;stop-opacity:1"/>
+      <stop offset="100%" style="stop-color:#ff7f0e;stop-opacity:1"/>
+    </linearGradient>
+    
+    <linearGradient id="shapGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#e41a1c;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#377eb8;stop-opacity:0.8"/>
+    </linearGradient>
+    
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="2" dy="2"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <pattern id="dataPattern" patternUnits="userSpaceOnUse" width="4" height="4">
+      <rect width="2" height="2" fill="#e8e8e8"/>
+      <rect x="2" y="2" width="2" height="2" fill="#e8e8e8"/>
+    </pattern>
+  </defs>
+  
+  <!-- Background -->
+  <rect x="0" y="0" width="1200" height="900" fill="#ffffff"/>
+  
+  <!-- Title -->
+  <text x="600" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" fill="#1a1a1a">
+    Machine Learning &amp; SHAP Explainability Framework
+  </text>
+  
+  <text x="600" y="60" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#4a4a4a">
+    XGBoost/Random Forest Ensemble with TreeSHAP Analysis
+  </text>
+  
+  <!-- Model Architecture Section -->
+  <g id="model-architecture" transform="translate(50, 100)">
+    <text x="250" y="0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+      A. Model Architecture Pipeline
+    </text>
+    
+    <!-- Input Features -->
+    <g id="input-features" transform="translate(0, 30)">
+      <rect x="0" y="0" width="120" height="200" fill="#f0f8ff" stroke="#1f77b4" stroke-width="2" rx="5"/>
+      <text x="60" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#1f77b4">
+        Input Features
+      </text>
+      <text x="60" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">
+        (78 variables)
+      </text>
+      
+      <g font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#555555">
+        <rect x="10" y="45" width="100" height="20" fill="#e6f2ff" stroke="#1f77b4" stroke-width="0.5" rx="2"/>
+        <text x="60" y="57" text-anchor="middle">Climate (45)</text>
+        
+        <rect x="10" y="70" width="100" height="20" fill="#e6f2ff" stroke="#1f77b4" stroke-width="0.5" rx="2"/>
+        <text x="60" y="82" text-anchor="middle">Temperature</text>
+        
+        <rect x="10" y="95" width="100" height="20" fill="#e6f2ff" stroke="#1f77b4" stroke-width="0.5" rx="2"/>
+        <text x="60" y="107" text-anchor="middle">Humidity</text>
+        
+        <rect x="10" y="120" width="100" height="20" fill="#e6f2ff" stroke="#1f77b4" stroke-width="0.5" rx="2"/>
+        <text x="60" y="132" text-anchor="middle">Demographics (33)</text>
+        
+        <rect x="10" y="145" width="100" height="20" fill="#e6f2ff" stroke="#1f77b4" stroke-width="0.5" rx="2"/>
+        <text x="60" y="157" text-anchor="middle">Age Groups</text>
+        
+        <rect x="10" y="170" width="100" height="20" fill="#e6f2ff" stroke="#1f77b4" stroke-width="0.5" rx="2"/>
+        <text x="60" y="182" text-anchor="middle">Socioeconomic</text>
+      </g>
+    </g>
+    
+    <!-- Feature Engineering -->
+    <g id="feature-engineering" transform="translate(150, 80)">
+      <rect x="0" y="0" width="100" height="100" fill="#fff8e6" stroke="#ff7f0e" stroke-width="2" rx="5"/>
+      <text x="50" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#ff7f0e">
+        Feature
+      </text>
+      <text x="50" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#ff7f0e">
+        Engineering
+      </text>
+      
+      <g font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        <text x="50" y="50" text-anchor="middle">• Lag variables</text>
+        <text x="50" y="62" text-anchor="middle">• Moving averages</text>
+        <text x="50" y="74" text-anchor="middle">• Interactions</text>
+        <text x="50" y="86" text-anchor="middle">• Transformations</text>
+      </g>
+    </g>
+    
+    <!-- Model Ensemble -->
+    <g id="model-ensemble" transform="translate(280, 30)">
+      <rect x="0" y="0" width="180" height="200" fill="#f0fff0" stroke="#2ca02c" stroke-width="2" rx="5"/>
+      <text x="90" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#2ca02c">
+        Ensemble Models
+      </text>
+      
+      <!-- XGBoost -->
+      <g transform="translate(10, 35)">
+        <rect x="0" y="0" width="160" height="75" fill="#ffffff" stroke="#2ca02c" stroke-width="1.5" rx="3" filter="url(#dropShadow)"/>
+        <text x="80" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">
+          XGBoost
+        </text>
+        
+        <g font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+          <text x="10" y="35">• max_depth: 6</text>
+          <text x="10" y="47">• learning_rate: 0.01</text>
+          <text x="10" y="59">• n_estimators: 1000</text>
+          <text x="10" y="71">• subsample: 0.8</text>
+        </g>
+      </g>
+      
+      <!-- Random Forest -->
+      <g transform="translate(10, 120)">
+        <rect x="0" y="0" width="160" height="65" fill="#ffffff" stroke="#2ca02c" stroke-width="1.5" rx="3" filter="url(#dropShadow)"/>
+        <text x="80" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="11" font-weight="bold" fill="#333333">
+          Random Forest
+        </text>
+        
+        <g font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+          <text x="10" y="35">• n_estimators: 500</text>
+          <text x="10" y="47">• max_depth: 10</text>
+          <text x="10" y="59">• min_samples_split: 5</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- Arrows -->
+    <g stroke="#666666" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M 120,130 L 150,130"/>
+      <path d="M 250,130 L 280,130"/>
+    </g>
+  </g>
+  
+  <!-- Temporal Cross-Validation -->
+  <g id="cross-validation" transform="translate(550, 130)">
+    <rect x="0" y="0" width="250" height="170" fill="#fff5f5" stroke="#d62728" stroke-width="2" rx="5"/>
+    <text x="125" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#d62728">
+      Temporal Cross-Validation
+    </text>
+    <text x="125" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">
+      (5 Folds - No Data Leakage)
+    </text>
+    
+    <!-- Fold visualization -->
+    <g transform="translate(20, 50)">
+      <g font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#333333">
+        <!-- Fold 1 -->
+        <rect x="0" y="0" width="150" height="20" fill="#1f77b4" opacity="0.7"/>
+        <rect x="150" y="0" width="60" height="20" fill="#ff7f0e" opacity="0.7"/>
+        <text x="5" y="13" fill="#ffffff">Train: 2002-2005</text>
+        <text x="155" y="13" fill="#ffffff">Test: 06-07</text>
+        
+        <!-- Fold 2 -->
+        <rect x="0" y="25" width="180" height="20" fill="#1f77b4" opacity="0.6"/>
+        <rect x="180" y="25" width="30" height="20" fill="#ff7f0e" opacity="0.6"/>
+        <text x="5" y="38" fill="#ffffff">Train: 2002-2008</text>
+        <text x="185" y="38" fill="#ffffff">09-11</text>
+        
+        <!-- Fold 3 -->
+        <rect x="0" y="50" width="190" height="20" fill="#1f77b4" opacity="0.5"/>
+        <rect x="190" y="50" width="20" height="20" fill="#ff7f0e" opacity="0.5"/>
+        <text x="5" y="63" fill="#ffffff">Train: 2002-2012</text>
+        <text x="192" y="63" fill="#ffffff" font-size="8">13-15</text>
+        
+        <!-- Fold 4 -->
+        <rect x="0" y="75" width="195" height="20" fill="#1f77b4" opacity="0.4"/>
+        <rect x="195" y="75" width="15" height="20" fill="#ff7f0e" opacity="0.4"/>
+        <text x="5" y="88" fill="#ffffff">Train: 2002-2016</text>
+        <text x="196" y="88" fill="#ffffff" font-size="8">17-18</text>
+        
+        <!-- Fold 5 -->
+        <rect x="0" y="100" width="200" height="20" fill="#1f77b4" opacity="0.3"/>
+        <rect x="200" y="100" width="10" height="20" fill="#ff7f0e" opacity="0.3"/>
+        <text x="5" y="113" fill="#333333">Train: 2002-2019</text>
+        <text x="201" y="113" fill="#333333" font-size="7">20-21</text>
+      </g>
+    </g>
+  </g>
+  
+  <!-- Performance Metrics -->
+  <g id="metrics" transform="translate(850, 130)">
+    <rect x="0" y="0" width="300" height="170" fill="#f8f8f8" stroke="#666666" stroke-width="1.5" rx="5"/>
+    <text x="150" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+      Performance Metrics
+    </text>
+    
+    <g transform="translate(20, 40)">
+      <!-- R² Scores -->
+      <text x="0" y="0" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#555555">
+        Cross-Validation R² Scores:
+      </text>
+      
+      <g font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        <text x="10" y="20">Fold 1: 0.812 ± 0.023</text>
+        <text x="10" y="35">Fold 2: 0.798 ± 0.031</text>
+        <text x="10" y="50">Fold 3: 0.825 ± 0.019</text>
+        <text x="10" y="65">Fold 4: 0.806 ± 0.027</text>
+        <text x="10" y="80">Fold 5: 0.819 ± 0.021</text>
+      </g>
+      
+      <line x1="0" y1="90" x2="260" y2="90" stroke="#cccccc" stroke-width="1"/>
+      
+      <text x="0" y="105" font-family="Helvetica, Arial, sans-serif" font-size="10" font-weight="bold" fill="#555555">
+        Mean Performance:
+      </text>
+      <text x="10" y="120" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#2ca02c" font-weight="bold">
+        R² = 0.812 ± 0.024
+      </text>
+    </g>
+  </g>
+  
+  <!-- SHAP Analysis Process -->
+  <g id="shap-process" transform="translate(50, 380)">
+    <text x="550" y="0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+      B. SHAP (SHapley Additive exPlanations) Analysis Process
+    </text>
+    
+    <!-- TreeExplainer -->
+    <g id="tree-explainer" transform="translate(0, 30)">
+      <rect x="0" y="0" width="200" height="120" fill="#ffe6e6" stroke="#e41a1c" stroke-width="2" rx="5"/>
+      <text x="100" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#e41a1c">
+        TreeExplainer
+      </text>
+      
+      <g font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">
+        <text x="100" y="40" text-anchor="middle">Exact Shapley values for</text>
+        <text x="100" y="53" text-anchor="middle">tree-based models</text>
+        
+        <rect x="20" y="65" width="160" height="40" fill="#ffffff" stroke="#e41a1c" stroke-width="1" rx="3"/>
+        <text x="100" y="80" text-anchor="middle" font-size="9" font-family="monospace">
+          explainer = shap.TreeExplainer(
+        </text>
+        <text x="100" y="92" text-anchor="middle" font-size="9" font-family="monospace">
+          model, data=X_train
+        </text>
+        <text x="100" y="104" text-anchor="middle" font-size="9" font-family="monospace">
+          )
+        </text>
+      </g>
+    </g>
+    
+    <!-- SHAP Value Calculation -->
+    <g id="shap-calc" transform="translate(250, 30)">
+      <rect x="0" y="0" width="200" height="120" fill="#e6f3ff" stroke="#377eb8" stroke-width="2" rx="5"/>
+      <text x="100" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#377eb8">
+        SHAP Values
+      </text>
+      
+      <g font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">
+        <text x="100" y="40" text-anchor="middle">Feature contribution to</text>
+        <text x="100" y="53" text-anchor="middle">individual predictions</text>
+        
+        <!-- Formula -->
+        <rect x="20" y="65" width="160" height="40" fill="#ffffff" stroke="#377eb8" stroke-width="1" rx="3"/>
+        <text x="100" y="85" text-anchor="middle" font-size="11" fill="#333333">
+          f(x) = E[f(X)] + Σ φᵢ
+        </text>
+        <text x="100" y="100" text-anchor="middle" font-size="9" fill="#666666">
+          φᵢ = SHAP value for feature i
+        </text>
+      </g>
+    </g>
+    
+    <!-- Feature Importance -->
+    <g id="feature-importance" transform="translate(500, 30)">
+      <rect x="0" y="0" width="200" height="120" fill="#fff0e6" stroke="#ff7f0e" stroke-width="2" rx="5"/>
+      <text x="100" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#ff7f0e">
+        Global Importance
+      </text>
+      
+      <!-- Bar chart -->
+      <g transform="translate(20, 35)">
+        <rect x="0" y="0" width="120" height="8" fill="#ff7f0e" opacity="0.8"/>
+        <text x="125" y="7" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#666666">Temperature</text>
+        
+        <rect x="0" y="12" width="100" height="8" fill="#ff7f0e" opacity="0.7"/>
+        <text x="105" y="19" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#666666">Humidity</text>
+        
+        <rect x="0" y="24" width="80" height="8" fill="#ff7f0e" opacity="0.6"/>
+        <text x="85" y="31" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#666666">Age Group</text>
+        
+        <rect x="0" y="36" width="70" height="8" fill="#ff7f0e" opacity="0.5"/>
+        <text x="75" y="43" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#666666">PM2.5</text>
+        
+        <rect x="0" y="48" width="60" height="8" fill="#ff7f0e" opacity="0.4"/>
+        <text x="65" y="55" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#666666">Wind</text>
+        
+        <rect x="0" y="60" width="50" height="8" fill="#ff7f0e" opacity="0.3"/>
+        <text x="55" y="67" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#666666">Rainfall</text>
+      </g>
+    </g>
+    
+    <!-- Interaction Effects -->
+    <g id="interactions" transform="translate(750, 30)">
+      <rect x="0" y="0" width="200" height="120" fill="#f0f0ff" stroke="#9467bd" stroke-width="2" rx="5"/>
+      <text x="100" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#9467bd">
+        Interaction Effects
+      </text>
+      
+      <g transform="translate(20, 35)">
+        <!-- Interaction matrix -->
+        <rect x="0" y="0" width="160" height="70" fill="url(#dataPattern)" stroke="#9467bd" stroke-width="1"/>
+        
+        <!-- Heatmap cells -->
+        <rect x="10" y="10" width="20" height="20" fill="#9467bd" opacity="0.8"/>
+        <rect x="35" y="10" width="20" height="20" fill="#9467bd" opacity="0.6"/>
+        <rect x="60" y="10" width="20" height="20" fill="#9467bd" opacity="0.4"/>
+        
+        <rect x="10" y="35" width="20" height="20" fill="#9467bd" opacity="0.6"/>
+        <rect x="35" y="35" width="20" height="20" fill="#9467bd" opacity="0.9"/>
+        <rect x="60" y="35" width="20" height="20" fill="#9467bd" opacity="0.3"/>
+        
+        <text x="90" y="25" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+          Temp × Humidity
+        </text>
+        <text x="90" y="50" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+          Age × Temp
+        </text>
+      </g>
+    </g>
+    
+    <!-- Arrows showing flow -->
+    <g stroke="#666666" stroke-width="2" fill="none" marker-end="url(#arrow)">
+      <path d="M 200,90 L 250,90"/>
+      <path d="M 450,90 L 500,90"/>
+      <path d="M 700,90 L 750,90"/>
+    </g>
+  </g>
+  
+  <!-- Interpretation Outputs -->
+  <g id="outputs" transform="translate(50, 550)">
+    <text x="550" y="0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+      C. Interpretation Outputs
+    </text>
+    
+    <!-- Local Explanations -->
+    <g transform="translate(0, 30)">
+      <rect x="0" y="0" width="350" height="200" fill="#f5f5f5" stroke="#333333" stroke-width="1.5" rx="5"/>
+      <text x="175" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        Local Explanations (Individual Predictions)
+      </text>
+      
+      <!-- Waterfall plot representation -->
+      <g transform="translate(30, 40)">
+        <line x1="0" y1="80" x2="290" y2="80" stroke="#666666" stroke-width="1"/>
+        
+        <!-- Base value -->
+        <rect x="0" y="75" width="40" height="10" fill="#666666"/>
+        <text x="20" y="95" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#666666">
+          E[f(X)]
+        </text>
+        
+        <!-- Feature contributions -->
+        <rect x="40" y="60" width="35" height="20" fill="#e41a1c" opacity="0.7"/>
+        <text x="57" y="55" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#333333">
+          Temp
+        </text>
+        
+        <rect x="75" y="65" width="30" height="15" fill="#e41a1c" opacity="0.5"/>
+        <text x="90" y="60" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#333333">
+          Humid
+        </text>
+        
+        <rect x="105" y="85" width="25" height="10" fill="#377eb8" opacity="0.7"/>
+        <text x="117" y="105" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#333333">
+          Age
+        </text>
+        
+        <rect x="130" y="70" width="20" height="10" fill="#e41a1c" opacity="0.3"/>
+        <text x="140" y="65" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#333333">
+          PM2.5
+        </text>
+        
+        <!-- Final prediction -->
+        <rect x="250" y="70" width="40" height="20" fill="#2ca02c"/>
+        <text x="270" y="85" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="8" fill="#ffffff">
+          f(x)
+        </text>
+        
+        <!-- Arrow -->
+        <path d="M 150,80 L 250,80" stroke="#666666" stroke-width="1" stroke-dasharray="2,2" marker-end="url(#arrow)"/>
+      </g>
+      
+      <text x="175" y="140" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="10" fill="#666666">
+        Individual prediction breakdown:
+      </text>
+      <text x="175" y="155" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        Base (2.5) + Temp (+1.2) + Humid (+0.8) - Age (-0.3) + ... = 4.7
+      </text>
+      
+      <rect x="20" y="170" width="310" height="20" fill="#e8f4f8" stroke="#377eb8" stroke-width="1" rx="3"/>
+      <text x="175" y="183" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#377eb8" font-weight="bold">
+        Explains why THIS patient has high risk at THIS temperature
+      </text>
+    </g>
+    
+    <!-- Pathway Insights -->
+    <g transform="translate(380, 30)">
+      <rect x="0" y="0" width="350" height="200" fill="#f5f5f5" stroke="#333333" stroke-width="1.5" rx="5"/>
+      <text x="175" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        Pathway-Specific Insights
+      </text>
+      
+      <!-- Pathway breakdown -->
+      <g transform="translate(30, 40)">
+        <g font-family="Helvetica, Arial, sans-serif" font-size="10">
+          <!-- Cardiovascular -->
+          <rect x="0" y="0" width="290" height="25" fill="#fee0d2" stroke="#de2d26" stroke-width="1" rx="3"/>
+          <circle cx="15" cy="12.5" r="8" fill="#de2d26"/>
+          <text x="15" y="16" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="bold">CV</text>
+          <text x="30" y="16" fill="#333333">Cardiovascular: BP features dominate (35% importance)</text>
+          
+          <!-- Renal -->
+          <rect x="0" y="30" width="290" height="25" fill="#deebf7" stroke="#3182bd" stroke-width="1" rx="3"/>
+          <circle cx="15" cy="42.5" r="8" fill="#3182bd"/>
+          <text x="15" y="46" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="bold">R</text>
+          <text x="30" y="46" fill="#333333">Renal: Creatinine shows strong heat response (28%)</text>
+          
+          <!-- Immune -->
+          <rect x="0" y="60" width="290" height="25" fill="#e5f5e0" stroke="#31a354" stroke-width="1" rx="3"/>
+          <circle cx="15" cy="72.5" r="8" fill="#31a354"/>
+          <text x="15" y="76" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="bold">I</text>
+          <text x="30" y="76" fill="#333333">Immune: CD4, Hemoglobin interactions (22%)</text>
+          
+          <!-- Metabolic -->
+          <rect x="0" y="90" width="290" height="25" fill="#fff7e6" stroke="#fd8d3c" stroke-width="1" rx="3"/>
+          <circle cx="15" cy="102.5" r="8" fill="#fd8d3c"/>
+          <text x="15" y="106" text-anchor="middle" fill="#ffffff" font-size="8" font-weight="bold">M</text>
+          <text x="30" y="106" fill="#333333">Metabolic: Glucose, lipids moderate effect (15%)</text>
+        </g>
+      </g>
+      
+      <!-- Integration note -->
+      <rect x="20" y="170" width="310" height="20" fill="#f0f0f0" stroke="#666666" stroke-width="1" rx="3"/>
+      <text x="175" y="183" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666" font-weight="bold">
+        Pathways interact: Temperature affects multiple systems
+      </text>
+    </g>
+    
+    <!-- Dependency Plots -->
+    <g transform="translate(760, 30)">
+      <rect x="0" y="0" width="350" height="200" fill="#f5f5f5" stroke="#333333" stroke-width="1.5" rx="5"/>
+      <text x="175" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" font-weight="bold" fill="#333333">
+        Dependency Plots
+      </text>
+      
+      <!-- Sample dependency plot -->
+      <g transform="translate(30, 40)">
+        <rect x="0" y="0" width="290" height="100" fill="#fafafa" stroke="#666666" stroke-width="1"/>
+        
+        <!-- Axes -->
+        <line x1="0" y1="100" x2="290" y2="100" stroke="#333333" stroke-width="1.5"/>
+        <line x1="0" y1="0" x2="0" y2="100" stroke="#333333" stroke-width="1.5"/>
+        
+        <!-- Scatter points with gradient -->
+        <circle cx="30" cy="80" r="3" fill="#377eb8" opacity="0.6"/>
+        <circle cx="50" cy="75" r="3" fill="#4393c3" opacity="0.6"/>
+        <circle cx="70" cy="70" r="3" fill="#4393c3" opacity="0.6"/>
+        <circle cx="90" cy="65" r="3" fill="#92c5de" opacity="0.6"/>
+        <circle cx="110" cy="60" r="3" fill="#92c5de" opacity="0.6"/>
+        <circle cx="130" cy="55" r="3" fill="#f4a582" opacity="0.6"/>
+        <circle cx="150" cy="50" r="3" fill="#f4a582" opacity="0.6"/>
+        <circle cx="170" cy="45" r="3" fill="#d6604d" opacity="0.6"/>
+        <circle cx="190" cy="35" r="3" fill="#d6604d" opacity="0.6"/>
+        <circle cx="210" cy="25" r="3" fill="#b2182b" opacity="0.6"/>
+        <circle cx="230" cy="15" r="3" fill="#b2182b" opacity="0.6"/>
+        <circle cx="250" cy="10" r="3" fill="#b2182b" opacity="0.6"/>
+        <circle cx="270" cy="5" r="3" fill="#b2182b" opacity="0.6"/>
+        
+        <!-- More scatter points -->
+        <circle cx="40" cy="78" r="2" fill="#377eb8" opacity="0.4"/>
+        <circle cx="60" cy="72" r="2" fill="#4393c3" opacity="0.4"/>
+        <circle cx="80" cy="68" r="2" fill="#4393c3" opacity="0.4"/>
+        <circle cx="100" cy="62" r="2" fill="#92c5de" opacity="0.4"/>
+        <circle cx="120" cy="58" r="2" fill="#92c5de" opacity="0.4"/>
+        <circle cx="140" cy="52" r="2" fill="#f4a582" opacity="0.4"/>
+        <circle cx="160" cy="48" r="2" fill="#f4a582" opacity="0.4"/>
+        <circle cx="180" cy="40" r="2" fill="#d6604d" opacity="0.4"/>
+        <circle cx="200" cy="30" r="2" fill="#d6604d" opacity="0.4"/>
+        <circle cx="220" cy="20" r="2" fill="#b2182b" opacity="0.4"/>
+        <circle cx="240" cy="12" r="2" fill="#b2182b" opacity="0.4"/>
+        <circle cx="260" cy="8" r="2" fill="#b2182b" opacity="0.4"/>
+        
+        <!-- Trend line -->
+        <path d="M 30,80 Q 145,50 270,5" stroke="#333333" stroke-width="2" fill="none" stroke-dasharray="5,3"/>
+        
+        <!-- Labels -->
+        <text x="145" y="115" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#333333">
+          Temperature (°C)
+        </text>
+        <text x="-50" y="0" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#333333" transform="rotate(-90 -50 50)">
+          SHAP Value
+        </text>
+      </g>
+      
+      <text x="175" y="160" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        Shows how feature values affect predictions
+      </text>
+      <text x="175" y="175" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="9" fill="#666666">
+        Color indicates interaction with other features
+      </text>
+    </g>
+  </g>
+  
+  <!-- Key Insights Box -->
+  <g id="insights" transform="translate(50, 780)">
+    <rect x="0" y="0" width="1100" height="90" fill="#f0f8ff" stroke="#1f77b4" stroke-width="2" rx="5"/>
+    
+    <text x="550" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#1f77b4">
+      Key Methodological Advantages
+    </text>
+    
+    <g font-family="Helvetica, Arial, sans-serif" font-size="11" fill="#333333">
+      <text x="50" y="40">• TreeSHAP provides exact Shapley values in polynomial time for tree-based models</text>
+      <text x="50" y="55">• Temporal cross-validation prevents data leakage and ensures robust performance estimates</text>
+      <text x="50" y="70">• Feature interactions captured through SHAP interaction values reveal complex relationships</text>
+      <text x="550" y="40">• Local explanations enable patient-specific risk assessment and targeted interventions</text>
+      <text x="550" y="55">• Global feature importance identifies primary climate-health drivers across population</text>
+      <text x="550" y="70">• Pathway analysis links environmental exposures to physiological mechanisms</text>
+    </g>
+  </g>
+  
+  <!-- Arrow definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#666666"/>
+    </marker>
+  </defs>
+</svg>

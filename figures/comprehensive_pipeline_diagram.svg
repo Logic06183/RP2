@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1400" height="1000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000">
+  <!-- Define gradients and filters -->
+  <defs>
+    <!-- Gradient definitions for different component types -->
+    <linearGradient id="dataGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#4A90E2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3571B8;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="processGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#5CB85C;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#449D44;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="mlGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#F0AD4E;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#EC971F;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="outputGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#D9534F;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#C9302C;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Drop shadow filter -->
+    <filter id="dropShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="2" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.3"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Arrow marker -->
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#666666"/>
+    </marker>
+    
+    <!-- Cylinder path for databases -->
+    <symbol id="cylinder" viewBox="0 0 100 120">
+      <ellipse cx="50" cy="15" rx="45" ry="12" fill="url(#dataGradient)" opacity="0.9"/>
+      <rect x="5" y="15" width="90" height="90" fill="url(#dataGradient)" opacity="0.9"/>
+      <ellipse cx="50" cy="105" rx="45" ry="12" fill="url(#dataGradient)"/>
+      <path d="M5,15 Q5,27 50,27 Q95,27 95,15" fill="none" stroke="#3571B8" stroke-width="0.5" opacity="0.5"/>
+    </symbol>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1400" height="1000" fill="#F8F9FA"/>
+  
+  <!-- Title and Subtitle -->
+  <text x="700" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#2C3E50">
+    HEAT Center Climate-Health Analysis Pipeline
+  </text>
+  <text x="700" y="65" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#5A6C7D">
+    Explainable AI Framework for Temperature-Health Relationships in Johannesburg
+  </text>
+  
+  <!-- Main container with subtle border -->
+  <rect x="30" y="85" width="1340" height="880" fill="none" stroke="#E0E0E0" stroke-width="1" rx="5"/>
+  
+  <!-- SECTION 1: DATA SOURCES -->
+  <g id="data-sources">
+    <!-- Section header -->
+    <rect x="50" y="100" width="300" height="35" fill="#2C3E50" rx="3"/>
+    <text x="200" y="122" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      DATA SOURCES
+    </text>
+    <text x="200" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      Input Layer
+    </text>
+    
+    <!-- Clinical Health Data -->
+    <g transform="translate(50, 180)">
+      <use href="#cylinder" width="80" height="100"/>
+      <text x="40" y="60" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">
+        Clinical
+      </text>
+      <text x="40" y="75" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+        Health Data
+      </text>
+      <rect x="90" y="10" width="160" height="90" fill="white" stroke="#4A90E2" stroke-width="1" rx="3" filter="url(#dropShadow)"/>
+      <text x="95" y="25" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2C3E50">
+        9,103 individuals | 17 studies
+      </text>
+      <text x="95" y="40" font-family="Arial, sans-serif" font-size="9" fill="#666">• CD4 count, Hemoglobin</text>
+      <text x="95" y="52" font-family="Arial, sans-serif" font-size="9" fill="#666">• Creatinine, Blood pressure</text>
+      <text x="95" y="64" font-family="Arial, sans-serif" font-size="9" fill="#666">• HIV viral load</text>
+      <text x="95" y="76" font-family="Arial, sans-serif" font-size="9" fill="#666">• Demographics (age, sex, race)</text>
+    </g>
+    
+    <!-- GCRO Survey Data -->
+    <g transform="translate(50, 300)">
+      <use href="#cylinder" width="80" height="100"/>
+      <text x="40" y="60" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">
+        GCRO
+      </text>
+      <text x="40" y="75" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+        Survey Data
+      </text>
+      <rect x="90" y="10" width="160" height="90" fill="white" stroke="#4A90E2" stroke-width="1" rx="3" filter="url(#dropShadow)"/>
+      <text x="95" y="25" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2C3E50">
+        9,103 matched records
+      </text>
+      <text x="95" y="40" font-family="Arial, sans-serif" font-size="9" fill="#666">• Socioeconomic indicators</text>
+      <text x="95" y="52" font-family="Arial, sans-serif" font-size="9" fill="#666">• Housing quality metrics</text>
+      <text x="95" y="64" font-family="Arial, sans-serif" font-size="9" fill="#666">• Healthcare access measures</text>
+      <text x="95" y="76" font-family="Arial, sans-serif" font-size="9" fill="#666">• Matched to clinical cohort</text>
+    </g>
+    
+    <!-- Climate Data Sources -->
+    <g transform="translate(50, 420)">
+      <use href="#cylinder" width="80" height="100"/>
+      <text x="40" y="60" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">
+        Climate Data
+      </text>
+      <text x="40" y="75" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+        Sources
+      </text>
+      <rect x="90" y="10" width="160" height="90" fill="white" stroke="#4A90E2" stroke-width="1" rx="3" filter="url(#dropShadow)"/>
+      <text x="95" y="25" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="#2C3E50">
+        78 climate features
+      </text>
+      <text x="95" y="40" font-family="Arial, sans-serif" font-size="9" fill="#666">• ERA5 Reanalysis (temp)</text>
+      <text x="95" y="52" font-family="Arial, sans-serif" font-size="9" fill="#666">• MODIS Satellite (validation)</text>
+      <text x="95" y="64" font-family="Arial, sans-serif" font-size="9" fill="#666">• SAAQIS Ground Stations</text>
+      <text x="95" y="76" font-family="Arial, sans-serif" font-size="9" fill="#666">• Multi-temporal aggregations</text>
+    </g>
+  </g>
+  
+  <!-- SECTION 2: PROCESSING PIPELINE -->
+  <g id="processing-pipeline">
+    <!-- Section header -->
+    <rect x="380" y="100" width="640" height="35" fill="#2C3E50" rx="3"/>
+    <text x="700" y="122" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      PROCESSING PIPELINE
+    </text>
+    
+    <!-- Stage 1: Data Integration -->
+    <g transform="translate(380, 160)">
+      <rect width="300" height="100" fill="url(#processGradient)" rx="5" filter="url(#dropShadow)"/>
+      <text x="150" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+        Stage 1: Data Integration &amp; Validation
+      </text>
+      <text x="150" y="42" font-family="Arial, sans-serif" font-size="11" text-anchor="middle" fill="white">
+        Master dataset: 128,465 records
+      </text>
+      <text x="10" y="58" font-family="Arial, sans-serif" font-size="10" fill="white">• Data type harmonization</text>
+      <text x="10" y="72" font-family="Arial, sans-serif" font-size="10" fill="white">• Temporal alignment</text>
+      <text x="150" y="58" font-family="Arial, sans-serif" font-size="10" fill="white">• Geographic matching</text>
+      <text x="150" y="72" font-family="Arial, sans-serif" font-size="10" fill="white">• Quality control (95.7%)</text>
+    </g>
+    
+    <!-- Stage 2: Feature Engineering -->
+    <g transform="translate(720, 160)">
+      <rect width="300" height="100" fill="url(#processGradient)" rx="5" filter="url(#dropShadow)"/>
+      <text x="150" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+        Stage 2: Feature Engineering
+      </text>
+      <text x="10" y="42" font-family="Arial, sans-serif" font-size="10" fill="white">• Climate: 1, 7, 30-day means</text>
+      <text x="10" y="56" font-family="Arial, sans-serif" font-size="10" fill="white">• Temperature extremes (90th, 95th %)</text>
+      <text x="10" y="70" font-family="Arial, sans-serif" font-size="10" fill="white">• Biomarker pathway classification</text>
+      <text x="10" y="84" font-family="Arial, sans-serif" font-size="10" fill="white">• Standardization &amp; scaling</text>
+    </g>
+    
+    <!-- Biomarker Pathways Box -->
+    <g transform="translate(820, 270)">
+      <rect width="180" height="70" fill="white" stroke="#5CB85C" stroke-width="1" rx="3" stroke-dasharray="3,2"/>
+      <text x="90" y="15" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#2C3E50">
+        Pathway Classification
+      </text>
+      <text x="10" y="30" font-family="Arial, sans-serif" font-size="9" fill="#666">• Cardiovascular pathway</text>
+      <text x="10" y="42" font-family="Arial, sans-serif" font-size="9" fill="#666">• Metabolic pathway</text>
+      <text x="10" y="54" font-family="Arial, sans-serif" font-size="9" fill="#666">• Immune pathway</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="9" fill="#666">• Renal pathway</text>
+    </g>
+    
+    <!-- Stage 3: Advanced Analytics -->
+    <text x="700" y="380" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#2C3E50">
+      Stage 3: Advanced Analytics
+    </text>
+    
+    <!-- Track A: Machine Learning -->
+    <g transform="translate(380, 400)">
+      <rect width="280" height="120" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
+      <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+        Track A: Machine Learning
+      </text>
+      <text x="140" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">
+        XGBoost + Random Forest
+      </text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Temporal cross-validation (5 folds)</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Model training for 6 health outcomes</text>
+      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Performance evaluation (R² scores)</text>
+      <text x="10" y="94" font-family="Arial, sans-serif" font-size="10" fill="white">• Feature importance ranking</text>
+      <text x="10" y="108" font-family="Arial, sans-serif" font-size="10" fill="white">• 6 ML models deployed</text>
+    </g>
+    
+    <!-- Track B: DLNM Analysis -->
+    <g transform="translate(720, 400)">
+      <rect width="280" height="120" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
+      <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+        Track B: DLNM Analysis
+      </text>
+      <text x="140" y="35" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="white">
+        Distributed Lag Non-linear Models
+      </text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Cross-basis functions (21-day lags)</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Natural cubic splines</text>
+      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Non-linear dose-response curves</text>
+      <text x="10" y="94" font-family="Arial, sans-serif" font-size="10" fill="white">• Seasonal vulnerability patterns</text>
+      <text x="10" y="108" font-family="Arial, sans-serif" font-size="10" fill="white">• Lag effects: 0-3d acute, 7-21d delayed</text>
+    </g>
+    
+    <!-- Stage 4: Explainable AI -->
+    <g transform="translate(550, 550)">
+      <rect width="300" height="100" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
+      <text x="150" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
+        Stage 4: Explainable AI &amp; Interpretation
+      </text>
+      <text x="10" y="42" font-family="Arial, sans-serif" font-size="10" fill="white">• SHAP (TreeExplainer) analysis</text>
+      <text x="10" y="56" font-family="Arial, sans-serif" font-size="10" fill="white">• Feature importance visualization</text>
+      <text x="10" y="70" font-family="Arial, sans-serif" font-size="10" fill="white">• Interaction effects</text>
+      <text x="150" y="42" font-family="Arial, sans-serif" font-size="10" fill="white">• Pathway-specific insights</text>
+      <text x="150" y="56" font-family="Arial, sans-serif" font-size="10" fill="white">• Socioeconomic modification</text>
+      <text x="150" y="70" font-family="Arial, sans-serif" font-size="10" fill="white">• Uncertainty quantification</text>
+    </g>
+  </g>
+  
+  <!-- SECTION 3: OUTPUTS -->
+  <g id="outputs">
+    <!-- Section header -->
+    <rect x="1050" y="100" width="300" height="35" fill="#2C3E50" rx="3"/>
+    <text x="1200" y="122" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+      OUTPUTS
+    </text>
+    <text x="1200" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+      Results Layer
+    </text>
+    
+    <!-- Model Performance Metrics -->
+    <g transform="translate(1050, 180)">
+      <rect width="280" height="90" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
+      <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+        Model Performance Metrics
+      </text>
+      <text x="10" y="38" font-family="Arial, sans-serif" font-size="10" fill="white">• R² scores by biomarker</text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• RMSE values</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Cross-validation results</text>
+      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Confidence intervals</text>
+    </g>
+    
+    <!-- Scientific Insights -->
+    <g transform="translate(1050, 290)">
+      <rect width="280" height="110" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
+      <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+        Scientific Insights
+      </text>
+      <text x="10" y="38" font-family="Arial, sans-serif" font-size="10" fill="white">• Temperature thresholds identified</text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Lag effects (0-3 days acute)</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Delayed effects (7-21 days)</text>
+      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Vulnerability patterns</text>
+      <text x="10" y="94" font-family="Arial, sans-serif" font-size="10" fill="white">• Environmental justice implications</text>
+    </g>
+    
+    <!-- Deliverables -->
+    <g transform="translate(1050, 420)">
+      <rect width="280" height="100" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
+      <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
+        Deliverables
+      </text>
+      <text x="10" y="38" font-family="Arial, sans-serif" font-size="10" fill="white">• Publication manuscript</text>
+      <text x="10" y="52" font-family="Arial, sans-serif" font-size="10" fill="white">• Supplementary materials</text>
+      <text x="10" y="66" font-family="Arial, sans-serif" font-size="10" fill="white">• Interactive visualizations</text>
+      <text x="10" y="80" font-family="Arial, sans-serif" font-size="10" fill="white">• Policy recommendations</text>
+    </g>
+  </g>
+  
+  <!-- FLOW ARROWS -->
+  <g id="flow-arrows" stroke="#666666" stroke-width="2" fill="none">
+    <!-- From data sources to Stage 1 -->
+    <path d="M 300 230 L 375 210" marker-end="url(#arrow)"/>
+    <path d="M 300 350 L 375 210" marker-end="url(#arrow)"/>
+    <path d="M 300 470 L 375 210" marker-end="url(#arrow)"/>
+    
+    <!-- From Stage 1 to Stage 2 -->
+    <path d="M 685 210 L 715 210" marker-end="url(#arrow)"/>
+    
+    <!-- From Stage 2 to Track A and Track B -->
+    <path d="M 870 265 L 520 395" marker-end="url(#arrow)"/>
+    <path d="M 870 265 L 860 395" marker-end="url(#arrow)"/>
+    
+    <!-- From Track A and Track B to Stage 4 -->
+    <path d="M 520 525 L 545 580" marker-end="url(#arrow)"/>
+    <path d="M 860 525 L 855 580" marker-end="url(#arrow)"/>
+    
+    <!-- From Stage 4 to Outputs -->
+    <path d="M 855 600 L 1045 225" marker-end="url(#arrow)"/>
+    <path d="M 855 600 L 1045 345" marker-end="url(#arrow)"/>
+    <path d="M 855 600 L 1045 470" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- KEY STATISTICS ANNOTATIONS -->
+  <g id="annotations">
+    <!-- Top statistics bar -->
+    <rect x="380" y="680" width="640" height="60" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="1" rx="5"/>
+    <text x="700" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2C3E50">
+      Key Project Statistics
+    </text>
+    <text x="450" y="720" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      Total records: 128,465
+    </text>
+    <text x="600" y="720" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      Study period: 19 years (2002-2021)
+    </text>
+    <text x="750" y="720" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      Machine learning models: 6
+    </text>
+    <text x="880" y="720" font-family="Arial, sans-serif" font-size="11" fill="#666">
+      Climate features: 78 variables
+    </text>
+    
+    <!-- Decision diamond for quality control -->
+    <g transform="translate(530, 290)">
+      <path d="M 0,20 L 20,0 L 40,20 L 20,40 Z" fill="#FFE4B5" stroke="#FF8C00" stroke-width="1"/>
+      <text x="20" y="24" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#8B4513">
+        QC
+      </text>
+      <text x="20" y="55" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#666">
+        95.7% completeness
+      </text>
+    </g>
+  </g>
+  
+  <!-- LEGEND -->
+  <g id="legend" transform="translate(50, 780)">
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2C3E50">
+      Component Types:
+    </text>
+    <rect x="120" y="5" width="15" height="15" fill="url(#dataGradient)"/>
+    <text x="140" y="16" font-family="Arial, sans-serif" font-size="10" fill="#666">Data Sources</text>
+    
+    <rect x="230" y="5" width="15" height="15" fill="url(#processGradient)"/>
+    <text x="250" y="16" font-family="Arial, sans-serif" font-size="10" fill="#666">Processing</text>
+    
+    <rect x="330" y="5" width="15" height="15" fill="url(#mlGradient)"/>
+    <text x="350" y="16" font-family="Arial, sans-serif" font-size="10" fill="#666">ML/AI Analysis</text>
+    
+    <rect x="450" y="5" width="15" height="15" fill="url(#outputGradient)"/>
+    <text x="470" y="16" font-family="Arial, sans-serif" font-size="10" fill="#666">Results/Outputs</text>
+    
+    <path d="M 570,13 L 590,13" stroke="#666666" stroke-width="2" marker-end="url(#arrow)"/>
+    <text x="595" y="16" font-family="Arial, sans-serif" font-size="10" fill="#666">Data Flow</text>
+  </g>
+  
+  <!-- Watermark/Attribution -->
+  <text x="1360" y="960" font-family="Arial, sans-serif" font-size="9" text-anchor="end" fill="#999">
+    HEAT Center Research Project | Climate-Health Analysis Pipeline | 2025
+  </text>
+</svg>

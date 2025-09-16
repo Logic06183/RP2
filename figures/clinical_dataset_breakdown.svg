@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="800" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Define gradients and filters for professional appearance -->
+  <defs>
+    <!-- Professional gradient definitions -->
+    <linearGradient id="headerGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1E3A8A;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1E3050;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="cardioGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#E53E3E;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#C53030;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="immuneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#9F7AEA;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#805AD5;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="renalGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#38B2AC;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#2C7A7B;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="metabolicGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ED8936;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#DD6B20;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="demographicGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#48BB78;stop-opacity:0.9" />
+      <stop offset="100%" style="stop-color:#38A169;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Professional drop shadow -->
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="3"/>
+      <feOffset dx="0" dy="2" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.2"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- Subtle shadow for cards -->
+    <filter id="cardShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="2"/>
+      <feOffset dx="0" dy="1" result="offsetblur"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.15"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#FAFBFC"/>
+  
+  <!-- Header Section -->
+  <rect x="0" y="0" width="1200" height="100" fill="url(#headerGradient)"/>
+  <text x="600" y="40" font-family="Helvetica, Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="white">
+    Clinical Health Dataset Architecture
+  </text>
+  <text x="600" y="70" font-family="Helvetica, Arial, sans-serif" font-size="16" text-anchor="middle" fill="#B8D4FF">
+    Johannesburg Metropolitan Area Health Cohort Study (2002-2021)
+  </text>
+  
+  <!-- Main Statistics Cards -->
+  <g id="main-stats">
+    <!-- Total Records Card -->
+    <g transform="translate(100, 130)">
+      <rect width="240" height="100" fill="white" rx="8" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="240" height="5" fill="#1E3A8A" rx="8"/>
+      <text x="120" y="35" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#1E3A8A">
+        9,103
+      </text>
+      <text x="120" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#64748B">
+        Total Individual Records
+      </text>
+      <text x="120" y="75" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#94A3B8">
+        From 17 Clinical Studies
+      </text>
+    </g>
+    
+    <!-- Temporal Coverage Card -->
+    <g transform="translate(380, 130)">
+      <rect width="240" height="100" fill="white" rx="8" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="240" height="5" fill="#1E3A8A" rx="8"/>
+      <text x="120" y="35" font-family="Helvetica, Arial, sans-serif" font-size="36" font-weight="bold" text-anchor="middle" fill="#1E3A8A">
+        19
+      </text>
+      <text x="120" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#64748B">
+        Years of Data Collection
+      </text>
+      <text x="120" y="75" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#94A3B8">
+        2002-2021 Study Period
+      </text>
+    </g>
+    
+    <!-- Geographic Coverage Card -->
+    <g transform="translate(660, 130)">
+      <rect width="340" height="100" fill="white" rx="8" filter="url(#cardShadow)"/>
+      <rect x="0" y="0" width="340" height="5" fill="#1E3A8A" rx="8"/>
+      <text x="170" y="35" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#1E3A8A">
+        Johannesburg Metro
+      </text>
+      <text x="170" y="55" font-family="Helvetica, Arial, sans-serif" font-size="14" text-anchor="middle" fill="#64748B">
+        Complete Geographic Coverage
+      </text>
+      <text x="170" y="75" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#94A3B8">
+        Urban and Peri-urban Communities
+      </text>
+    </g>
+  </g>
+  
+  <!-- Biomarker Pathways Section -->
+  <text x="100" y="280" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#1E293B">
+    Biomarker Pathways and Sample Sizes
+  </text>
+  
+  <!-- Cardiovascular Pathway -->
+  <g transform="translate(100, 310)">
+    <rect width="450" height="120" fill="white" rx="8" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="450" height="40" fill="url(#cardioGradient)" rx="8"/>
+    <text x="15" y="27" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Cardiovascular Pathway
+    </text>
+    <text x="435" y="27" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="end" fill="white">
+      54.5% Coverage
+    </text>
+    
+    <g transform="translate(15, 55)">
+      <circle cx="5" cy="5" r="3" fill="#E53E3E"/>
+      <text x="15" y="9" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+        Systolic Blood Pressure: 4,957 records
+      </text>
+    </g>
+    <g transform="translate(15, 75)">
+      <circle cx="5" cy="5" r="3" fill="#E53E3E"/>
+      <text x="15" y="9" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+        Diastolic Blood Pressure: 4,957 records
+      </text>
+    </g>
+    
+    <!-- Progress bar -->
+    <rect x="15" y="100" width="420" height="8" fill="#F3F4F6" rx="4"/>
+    <rect x="15" y="100" width="229" height="8" fill="url(#cardioGradient)" rx="4"/>
+  </g>
+  
+  <!-- Immune Pathway -->
+  <g transform="translate(580, 310)">
+    <rect width="450" height="140" fill="white" rx="8" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="450" height="40" fill="url(#immuneGradient)" rx="8"/>
+    <text x="15" y="27" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Immune Pathway
+    </text>
+    <text x="435" y="27" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="end" fill="white">
+      30.6% Total Coverage
+    </text>
+    
+    <g transform="translate(15, 55)">
+      <circle cx="5" cy="5" r="3" fill="#9F7AEA"/>
+      <text x="15" y="9" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+        CD4 Cell Count: 1,283 records (14.1%)
+      </text>
+    </g>
+    <g transform="translate(15, 75)">
+      <circle cx="5" cy="5" r="3" fill="#9F7AEA"/>
+      <text x="15" y="9" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+        Hemoglobin: 1,283 records (14.1%)
+      </text>
+    </g>
+    <g transform="translate(15, 95)">
+      <circle cx="5" cy="5" r="3" fill="#9F7AEA"/>
+      <text x="15" y="9" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+        HIV Viral Load: 221 records (2.4%)
+      </text>
+    </g>
+    
+    <!-- Progress bar -->
+    <rect x="15" y="120" width="420" height="8" fill="#F3F4F6" rx="4"/>
+    <rect x="15" y="120" width="129" height="8" fill="url(#immuneGradient)" rx="4"/>
+  </g>
+  
+  <!-- Renal Pathway -->
+  <g transform="translate(100, 460)">
+    <rect width="450" height="100" fill="white" rx="8" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="450" height="40" fill="url(#renalGradient)" rx="8"/>
+    <text x="15" y="27" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Renal Pathway
+    </text>
+    <text x="435" y="27" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="end" fill="white">
+      13.7% Coverage
+    </text>
+    
+    <g transform="translate(15, 55)">
+      <circle cx="5" cy="5" r="3" fill="#38B2AC"/>
+      <text x="15" y="9" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+        Creatinine: 1,251 records
+      </text>
+    </g>
+    
+    <!-- Progress bar -->
+    <rect x="15" y="80" width="420" height="8" fill="#F3F4F6" rx="4"/>
+    <rect x="15" y="80" width="58" height="8" fill="url(#renalGradient)" rx="4"/>
+  </g>
+  
+  <!-- Metabolic Pathway -->
+  <g transform="translate(580, 480)">
+    <rect width="450" height="140" fill="white" rx="8" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="450" height="40" fill="url(#metabolicGradient)" rx="8"/>
+    <text x="15" y="27" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Metabolic Pathway
+    </text>
+    <text x="435" y="27" font-family="Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="end" fill="white">
+      ~62% Coverage
+    </text>
+    
+    <g transform="translate(15, 55)">
+      <circle cx="5" cy="5" r="3" fill="#ED8936"/>
+      <text x="15" y="9" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+        Fasting Glucose: ~2,700 records (~30%)
+      </text>
+    </g>
+    <g transform="translate(15, 75)">
+      <circle cx="5" cy="5" r="3" fill="#ED8936"/>
+      <text x="15" y="9" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+        Total Cholesterol: ~3,000 records (~33%)
+      </text>
+    </g>
+    <g transform="translate(15, 95)">
+      <circle cx="5" cy="5" r="3" fill="#ED8936"/>
+      <text x="15" y="9" font-family="Helvetica, Arial, sans-serif" font-size="13" fill="#475569">
+        HDL/LDL Cholesterol: Variable coverage
+      </text>
+    </g>
+    
+    <!-- Progress bar -->
+    <rect x="15" y="120" width="420" height="8" fill="#F3F4F6" rx="4"/>
+    <rect x="15" y="120" width="260" height="8" fill="url(#metabolicGradient)" rx="4"/>
+  </g>
+  
+  <!-- Demographics Section -->
+  <g transform="translate(100, 640)">
+    <rect width="930" height="120" fill="white" rx="8" filter="url(#cardShadow)"/>
+    <rect x="0" y="0" width="930" height="40" fill="url(#demographicGradient)" rx="8"/>
+    <text x="15" y="27" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="white">
+      Demographic Variables
+    </text>
+    
+    <!-- Three columns of demographic data -->
+    <g transform="translate(30, 55)">
+      <rect x="0" y="0" width="280" height="50" fill="#F9FAFB" rx="4"/>
+      <text x="140" y="20" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1E293B">
+        Age at Enrollment
+      </text>
+      <text x="140" y="38" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748B">
+        6,563 records (72.1%)
+      </text>
+    </g>
+    
+    <g transform="translate(325, 55)">
+      <rect x="0" y="0" width="280" height="50" fill="#F9FAFB" rx="4"/>
+      <text x="140" y="20" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1E293B">
+        Sex Distribution
+      </text>
+      <text x="140" y="38" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748B">
+        6,859 records (75.3%)
+      </text>
+    </g>
+    
+    <g transform="translate(620, 55)">
+      <rect x="0" y="0" width="280" height="50" fill="#F9FAFB" rx="4"/>
+      <text x="140" y="20" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#1E293B">
+        Race/Ethnicity
+      </text>
+      <text x="140" y="38" font-family="Helvetica, Arial, sans-serif" font-size="12" text-anchor="middle" fill="#64748B">
+        3,966 records (43.6%)
+      </text>
+    </g>
+  </g>
+  
+  <!-- Footer note -->
+  <text x="600" y="785" font-family="Helvetica, Arial, sans-serif" font-size="10" text-anchor="middle" fill="#94A3B8">
+    Data represents integrated clinical health records from 17 studies conducted in the Johannesburg metropolitan area
+  </text>
+</svg>
