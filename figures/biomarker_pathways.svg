@@ -78,7 +78,7 @@
   </g>
   
   <!-- Cardiovascular Pathway -->
-  <g id="cardiovascular" transform="translate(200, 300)">
+  <g id="cardiovascular" transform="translate(320, 330)">
     <!-- Pathway box -->
     <rect x="-100" y="-40" width="280" height="200" fill="url(#cardioGradient)" stroke="#de2d26" stroke-width="2" rx="10" filter="url(#dropShadow)"/>
     
@@ -126,7 +126,7 @@
   </g>
   
   <!-- Renal Pathway -->
-  <g id="renal" transform="translate(550, 300)">
+  <g id="renal" transform="translate(720, 330)">
     <!-- Pathway box -->
     <rect x="-100" y="-40" width="280" height="200" fill="url(#renalGradient)" stroke="#3182bd" stroke-width="2" rx="10" filter="url(#dropShadow)"/>
     
@@ -174,7 +174,7 @@
   </g>
   
   <!-- Immune Pathway -->
-  <g id="immune" transform="translate(900, 300)">
+  <g id="immune" transform="translate(1200, 330)">
     <!-- Pathway box -->
     <rect x="-100" y="-40" width="280" height="200" fill="url(#immuneGradient)" stroke="#31a354" stroke-width="2" rx="10" filter="url(#dropShadow)"/>
     
@@ -222,7 +222,7 @@
   </g>
   
   <!-- Metabolic Pathway -->
-  <g id="metabolic" transform="translate(375, 580)">
+  <g id="metabolic" transform="translate(520, 640)">
     <!-- Pathway box -->
     <rect x="-100" y="-40" width="280" height="200" fill="url(#metabolicGradient)" stroke="#fd8d3c" stroke-width="2" rx="10" filter="url(#dropShadow)"/>
     
@@ -325,7 +325,7 @@
   <g id="summary" transform="translate(100, 780)">
     <rect x="0" y="0" width="1000" height="90" fill="#e8f4f8" stroke="#2166ac" stroke-width="2" rx="5"/>
     
-    <text x="500" y="20" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="13" font-weight="bold" fill="#2166ac">
+    <text x="800" y="25" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" font-weight="bold" fill="#2166ac">
       Key Findings from Pathway Analysis
     </text>
     
@@ -348,8 +348,8 @@
   </g>
   
   <!-- References Section -->
-  <g id=\"references\" transform=\"translate(50, 970)\">
-    <rect x=\"0\" y=\"0\" width=\"1100\" height=\"80\" fill=\"#F0F8FF\" stroke=\"#4A90E2\" stroke-width=\"1\" rx=\"8\"/>
+  <g id=\"references\" transform=\"translate(80, 1000)\">
+    <rect x=\"0\" y=\"0\" width=\"1760\" height=\"60\" fill=\"#F0F8FF\" stroke=\"#4A90E2\" stroke-width=\"1\" rx=\"8\"/>
     
     <text x=\"550\" y=\"20\" text-anchor=\"middle\" font-family=\"Helvetica, Arial, sans-serif\" font-size=\"13\" font-weight=\"bold\" fill=\"#2166ac\">
       KEY REFERENCES: AFRICAN DISEASE BURDEN & CLIMATE HEALTH
@@ -366,8 +366,8 @@
   </g>
   
   <!-- ENBEL Footer -->
-  <rect x=\"50\" y=\"1060\" width=\"1100\" height=\"30\" fill=\"#1B5E5E\" rx=\"8\"/>
-  <text x=\"600\" y=\"1078\" text-anchor=\"middle\" font-family=\"Helvetica, Arial, sans-serif\" font-size=\"12\" font-weight=\"bold\" fill=\"white\">
+  <rect x=\"80\" y=\"1070\" width=\"1760\" height=\"20\" fill=\"#1B5E5E\" rx=\"8\"/>
+  <text x=\"960\" y=\"1085\" text-anchor=\"middle\" font-family=\"Helvetica, Arial, sans-serif\" font-size=\"14\" font-weight=\"bold\" fill=\"white\">
     ENBEL Conference 2025 | Biomarker Pathways in African Urban Health | Johannesburg Case Study
   </text>
 </svg>

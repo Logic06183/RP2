@@ -1,4 +1,4 @@
-<svg viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <defs>
     <!-- Gradients for 3D surface effect -->
     <linearGradient id="surfaceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -34,44 +34,44 @@
   </defs>
   
   <!-- Background -->
-  <rect x="0" y="0" width="1200" height="800" fill="#ffffff"/>
+  <rect x="0" y="0" width="1920" height="1080" fill="#ffffff"/>
   
   <!-- Title -->
-  <text x="600" y="35" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="24" font-weight="bold" fill="#1a1a1a">
+  <text x="960" y="45" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" fill="#1a1a1a">
     Distributed Lag Non-linear Model (DLNM) Methodology
   </text>
   
-  <text x="600" y="60" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="14" fill="#4a4a4a">
+  <text x="960" y="80" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="18" fill="#4a4a4a">
     Temperature-Lag-Response Surface for Health Outcomes
   </text>
   
   <!-- 3D Conceptual Framework -->
-  <g id="3d-framework" transform="translate(100, 100)">
-    <text x="200" y="-10" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+  <g id="3d-framework" transform="translate(120, 120)">
+    <text x="300" y="-10" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">
       A. Exposure-Lag-Response Surface
     </text>
     
     <!-- 3D axes -->
     <!-- Temperature axis (X) -->
-    <line x1="50" y1="250" x2="350" y2="250" stroke="#333333" stroke-width="2" marker-end="url(#arrowhead)"/>
-    <text x="200" y="280" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">
+    <line x1="60" y1="300" x2="420" y2="300" stroke="#333333" stroke-width="3" marker-end="url(#arrowhead)"/>
+    <text x="240" y="335" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#333333">
       Temperature (°C)
     </text>
     
     <!-- Lag axis (Y) -->
-    <line x1="50" y1="250" x2="150" y2="150" stroke="#333333" stroke-width="2"/>
-    <text x="100" y="130" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">
+    <line x1="60" y1="300" x2="180" y2="180" stroke="#333333" stroke-width="3"/>
+    <text x="120" y="155" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#333333">
       Lag (days)
     </text>
     
     <!-- Response axis (Z) -->
-    <line x1="50" y1="250" x2="50" y2="50" stroke="#333333" stroke-width="2"/>
-    <text x="25" y="45" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="12" fill="#333333">
+    <line x1="60" y1="300" x2="60" y2="60" stroke="#333333" stroke-width="3"/>
+    <text x="30" y="55" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="15" fill="#333333">
       RR
     </text>
     
     <!-- 3D surface representation -->
-    <path d="M 80,220 Q 200,180 320,220 L 420,120 Q 300,80 180,120 Z" 
+    <path d="M 96,264 Q 240,216 384,264 L 504,144 Q 360,96 216,144 Z" 
           fill="url(#surfaceGradient)" opacity="0.7" filter="url(#shadow)"/>
     
     <!-- Grid lines on surface -->
@@ -106,8 +106,8 @@
   </g>
   
   <!-- Cross-basis Functions -->
-  <g id="cross-basis" transform="translate(550, 100)">
-    <text x="275" y="-10" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="16" font-weight="bold" fill="#2c3e50">
+  <g id="cross-basis" transform="translate(660, 120)">
+    <text x="330" y="-10" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="20" font-weight="bold" fill="#2c3e50">
       B. Cross-basis Functions
     </text>
     

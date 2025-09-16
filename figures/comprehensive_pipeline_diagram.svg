@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="1400" height="1000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000">
+<svg width="1920" height="1080" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080">
   <!-- Define gradients and filters -->
   <defs>
     <!-- Gradient definitions for different component types -->
@@ -51,32 +51,32 @@
   </defs>
   
   <!-- Background -->
-  <rect width="1400" height="1000" fill="#F8F9FA"/>
+  <rect width="1920" height="1080" fill="#F8F9FA"/>
   
   <!-- Title and Subtitle -->
-  <text x="700" y="40" font-family="Arial, sans-serif" font-size="28" font-weight="bold" text-anchor="middle" fill="#1B5E5E">
+  <text x="960" y="50" font-family="Arial, sans-serif" font-size="32" font-weight="bold" text-anchor="middle" fill="#1B5E5E">
     ENBEL Conference: XAI-Driven Climate-Health Analysis Framework
   </text>
-  <text x="700" y="65" font-family="Arial, sans-serif" font-size="18" text-anchor="middle" fill="#2E8B8B">
+  <text x="960" y="80" font-family="Arial, sans-serif" font-size="20" text-anchor="middle" fill="#2E8B8B">
     Machine Learning Insights for African Urban Health - Johannesburg Case Study
   </text>
   
   <!-- Main container with subtle border -->
-  <rect x="30" y="85" width="1340" height="880" fill="none" stroke="#E0E0E0" stroke-width="1" rx="5"/>
+  <rect x="80" y="100" width="1760" height="930" fill="none" stroke="#E0E0E0" stroke-width="1" rx="5"/>
   
   <!-- SECTION 1: DATA SOURCES -->
   <g id="data-sources">
     <!-- Section header -->
-    <rect x="50" y="100" width="300" height="35" fill="#2C3E50" rx="3"/>
-    <text x="200" y="122" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    <rect x="100" y="130" width="380" height="40" fill="#2C3E50" rx="3"/>
+    <text x="290" y="155" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
       DATA SOURCES
     </text>
-    <text x="200" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+    <text x="290" y="185" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">
       Input Layer
     </text>
     
     <!-- Clinical Health Data -->
-    <g transform="translate(50, 180)">
+    <g transform="translate(100, 210)">
       <use href="#cylinder" width="80" height="100"/>
       <text x="40" y="60" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">
         Clinical
@@ -95,7 +95,7 @@
     </g>
     
     <!-- GCRO Survey Data -->
-    <g transform="translate(50, 300)">
+    <g transform="translate(100, 350)">
       <use href="#cylinder" width="80" height="100"/>
       <text x="40" y="60" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">
         GCRO
@@ -114,7 +114,7 @@
     </g>
     
     <!-- Climate Data Sources -->
-    <g transform="translate(50, 420)">
+    <g transform="translate(100, 490)">
       <use href="#cylinder" width="80" height="100"/>
       <text x="40" y="60" font-family="Arial, sans-serif" font-size="11" font-weight="bold" text-anchor="middle" fill="white">
         Climate Data
@@ -136,14 +136,14 @@
   <!-- SECTION 2: PROCESSING PIPELINE -->
   <g id="processing-pipeline">
     <!-- Section header -->
-    <rect x="380" y="100" width="640" height="35" fill="#2C3E50" rx="3"/>
-    <text x="700" y="122" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    <rect x="520" y="130" width="880" height="40" fill="#2C3E50" rx="3"/>
+    <text x="960" y="155" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
       PROCESSING PIPELINE
     </text>
     
     <!-- Stage 1: Data Integration -->
-    <g transform="translate(380, 160)">
-      <rect width="300" height="100" fill="url(#processGradient)" rx="5" filter="url(#dropShadow)"/>
+    <g transform="translate(520, 190)">
+      <rect width="400" height="120" fill="url(#processGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="150" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
         Stage 1: Data Integration &amp; Validation
       </text>
@@ -157,8 +157,8 @@
     </g>
     
     <!-- Stage 2: Feature Engineering -->
-    <g transform="translate(720, 160)">
-      <rect width="300" height="100" fill="url(#processGradient)" rx="5" filter="url(#dropShadow)"/>
+    <g transform="translate(960, 190)">
+      <rect width="400" height="120" fill="url(#processGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="150" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
         Stage 2: Feature Engineering
       </text>
@@ -169,8 +169,8 @@
     </g>
     
     <!-- Biomarker Pathways Box -->
-    <g transform="translate(820, 270)">
-      <rect width="180" height="70" fill="white" stroke="#5CB85C" stroke-width="1" rx="3" stroke-dasharray="3,2"/>
+    <g transform="translate(1120, 320)">
+      <rect width="220" height="80" fill="white" stroke="#5CB85C" stroke-width="1" rx="3" stroke-dasharray="3,2"/>
       <text x="90" y="15" font-family="Arial, sans-serif" font-size="10" font-weight="bold" text-anchor="middle" fill="#2C3E50">
         Pathway Classification
       </text>
@@ -181,13 +181,13 @@
     </g>
     
     <!-- Stage 3: XAI-Driven Discovery Process -->
-    <text x="700" y="380" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="#2C3E50">
+    <text x="960" y="450" font-family="Arial, sans-serif" font-size="15" font-weight="bold" text-anchor="middle" fill="#2C3E50">
       Stage 3: XAI-Driven Discovery Process
     </text>
     
     <!-- Phase A: Comprehensive XAI Analysis -->
-    <g transform="translate(380, 400)">
-      <rect width="280" height="120" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
+    <g transform="translate(520, 480)">
+      <rect width="380" height="140" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
         Phase A: Comprehensive XAI Analysis
       </text>
@@ -202,8 +202,8 @@
     </g>
     
     <!-- Phase B: Hypothesis Generation -->
-    <g transform="translate(720, 400)">
-      <rect width="280" height="120" fill="url(#processGradient)" rx="5" filter="url(#dropShadow)"/>
+    <g transform="translate(960, 480)">
+      <rect width="380" height="140" fill="url(#processGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
         Phase B: Hypothesis Generation
       </text>
@@ -218,8 +218,8 @@
     </g>
     
     <!-- Stage 4: DLNM Validation -->
-    <g transform="translate(550, 550)">
-      <rect width="300" height="100" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
+    <g transform="translate(740, 640)">
+      <rect width="400" height="120" fill="url(#mlGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="150" y="25" font-family="Arial, sans-serif" font-size="13" font-weight="bold" text-anchor="middle" fill="white">
         Stage 4: DLNM Validation
       </text>
@@ -235,17 +235,17 @@
   <!-- SECTION 3: OUTPUTS -->
   <g id="outputs">
     <!-- Section header -->
-    <rect x="1050" y="100" width="300" height="35" fill="#2C3E50" rx="3"/>
-    <text x="1200" y="122" font-family="Arial, sans-serif" font-size="16" font-weight="bold" text-anchor="middle" fill="white">
+    <rect x="1450" y="130" width="380" height="40" fill="#2C3E50" rx="3"/>
+    <text x="1640" y="155" font-family="Arial, sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="white">
       OUTPUTS
     </text>
-    <text x="1200" y="155" font-family="Arial, sans-serif" font-size="12" text-anchor="middle" fill="#666">
+    <text x="1640" y="185" font-family="Arial, sans-serif" font-size="14" text-anchor="middle" fill="#666">
       Results Layer
     </text>
     
     <!-- Model Performance Assessment -->
-    <g transform="translate(1050, 180)">
-      <rect width="280" height="90" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
+    <g transform="translate(1450, 210)">
+      <rect width="360" height="100" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
         Model Performance Assessment
       </text>
@@ -256,8 +256,8 @@
     </g>
     
     <!-- Policy-Relevant Findings -->
-    <g transform="translate(1050, 290)">
-      <rect width="280" height="110" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
+    <g transform="translate(1450, 340)">
+      <rect width="360" height="130" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
         Policy-Relevant Findings
       </text>
@@ -269,8 +269,8 @@
     </g>
     
     <!-- Deliverables -->
-    <g transform="translate(1050, 420)">
-      <rect width="280" height="100" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
+    <g transform="translate(1450, 500)">
+      <rect width="360" height="120" fill="url(#outputGradient)" rx="5" filter="url(#dropShadow)"/>
       <text x="140" y="20" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="white">
         Deliverables
       </text>
@@ -284,48 +284,48 @@
   <!-- FLOW ARROWS -->
   <g id="flow-arrows" stroke="#666666" stroke-width="2" fill="none">
     <!-- From data sources to Stage 1 -->
-    <path d="M 300 230 L 375 210" marker-end="url(#arrow)"/>
-    <path d="M 300 350 L 375 210" marker-end="url(#arrow)"/>
-    <path d="M 300 470 L 375 210" marker-end="url(#arrow)"/>
+    <path d="M 480 270 L 520 250" marker-end="url(#arrow)"/>
+    <path d="M 480 400 L 520 250" marker-end="url(#arrow)"/>
+    <path d="M 480 540 L 520 250" marker-end="url(#arrow)"/>
     
     <!-- From Stage 1 to Stage 2 -->
-    <path d="M 685 210 L 715 210" marker-end="url(#arrow)"/>
+    <path d="M 925 250 L 955 250" marker-end="url(#arrow)"/>
     
     <!-- From Stage 2 to Phase A and Phase B -->
-    <path d="M 870 265 L 520 395" marker-end="url(#arrow)"/>
-    <path d="M 665 460 L 715 460" marker-end="url(#arrow)"/>
+    <path d="M 1160 315 L 680 475" marker-end="url(#arrow)"/>
+    <path d="M 860 540 L 955 540" marker-end="url(#arrow)"/>
     
     <!-- From Phase B to Stage 4 -->
-    <path d="M 860 525 L 700 545" marker-end="url(#arrow)"/>
+    <path d="M 1160 625 L 940 665" marker-end="url(#arrow)"/>
     
     <!-- From Stage 4 to Outputs -->
-    <path d="M 855 600 L 1045 225" marker-end="url(#arrow)"/>
-    <path d="M 855 600 L 1045 345" marker-end="url(#arrow)"/>
-    <path d="M 855 600 L 1045 470" marker-end="url(#arrow)"/>
+    <path d="M 1145 700 L 1445 270" marker-end="url(#arrow)"/>
+    <path d="M 1145 700 L 1445 400" marker-end="url(#arrow)"/>
+    <path d="M 1145 700 L 1445 560" marker-end="url(#arrow)"/>
   </g>
   
   <!-- KEY STATISTICS ANNOTATIONS -->
   <g id="annotations">
     <!-- Top statistics bar -->
-    <rect x="380" y="680" width="640" height="60" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="1" rx="5"/>
-    <text x="700" y="700" font-family="Arial, sans-serif" font-size="12" font-weight="bold" text-anchor="middle" fill="#2C3E50">
+    <rect x="520" y="780" width="880" height="70" fill="#F5F5F5" stroke="#DDDDDD" stroke-width="1" rx="5"/>
+    <text x="960" y="810" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle" fill="#2C3E50">
       Key Project Statistics
     </text>
-    <text x="450" y="720" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    <text x="580" y="835" font-family="Arial, sans-serif" font-size="12" fill="#666">
       Total records: 128,465
     </text>
-    <text x="600" y="720" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    <text x="780" y="835" font-family="Arial, sans-serif" font-size="12" fill="#666">
       Study period: 19 years (2002-2021)
     </text>
-    <text x="750" y="720" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    <text x="980" y="835" font-family="Arial, sans-serif" font-size="12" fill="#666">
       Machine learning models: 6
     </text>
-    <text x="880" y="720" font-family="Arial, sans-serif" font-size="11" fill="#666">
+    <text x="1180" y="835" font-family="Arial, sans-serif" font-size="12" fill="#666">
       Climate features: 78 variables
     </text>
     
     <!-- Decision diamond for quality control -->
-    <g transform="translate(530, 290)">
+    <g transform="translate(730, 350)">
       <path d="M 0,20 L 20,0 L 40,20 L 20,40 Z" fill="#FFE4B5" stroke="#FF8C00" stroke-width="1"/>
       <text x="20" y="24" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#8B4513">
         QC
@@ -337,8 +337,8 @@
   </g>
   
   <!-- LEGEND -->
-  <g id="legend" transform="translate(50, 780)">
-    <text x="0" y="15" font-family="Arial, sans-serif" font-size="11" font-weight="bold" fill="#2C3E50">
+  <g id="legend" transform="translate(100, 880)">
+    <text x="0" y="15" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#2C3E50">
       Component Types:
     </text>
     <rect x="120" y="5" width="15" height="15" fill="url(#dataGradient)"/>
@@ -358,34 +358,34 @@
   </g>
   
   <!-- ENBEL Conference Note -->
-  <rect x="30" y="880" width="800" height="40" fill="#E8F4F8" stroke="#1B5E5E" stroke-width="1" rx="5"/>
-  <text x="50" y="898" font-family="Arial, sans-serif" font-size="11" fill="#1B5E5E" font-weight="bold">
+  <rect x="100" y="980" width="1000" height="50" fill="#E8F4F8" stroke="#1B5E5E" stroke-width="1" rx="5"/>
+  <text x="120" y="1005" font-family="Arial, sans-serif" font-size="12" fill="#1B5E5E" font-weight="bold">
     Temporal Matching Note:
   </text>
-  <text x="180" y="898" font-family="Arial, sans-serif" font-size="11" fill="#666">
+  <text x="260" y="1005" font-family="Arial, sans-serif" font-size="12" fill="#666">
     Clinical and GCRO survey data aligned temporally to enable comprehensive XAI analysis
   </text>
-  <text x="50" y="912" font-family="Arial, sans-serif" font-size="11" fill="#1B5E5E" font-weight="bold">
+  <text x="120" y="1022" font-family="Arial, sans-serif" font-size="12" fill="#1B5E5E" font-weight="bold">
     ENBEL Context:
   </text>
-  <text x="150" y="912" font-family="Arial, sans-serif" font-size="11" fill="#666">
+  <text x="240" y="1022" font-family="Arial, sans-serif" font-size="12" fill="#666">
     Environmental Burden of Disease framework for African urban health research
   </text>
   
   <!-- QR Code placeholder -->
-  <rect x="1250" y="880" width="80" height="80" fill="white" stroke="#1B5E5E" stroke-width="2" rx="5"/>
-  <text x="1290" y="900" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#666">
+  <rect x="1720" y="980" width="100" height="100" fill="white" stroke="#1B5E5E" stroke-width="2" rx="5"/>
+  <text x="1770" y="1010" font-family="Arial, sans-serif" font-size="10" text-anchor="middle" fill="#666">
     QR Code:
   </text>
-  <text x="1290" y="915" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">
+  <text x="1770" y="1030" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#666">
     Full Methodology
   </text>
-  <text x="1290" y="925" font-family="Arial, sans-serif" font-size="8" text-anchor="middle" fill="#666">
+  <text x="1770" y="1045" font-family="Arial, sans-serif" font-size="9" text-anchor="middle" fill="#666">
     Details
   </text>
   
   <!-- Conference Attribution -->
-  <text x="1320" y="975" font-family="Arial, sans-serif" font-size="9" text-anchor="end" fill="#999">
+  <text x="1840" y="1070" font-family="Arial, sans-serif" font-size="10" text-anchor="end" fill="#999">
     ENBEL Conference 2025 | XAI-Driven Climate-Health Analysis | Johannesburg Case Study
   </text>
 </svg>
